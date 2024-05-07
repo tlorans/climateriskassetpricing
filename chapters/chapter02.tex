@@ -20,38 +20,86 @@ like Current Policies (business-as-usual scenario) versus
 Transition (low-carbon economy scenario). The pricing of assets 
 should reflect their expected payoffs in these different states.
 
+\begin{tikzpicture}[->, thick, auto, node distance=4cm]
+    % Nodes at time t
+    \node[circle, draw] (current_t) at (0, 2) {CP};
+    \node[circle, draw] (net_zero_t) at (0, -2) {NZ};
+
+    % Nodes at time t+1
+    \node[circle, draw] (current_t1) at (4, 2) {CP};
+    \node[circle, draw] (net_zero_t1) at (4, -2) {NZ};
+
+    % Edges
+    \draw (current_t) -- node[midway, above] {Transition} (net_zero_t1);
+    \draw (current_t) -- node[midway, above] {No Transition} (current_t1);
+    \draw (net_zero_t) -- node[midway, below] {Transition} (net_zero_t1);
+    \draw (net_zero_t) -- node[midway, below] {No Transition} (current_t1);
+    
+    % Labels
+    \node at (0, 3) {Time \(t\)};
+    \node at (4, 3) {Time \(t+1\)};
+
+\end{tikzpicture}
+
+
+\section{Transition Scenarios as States of the World}
+
+\begin{figure}[htbp]
+    \centering
+\begin{tikzpicture}[->, thick, auto, node distance=4cm]
+    % Nodes
+    \node[circle, draw] (current) at (0, 0) {CP};
+    \node[circle, draw] (net_zero) at (4, 2) {NZ};
+    \node[circle, draw] (no_transition) at (4, -2) {CP};
+
+    % Edges
+    \draw (current) -- node[midway, above] {Transition} (net_zero);
+    \draw (current) -- node[midway, below] {No Transition} (no_transition);
+
+    % Labels for time
+    \node at (0, -1) {t};
+    \node at (4, -3) {t+1};
+\end{tikzpicture}
+    \caption{Climate Transition Risk}
+    \label{fig:climate_transition}
+\end{figure}
+
+
+\section{What are Green and Brown Assets?}
+
+\section{Expected Payoffs}
+
 \begin{figure}[htbp]
     \centering
     \begin{tikzpicture}[scale=1.5, every node/.style={font=\footnotesize}]
 
     % Nodes
-    \node (start) at (0,0) [draw, circle] {};
-    \node (current) at (2,1.5) [draw, circle] {};
-    \node (transition) at (2,-1.5) [draw, circle] {};
+    \node (start) at (0,0) [draw, circle] {CP};
+    \node (current) at (2,1.5) [draw, circle] {CP};
+    \node (transition) at (2,-1.5) [draw, circle] {NZ};
     \node (current_green) at (4,2.5) {Green asset: Low payoff};
     \node (current_brown) at (4,1) {Brown asset: High payoff};
     \node (transition_green) at (4,-1) {Green asset: High payoff};
     \node (transition_brown) at (4,-2.5) {Brown asset: Low payoff};
 
     % Edges
-    \draw[->] (start) -- (current) node[midway, above] {Current Policies};
+    \draw[->] (start) -- (current) node[midway, above] {No Transition};
     \draw[->] (start) -- (transition) node[midway, below] {Transition};
     \draw[->] (current) -- (current_green);
     \draw[->] (current) -- (current_brown);
     \draw[->] (transition) -- (transition_green);
     \draw[->] (transition) -- (transition_brown);
     
-    % Labels
+     % Labels for time
+     \node at (0, -1) {t};
+     \node at (4, -3) {t+1};   % Labels
 
 \end{tikzpicture}
     \caption{Climate States of the World}
     \label{fig:climate_risk}
 \end{figure}
 
-\section{Transition Scenarios as States of the World}
 
-\section{What are Green and Brown Assets?}
-
-\section{Expected Payoffs}
 
 \section{Climate Risk Exposure and Expected Returns}
+
