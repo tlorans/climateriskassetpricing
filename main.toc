@@ -1,8 +1,17 @@
 \contentsline {chapter}{\numberline {1}States of the World and Asset Pricing}{1}{}%
 \contentsline {section}{\numberline {1.1}Utility and Asset Pricing}{1}{}%
-\contentsline {section}{\numberline {1.2}Risk Valuation}{2}{}%
-\contentsline {chapter}{\numberline {2}Climate Scenarios as States of the World}{5}{}%
-\contentsline {chapter}{\numberline {3}Risk Factors: Empirical Methods}{7}{}%
-\contentsline {chapter}{\numberline {4}The Green Factor}{9}{}%
-\contentsline {chapter}{\numberline {5}Time-Varying Discount Factor}{11}{}%
-\contentsline {chapter}{\numberline {6}Climate Sentiment}{13}{}%
+\contentsline {section}{\numberline {1.2}Risk Valuation}{3}{}%
+\contentsline {section}{\numberline {1.3}Risk and Beta}{5}{}%
+\contentsline {subsection}{\numberline {1.3.1}Expected Excess Returns and Covariance}{5}{}%
+\contentsline {subsection}{\numberline {1.3.2}Betas Formulation}{5}{}%
+\contentsline {subsection}{\numberline {1.3.3}Interpreting Excess Return and Beta Relationship}{6}{}%
+\contentsline {section}{\numberline {1.4}CAPM and Multifactor models}{8}{}%
+\contentsline {section}{\numberline {1.5}Conclusion}{9}{}%
+\contentsline {chapter}{\numberline {2}Climate Risk}{11}{}%
+\contentsline {section}{\numberline {2.1}Brown / Green Assets}{11}{}%
+\contentsline {section}{\numberline {2.2}Climate Risk and Utility}{11}{}%
+\contentsline {section}{\numberline {2.3}Climate Betas and Expected Returns}{11}{}%
+\contentsline {chapter}{\numberline {3}Risk Factors: Empirical Methods}{13}{}%
+\contentsline {chapter}{\numberline {4}The Green Factor}{15}{}%
+\contentsline {chapter}{\numberline {5}Time-Varying Risk Premia}{17}{}%
+\contentsline {chapter}{\numberline {6}Chasing the Climate Risk Factor}{19}{}%

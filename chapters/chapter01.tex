@@ -53,6 +53,39 @@ or value $p_t$ of the payoff $x_{t+1}$ at time $t$?
 
 \section{Utility and Asset Pricing}
 
+We want to find the value of the payoff $x_{t+1}$ at time $t$ to an 
+investor. We describe the investor's preferences using an 
+\textit{utility function}:
+
+\begin{equation}
+    U(c_t, c_{t+1}) = u(c_t) + \beta u(c_{t+1})
+\end{equation}
+
+where $c_t$ is consumption at time $t$, $c_{t+1}$ is consumption at
+time $t+1$, $u(c_t)$ is the utility of consumption at time $t$.
+$\beta$ is the \textit{discount factor} that measures how much the
+investor values consumption at time $t+1$ relative to consumption at
+time $t$. 
+
+The point of the utility function is to capture the investor's
+aversion to \textit{risk} and \textit{delay}, and 
+discounting prices accordingly. 
+Asset pricing depends on what are people willing to pay for.
+It depends on how impatient and risk averse they are.
+An example is the logarithmic utility function. In that case,
+if $u(c) = \log(c)$, then $u'(c) = 1/c$. 
+
+$u(c)$ is the level of utility from consumption. It can be described 
+as the level of happiness of the investor. $u'(c)$ is the 
+marginal utility of consumption. It can be roughly described as 
+hunger of the investor.
+If $u'(c) > 0$ when $u(c)$ rises, it means that people 
+always want more consumption. If $u'(c) < 0$ when $u(c)$ rises,
+then $u(c)$ is concave, and hunger decrease as you eat more.
+$\beta$ is a number, typically 0.95. People prefer money now 
+than later, they dislike delay. $\beta$ captures their impatience.
+$c_{t+1}$ is random. You don't know at time $t$ how things will 
+turn out, what $c_{t+1}$ will be.
 
 \begin{tcolorbox}[colback=white, colframe=black, title=Example X]
     xxx
@@ -134,3 +167,261 @@ delivered in the bad state of nature $d$ worth more than
 payoffs delivered in the good state of nature $u$.
 
 \end{tcolorbox}
+
+In the previous part, we had the discount factor of the form:
+
+\begin{equation}
+    p^i_t = \frac{E(x^i_{t+1})}{ER^i}
+\end{equation}
+
+where $ER^i$ is the expected return on the asset.
+Our new version is:
+
+\begin{equation}
+    p^i_t = E(m_{t+1}x^i_{t+1})
+\end{equation}
+
+where $m_{t+1}$ is the stochastic discount factor. It is 
+stochastic in the sense that it is unknown at time $t$, 
+and therefore is inside the expectation. It is the same 
+for all assets. Different covariance of 
+$m_{t+1}$ with $x^i_{t+1}$ gives different risk adjustments
+for different assets.
+
+\section{Risk and Beta}
+
+In this section, we will see that $p = E(mx)$ implies:
+
+\begin{equation}
+E(R^{ei}) = -R^f \text{Cov}(R^{ei}, m) = \beta_{R^{ei},m} \lambda_m
+\end{equation}
+
+where $\beta_{R^{ei},m}$ is the beta of the asset $i$ with respect to $m$.
+
+\subsection{Expected Excess Returns and Covariance}
+
+We start with the fact that if \textit{excess} returns or 
+zero-cost portfolios have price 0, then, when excess returns 
+$R^e = R^i - R^f$
+is the payoff, $p = E(mx)$ implies:
+
+\begin{equation}
+    0 = E_t(m_{t+1}R^{e}_{t+1})
+\end{equation}
+
+Using again the definition of the covariance and looking 
+to obtain the betas:
+
+\begin{equation}
+    \text{Cov}(m, x) = E(mx) - E(m)E(x)
+\end{equation}
+
+\begin{equation}
+    E(mx) = \text{Cov}(m, x) + E(m)E(x)
+\end{equation}
+
+Then 
+
+\begin{equation}
+    0 = E(mR^e) = E(m)E(R^e) + \text{Cov}(m, R^e)
+\end{equation}
+
+\begin{equation}
+    E(m)E(R^e) = -\text{Cov}(m, R^e)
+\end{equation}
+
+\begin{equation}
+    E(R^e) = - R^f \text{Cov}(m, R^e)
+\end{equation}
+
+\subsection{Betas Formulation}
+
+We can reformulate our previous result in terms of betas:
+
+\begin{equation}
+    E(R^e) = \frac{\text{Cov}(m, R^e)}{var(m)}[-R^f var(m)]
+\end{equation}
+
+\begin{equation}
+    E(R^e) = \beta_{R^e, m} \lambda_m
+\end{equation}
+
+We can now link it directly to consumption. If $m_{t+1} = a - bf_{t+1}$
+then:
+
+\begin{equation}
+    E(R^e) = -R^f \text{Cov}(R^e, m) = R^f \times b \times cov(R^e, f)
+\end{equation}
+
+\begin{equation}
+    E(R^e) = \frac{\text{Cov}(R^e,f)}{var(f)}[R^f \times b \times var(f)] = \beta_{R^e,f} \lambda_f
+\end{equation}
+
+So, using $m_{t+1} \approx 1 - \delta - \gamma \Delta c_{t+1}$, we have:
+
+\begin{equation}
+    E(R^e) \approx -\text{Cov}(1 - \delta - \gamma \Delta c_{t+1}, R^e) \approx \gamma \text{Cov}(\Delta c_{t+1}, R^e)
+\end{equation}
+
+where we also have assumed that $R^f \approx 1$. We finally have:
+
+\begin{equation}
+    E(R^e) \approx \beta_{R^e, \Delta c} \times \lambda_c
+\end{equation}
+
+\subsection{Interpreting Excess Return and Beta Relationship}
+
+In regression terms, it means that we can run time series 
+regressions to find betas:
+
+\begin{equation}
+    R^i_{t+1} = \alpha_i + \beta_{i,\Delta c} \Delta c_{t+1} + \epsilon^i_{t+1}
+\end{equation}
+
+The average returns should indeed be linearly related to 
+betas:
+
+\begin{equation}
+    E(R^i) = R^f + \beta_{i,\Delta c} \lambda_c
+\end{equation}
+
+where $\beta$ is the right hand variable (the usual $x$) and 
+$\lambda$ is the slope (usually the $\beta$).
+
+\begin{figure}[htbp]
+    \centering
+\begin{tikzpicture}
+    % Axis
+    \draw[<->] (0, 5) node[above] {$E(R^i)$} -- (0, 0) -- (5, 0) node[right] {\(\beta_i\)};
+    
+    % Line
+    \draw[thick, blue] (0, 0) -- (4, 4) node[above] {slope \(\lambda\)};
+    
+    % Labels
+    \node[below left] at (0, 0) {0};
+    \node[below right] at (2, 2) { $E(R^i) = \lambda \beta_i$};
+    \node[below] at (4, 0) {1};
+    \node[left] at (0, 4) {1};
+\end{tikzpicture}
+    \caption{Expected Return and Beta Relationship}
+    \label{fig:expected_return_beta}
+\end{figure}
+
+The superscript $i$ emphasizes that this is about 
+why average returns of one asset are higher than of another 
+(cross section). This is not about the fluctuation in ex-post return
+or predicting returns. $E(R^i)$ is the reward, $\beta_i$ the 
+quantity of risk that varies across assets $i$, and 
+$\lambda$ is the price of risk (it is common to all assets).
+
+An asset must offer high $E(R^i)$ (reward) to compensate
+the investors for high $\beta_i$ (risk). 
+Assets that covary negatively with $m$, hence positively 
+with consumption growth, must pay a higher average return. 
+
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    
+
+
+\end{tcolorbox}
+
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        % Draw the axes
+        \draw[<->] (0, 5) node[above] {\(p\)} -- (0, 0) -- (3, 0) node[right] {Time};
+        
+        % Draw the lines for the two assets
+        \draw[thick, blue] (0.5, 1) -- (2.5, 4) node[near end, right, below] {};
+        \draw[thick, red] (0.5, 3) -- (2.5, 3.5) node[midway, above] {};
+        
+        % Add points for Asset 1
+        \node[below] at (0.5, 1) {\(p_1^t\)};
+        \node[above] at (2.5, 4) {\(p_1^{t+1}\)};
+        \draw[fill=blue] (0.5, 1) circle (2pt);
+        \draw[fill=blue] (2.5, 4) circle (2pt);
+        
+        % Add points for Asset 2
+        \node[below] at (0.5, 3) {};
+        \node[above] at (2.5, 3.5) {};
+        \draw[fill=red] (0.5, 3) circle (2pt);
+        \draw[fill=red] (2.5, 3.5) circle (2pt);
+        
+        % Label the times
+        \node[below] at (0.5, 0) {\(t\)};
+        \node[below] at (2.5, 0) {\(t+1\)};
+    \end{tikzpicture}
+    \caption{High $E(R^i)$ = Low $p^i$}
+    \label{fig:asset_pricing}
+\end{figure}
+
+Given a certain amount of volatility (price must move at some point),
+price (risk-discount) depends on when good/bad performance occurs.
+Average returns are high if beta on $m$ or $\Delta c$ is large.
+Stocks must pay high returns if they tend to go down 
+in bad times. Price is depressed if a payoff is low in 
+bad times, when the investor is hungry (high $m$, low $\Delta c$), 
+therefore we have high $E(R^i)$.
+Price is high if a payoff is high in bad times, when the investor
+is full (low $m$, high $\Delta c$). Therefore we have low $E(R^i)$.
+Higher $\gamma$ (risk aversion) implies larger price effects.
+
+The variance $\sigma(R^e)$ of an individual asset 
+does not matter, only its covariance with $m$ (\textit{e.g.} consumption growth)
+matters. Recall that we have the following:
+
+\begin{equation}
+    R^{ei} = \beta_{i,m} m + \epsilon^i 
+\end{equation}
+
+Therefore the variance is:
+\begin{equation}
+    var(R^{ei}) = \beta^2_{i,m} \sigma^2_{m} + \sigma_{\epsilon^i}^2
+\end{equation}
+
+and the second component of variance has no effect on mean returns.
+
+\section{CAPM and Multifactor models}
+
+We can relate what we have seen so far to the CAPM and Fama-French model. 
+This underlines the economic rationale for $E(hml)$, $E(smb)$, and so forth.
+
+To do so, we start from:
+
+\begin{equation}
+    E(R^{ei}) = R^f \text{Cov}(R^{ei}, m) = \beta_{R^{ei}, m} \lambda_m
+\end{equation}
+
+We find reasons to say:
+
+\begin{equation}
+    m = a -b \times f 
+\end{equation}
+
+to get 
+
+\begin{equation}
+    E(R^{ei}) = \beta_{R^{ei}, f} \lambda_f
+\end{equation}
+
+with the full algebra to be:
+
+\begin{equation}
+    E(R^{ei}) = R^f \text{Cov}(R^{ei}, f \times b) = R^f \text{Cov}(R^{ei}, f) \times b 
+    = \frac{\text{Cov}(R^{ei}, f)}{var(f)} \times [R^f \times b \times var(f)] 
+\end{equation}
+
+The intuition is to say that if low $f$ indicates bad times, 
+when people are hungry, then assets which pay off badly in times 
+of low $f$ must have low prices and deliver high expected returns.
+
+
+
+
+\section{Conclusion}
+
+What we have seen here is the beginning of all asset pricing 
+models. In the empirical version, we'll see that 
+we use risk factors instead of $\Delta c$.
