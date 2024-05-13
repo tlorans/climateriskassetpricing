@@ -1,105 +1,202 @@
-\chapter{Climate Risk}
+\chapter{Climate Transition Risk and Asset Pricing}
 
-In what follow, we will focus on \textit{climate transition risk}. 
-This refers to the financial risks that arise from the transition 
-to a low-carbon economy. 
+Uncertainty about states of world with climate risks 
+is a key driver of asset prices. Uncertainty
+about the states of the world with climate risks
+can be thought with the uncertainty about the 
+climate scenarios.
 
-This includes risks from policy changes, technological innovations or 
-market shifts. Transition risk can significantly 
-affect the value of assets tied to carbon-intensive industries 
-(brown assets) versus those aligned with a low-carbon economy (green assets).
-Brown assets may face a decrease in value 
-due to reduced demand or increased regulatory burden.
-Green assets may benefit from increased demand and supportive 
-policies during the transition.
 
-As we have seen in the previous chapter, 
-different states of the world represent different future 
-scenarios. Climate transition introduces states 
-like Current Policies (business-as-usual scenario) versus
-Transition (low-carbon economy scenario). The pricing of assets 
-should reflect their expected payoffs in these different states.
+\section{Climate Transition Risk Dynamic}
 
-\begin{tikzpicture}[->, thick, auto, node distance=4cm]
-    % Nodes at time t
-    \node[circle, draw] (current_t) at (0, 2) {CP};
-    \node[circle, draw] (net_zero_t) at (0, -2) {NZ};
+The evolution of aggregate consumption growth $\Delta c_{t+1}$
+is described as:
 
-    % Nodes at time t+1
-    \node[circle, draw] (current_t1) at (4, 2) {CP};
-    \node[circle, draw] (net_zero_t1) at (4, -2) {NZ};
+\begin{equation}
+\Delta c_{t+1} = \mu + x_t + J_{t+1}
+\end{equation}
 
-    % Edges
-    \draw (current_t) -- node[midway, above] {Transition} (net_zero_t1);
-    \draw (current_t) -- node[midway, above] {No Transition} (current_t1);
-    \draw (net_zero_t) -- node[midway, below] {Transition} (net_zero_t1);
-    \draw (net_zero_t) -- node[midway, below] {No Transition} (current_t1);
+where $\mu$ is the unconditional average, $x_t$ represents the
+time-varying expected consumption growth and 
+$J_{t+1}$ is the climate transition shock to the economy.
+It can be referred to the abrupt introduction of 
+a carbon tax or a sudden shift in climate policy.
+
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    Sample Paths: Trend Growth and Above-Trend Growth
+\end{tcolorbox}
+
+The expected consumption growth is:
+
+\begin{equation}
+    x_{t+1} = \mu_x + \rho x_t + \phi J_{t+1}
+\end{equation}
+
+with a persistence parameter $\rho$ and innovations also driven 
+by the shock $J_{t+1}$. The parameter $\phi$ captures the way 
+the climate shock $J_{t+1}$ affects future path of consumption
+growth.
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    Sample Paths: Above-Trend Growth,With andWithout a Climate 
+    Transition Shock
+\end{tcolorbox}
+
+In any period, the transition shock $J_{t+1}$ can take the value 
+$-\varepsilon \in (0,1)$ with probability $\lambda_t$ or $0$ with 
+probability $(1 - \lambda_t)$. The probability $\lambda_t$ is
+itself time-varying, with the dynamics:
+
+\begin{equation}
+    \lambda_{t+1} = \mu_{\lambda} + \alpha \lambda_t 
+    + \eta x_t + \xi J_{t+1}
+\end{equation}
+
+
+in addition to an autoregressive term, 
+it depends on lagged measures of economic activity ($x_t$)
+as well as on the current shock $J_{t+1}$.
+
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    Time-varying transition risk
+\end{tcolorbox}
+
+We think about climate transition risk in terms 
+of a relatively low-probability catastrophic event 
+that could dramatically impact the economy. 
+
+The parameter $\lambda_t$ captures the conditional
+probability of such an abrupt shift occurring and 
+$\varepsilon$ captures the magnitude of the shock.
+
+The occurence of the abrupt low-carbon shift also affects the 
+future path of the economy, since it directly affects 
+the expected consumption growth $x_t$. 
+Specifically, when $\phi > 0$, the transition shock
+reduces not only consumption immediately 
+but also future expected consumption growth. 
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    xxx
+\end{tcolorbox}
+
+When instead, $\phi < 0$, there is a partial mean reversion
+after a transition shock. This case has an especially 
+interesting interpretation when modelling climate transition:
+it captures the ability of the economy to shift towards 
+a low-carbon economy.
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    xxx
+\end{tcolorbox}
+
+Through the parameter $\xi$, a transition 
+realization also affects future climate transition 
+risk $\lambda_{t}$.
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    xxx
+\end{tcolorbox}
+
+Finally, the model allows for feedback effects between 
+climate change and the economy. Climate risks affect 
+the economy (when the climate disaster occurs) and 
+the economy affects climate risks through the effects 
+of $x_t$ on $\lambda_{t+1}$ (modulated through the parameter 
+$\eta$): when economic activity is high, climate risk 
+increases. But when the climate shock materializes, 
+consumption is low. 
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    xxx
+\end{tcolorbox}
+
+
+\section{Climate Transition Risk Valuation}
+
+Once the physical process of climate change is modeled,
+one need to choose an utility function for the representative 
+investor. It implies a stochastic discount factor (SDF)
+that prices assets in the economy, at equilibrium. 
+
+When the uncertainty emanates directly from the climate process 
+itself, climate damage tends to be unexpectedly high in times 
+when consumption is low because climate disaster realization 
+are a primary driver of reduced consumption. 
+
+\section{Climate Transition Risk Beta and Excess Returns}
+
+Assets that are positively exposed to climate risk - that is, 
+assets with low payoffs when climate damages are high -
+thus tend to require positive risk premia. On the other hand, 
+assets that are negatively exposed to climate risk - 
+assets that payoffs primarily when climate are realized - 
+tend to require negative risk premia since these assets 
+provide an insurance against bad (high marginal utility)
+states of the world. 
+
+DERIVATION OF BETAS
+
+\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
+    xxx
+\end{tcolorbox}
+
+
+\section{Conclusion}
+
+We've focused on climate transition risk, but same approach 
+can be applied to physical risk. 
+
+%\begin{figure}[htbp]
+    %     \centering
+    % \begin{tikzpicture}[->, thick, auto, node distance=4cm]
+    %     % Nodes
+    %     \node[circle, draw] (current) at (0, 0) {CP};
+    %     \node[circle, draw] (net_zero) at (4, 2) {NZ};
+    %     \node[circle, draw] (no_transition) at (4, -2) {CP};
     
-    % Labels
-    \node at (0, 3) {Time \(t\)};
-    \node at (4, 3) {Time \(t+1\)};
-
-\end{tikzpicture}
-
-
-\section{Transition Scenarios as States of the World}
-
-\begin{figure}[htbp]
-    \centering
-\begin{tikzpicture}[->, thick, auto, node distance=4cm]
-    % Nodes
-    \node[circle, draw] (current) at (0, 0) {CP};
-    \node[circle, draw] (net_zero) at (4, 2) {NZ};
-    \node[circle, draw] (no_transition) at (4, -2) {CP};
-
-    % Edges
-    \draw (current) -- node[midway, above] {Transition} (net_zero);
-    \draw (current) -- node[midway, below] {No Transition} (no_transition);
-
-    % Labels for time
-    \node at (0, -1) {t};
-    \node at (4, -3) {t+1};
-\end{tikzpicture}
-    \caption{Climate Transition Risk}
-    \label{fig:climate_transition}
-\end{figure}
-
-
-\section{What are Green and Brown Assets?}
-
-\section{Expected Payoffs}
-
-\begin{figure}[htbp]
-    \centering
-    \begin{tikzpicture}[scale=1.5, every node/.style={font=\footnotesize}]
-
-    % Nodes
-    \node (start) at (0,0) [draw, circle] {CP};
-    \node (current) at (2,1.5) [draw, circle] {CP};
-    \node (transition) at (2,-1.5) [draw, circle] {NZ};
-    \node (current_green) at (4,2.5) {Green asset: Low payoff};
-    \node (current_brown) at (4,1) {Brown asset: High payoff};
-    \node (transition_green) at (4,-1) {Green asset: High payoff};
-    \node (transition_brown) at (4,-2.5) {Brown asset: Low payoff};
-
-    % Edges
-    \draw[->] (start) -- (current) node[midway, above] {No Transition};
-    \draw[->] (start) -- (transition) node[midway, below] {Transition};
-    \draw[->] (current) -- (current_green);
-    \draw[->] (current) -- (current_brown);
-    \draw[->] (transition) -- (transition_green);
-    \draw[->] (transition) -- (transition_brown);
+    %     % Edges
+    %     \draw (current) -- node[midway, above] {Transition} (net_zero);
+    %     \draw (current) -- node[midway, below] {No Transition} (no_transition);
     
-     % Labels for time
-     \node at (0, -1) {t};
-     \node at (4, -3) {t+1};   % Labels
-
-\end{tikzpicture}
-    \caption{Climate States of the World}
-    \label{fig:climate_risk}
-\end{figure}
-
-
-
-\section{Climate Risk Exposure and Expected Returns}
-
+    %     % Labels for time
+    %     \node at (0, -1) {t};
+    %     \node at (4, -3) {t+1};
+    % \end{tikzpicture}
+    %     \caption{Climate Transition Risk}
+    %     \label{fig:climate_transition}
+    % \end{figure}
+    
+    
+    % \begin{figure}[htbp]
+    %     \centering
+    %     \begin{tikzpicture}[scale=1.5, every node/.style={font=\footnotesize}]
+    
+    %     % Nodes
+    %     \node (start) at (0,0) [draw, circle] {CP};
+    %     \node (current) at (2,1.5) [draw, circle] {CP};
+    %     \node (transition) at (2,-1.5) [draw, circle] {NZ};
+    %     \node (current_green) at (4,2.5) {Green asset: Low payoff};
+    %     \node (current_brown) at (4,1) {Brown asset: High payoff};
+    %     \node (transition_green) at (4,-1) {Green asset: High payoff};
+    %     \node (transition_brown) at (4,-2.5) {Brown asset: Low payoff};
+    
+    %     % Edges
+    %     \draw[->] (start) -- (current) node[midway, above] {No Transition};
+    %     \draw[->] (start) -- (transition) node[midway, below] {Transition};
+    %     \draw[->] (current) -- (current_green);
+    %     \draw[->] (current) -- (current_brown);
+    %     \draw[->] (transition) -- (transition_green);
+    %     \draw[->] (transition) -- (transition_brown);
+        
+    %      % Labels for time
+    %      \node at (0, -1) {t};
+    %      \node at (4, -3) {t+1};   % Labels
+    
+    % \end{tikzpicture}
+    %     \caption{Climate States of the World}
+    %     \label{fig:climate_risk}
+    % \end{figure}
+    

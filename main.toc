@@ -3,16 +3,16 @@
 \contentsline {section}{\numberline {1.2}Risk Valuation}{3}{}%
 \contentsline {section}{\numberline {1.3}Risk and Beta}{5}{}%
 \contentsline {subsection}{\numberline {1.3.1}Expected Excess Returns and Covariance}{5}{}%
-\contentsline {subsection}{\numberline {1.3.2}Betas Formulation}{5}{}%
+\contentsline {subsection}{\numberline {1.3.2}Betas Formulation}{6}{}%
 \contentsline {subsection}{\numberline {1.3.3}Interpreting Excess Return and Beta Relationship}{6}{}%
 \contentsline {section}{\numberline {1.4}CAPM and Multifactor models}{8}{}%
 \contentsline {section}{\numberline {1.5}Conclusion}{9}{}%
-\contentsline {chapter}{\numberline {2}Climate Risk}{11}{}%
-\contentsline {section}{\numberline {2.1}Transition Scenarios as States of the World}{12}{}%
-\contentsline {section}{\numberline {2.2}What are Green and Brown Assets?}{12}{}%
-\contentsline {section}{\numberline {2.3}Expected Payoffs}{12}{}%
-\contentsline {section}{\numberline {2.4}Climate Risk Exposure and Expected Returns}{12}{}%
-\contentsline {chapter}{\numberline {3}Risk Factors: Empirical Methods}{15}{}%
-\contentsline {chapter}{\numberline {4}The Green Factor}{17}{}%
-\contentsline {chapter}{\numberline {5}Time-Varying Risk Premia}{19}{}%
-\contentsline {chapter}{\numberline {6}Chasing the Climate Risk Factor}{21}{}%
+\contentsline {chapter}{\numberline {2}Climate Transition Risk and Asset Pricing}{11}{}%
+\contentsline {section}{\numberline {2.1}Climate Transition Risk Dynamic}{11}{}%
+\contentsline {section}{\numberline {2.2}Climate Transition Risk Valuation}{13}{}%
+\contentsline {section}{\numberline {2.3}Climate Transition Risk Beta and Excess Returns}{13}{}%
+\contentsline {section}{\numberline {2.4}Conclusion}{14}{}%
+\contentsline {chapter}{\numberline {3}Empirical Methods for Asset Pricing}{15}{}%
+\contentsline {chapter}{\numberline {4}The Narrative Approach}{17}{}%
+\contentsline {chapter}{\numberline {5}Mimicking Portfolio}{19}{}%
+\contentsline {chapter}{\numberline {6}Quantity-Based Approach}{21}{}%
