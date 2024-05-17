@@ -296,29 +296,42 @@ are real numbers:
     E(cR^a + dR^b) = cE(R^a) + dE(R^b)
 \end{equation}
 
-You can derive this by using the definition of 
-expectations $E(R) = \sum_i R_i \pi_i$:
+Let's check this with Python:
 
-\begin{equation}
-    E(cR^a) = \sum_i \pi_i c R^a_i  = c\sum_i  \pi_i R^a_i = cE(R^a)
-\end{equation}
+\begin{python}
+import numpy as np
+
+# Define the values for random variable R^a and its associated probabilities
+values_a = np.array([1.1, 1.2, 0.7, 0.0])  # Example values R^a_i
+probabilities = np.array([0.6, 0.1, 0.25, 0.05])  # Corresponding probabilities pi_i
+
+# Calculate the expected value of R^a
+expected_value_a = np.sum(values_a * probabilities)
+print("Expected Value E(R^a):", expected_value_a)
+
+# Define the constant c
+c = 0.5
+
+# Calculate the expected value of cR^a using the definition
+expected_value_cRa = np.sum(c * values_a * probabilities)
+print("Expected Value E(cR^a):", expected_value_cRa)
+
+# Calculate c times the expected value of R^a
+c_times_expected_value_a = c * expected_value_a
+print("c * E(R^a):", c_times_expected_value_a)
+
+# Check if E(cR^a) is numerically equal to cE(R^a)
+if np.isclose(expected_value_cRa, c_times_expected_value_a):
+    print("Numerically verified that E(cR^a) = cE(R^a)")
+else:
+    print("Numerical discrepancy found")
+\end{python}
 
 Variance of sums works like taking a square:
 
 \begin{equation}
     \sigma^2(R^a + R^b) = \sigma^2(R^a) + \sigma^2(R^b) + 2\text{Cov}(R^a, R^b)
 \end{equation}
-
-You can derive this with the definition of variance $\sigma^2(R) = E[(R - E(R))^2]$ and 
-the definition of covariance $\text{Cov}(R^a, R^b) = E[(R^a - E(R^a))(R^b - E(R^b))]$:
-
-\begin{align}
-    \sigma^2(R^a + R^b) &= E[(R^a + R^b - E(R^a + R^b))^2] \\
-    &= E[(R^a + R^b - E(R^a) - E(R^b))^2] \\
-    &= E[(R^a - E(R^a) + R^b - E(R^b))^2] \\
-    &= E[(R^a - E(R^a))^2 + (R^b - E(R^b))^2 + 2(R^a - E(R^a))(R^b - E(R^b))] \\
-    &= \sigma^2(R^a) + \sigma^2(R^b) + 2\text{Cov}(R^a, R^b)
-\end{align}
 
 With constants $c$ and $d$:	
 
@@ -332,6 +345,43 @@ The covariance works linearly with constants:
     \text{Cov}(cR^a, dR^b) = cd\text{Cov}(R^a, R^b)
 \end{equation}
 
+In Python:
+
+\begin{python}
+import numpy as np
+
+# Define the values and probabilities for two random variables R^a and R^b
+values_a = np.array([1.1, 1.2, 0.7, 0.0])  # Example values R^a_i
+values_b = np.array([1.0, 1.3, 0.4, 0.1])  # Example values R^b_i
+probabilities = np.array([0.6, 0.1, 0.25, 0.05])  # Corresponding probabilities pi_i
+
+# Calculate the expected values (means) of R^a and R^b
+expected_value_a = np.sum(values_a * probabilities)
+expected_value_b = np.sum(values_b * probabilities)
+
+# Calculate the covariance between R^a and R^b
+covariance_ab = np.sum(probabilities * (values_a - expected_value_a) * (values_b - expected_value_b))
+print("Covariance Cov(R^a, R^b):", covariance_ab)
+
+# Constants c and d
+c = 0.5  # Scaling factor for R^a
+d = 0.8  # Scaling factor for R^b
+
+# Calculate the covariance between cR^a and dR^b
+covariance_cRa_dRb = np.sum(probabilities * (c * (values_a - expected_value_a)) * (d * (values_b - expected_value_b)))
+print("Covariance Cov(cR^a, dR^b):", covariance_cRa_dRb)
+
+# Calculate cd * Cov(R^a, R^b)
+cd_covariance_ab = c * d * covariance_ab
+print("cd * Cov(R^a, R^b):", cd_covariance_ab)
+
+# Check if Cov(cR^a, dR^b) is numerically equal to cd * Cov(R^a, R^b)
+if np.isclose(covariance_cRa_dRb, cd_covariance_ab):
+    print("Numerically verified that Cov(cR^a, dR^b) = cd * Cov(R^a, R^b)")
+else:
+    print("Numerical discrepancy found")
+\end{python}
+
 Normal distributions have an extra property. 
 Linear combinations of normally distributed random variables 
 are again normally distributed. 
@@ -341,7 +391,80 @@ Precisely, if $R^a$ and $R^b$ are normally distributed and:
     R^p = cR^a + dR^b
 \end{equation}
 
-then $R^p$ is normally distributed. Its mean is:
+then $R^p$ is normally distributed. 
+
+\section{Sample Returns}
+
+
+\section{Exercises}
+
+\subsection{}
+
+Compute the expected return $E(R)$ for the 
+$R = [1.1, 1.2, 0.7, 0.0]$ with probabilities
+$\pi = [0.6, 0.1, 0.25, 0.05]$ with Python.
+
+\subsection{}
+
+Derive $E(cR^a) = cE(R^a)$ using the 
+definition of expectations $E(R) = \sum_i R_i \pi_i$.
+
+\subsection{}
+
+Derive the variance of sums formula:
+\begin{equation}
+    \sigma^2(R^a + R^b) = \sigma^2(R^a) + \sigma^2(R^b) + 2\text{Cov}(R^a, R^b)
+\end{equation}
+
+using the definition of variance $\sigma^2(R) = E[(R - E(R))^2]$ and
+the definition of covariance $\text{Cov}(R^a, R^b) = E[(R^a - E(R^a))(R^b - E(R^b))]$.
+
+
+
+\subsection{}
+
+Express the expected return $E(R^p)$ 
+and variance $\sigma^2(R^p)$ of the
+portfolio $R^p$ with returns $R^a$ and $R^b$
+and weights $c$ and $d$.
+
+
+\section{Solutions}
+
+\subsection{}
+
+\begin{python}
+import numpy as np
+
+# Define the returns and their corresponding probabilities
+returns = np.array([1.1, 1.2, 0.7, 0.0])  # Values of R
+probabilities = np.array([0.6, 0.1, 0.25, 0.05])  # Corresponding probabilities pi
+
+# Calculate the expected return E(R)
+expected_return = np.sum(returns * probabilities)
+print("Expected Return E(R):", expected_return)
+\end{python}
+
+
+\subsection{}
+
+\begin{equation}
+    E(cR^a) = \sum_i \pi_i c R^a_i  = c\sum_i  \pi_i R^a_i = cE(R^a)
+\end{equation}
+
+\subsection{}
+
+\begin{align}
+    \sigma^2(R^a + R^b) &= E[(R^a + R^b - E(R^a + R^b))^2] \\
+    &= E[(R^a + R^b - E(R^a) - E(R^b))^2] \\
+    &= E[(R^a - E(R^a) + R^b - E(R^b))^2] \\
+    &= E[(R^a - E(R^a))^2 + (R^b - E(R^b))^2 + 2(R^a - E(R^a))(R^b - E(R^b))] \\
+    &= \sigma^2(R^a) + \sigma^2(R^b) + 2\text{Cov}(R^a, R^b)
+\end{align}
+
+\subsection{}
+
+Its mean is:
 
 \begin{equation}
     E(R^p) = cE(R^a) + dE(R^b)
@@ -352,12 +475,3 @@ and its variance is:
 \begin{equation}
     \sigma^2(R^p) = c^2\sigma^2(R^a) + d^2\sigma^2(R^b) + 2cd\text{Cov}(R^a, R^b)
 \end{equation}
-
-
-\section{Sample Returns}
-
-
-\section{Exercises}
-
-\section{Solutions}
-
