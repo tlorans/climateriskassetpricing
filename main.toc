@@ -2,16 +2,28 @@
 \contentsline {chapter}{\numberline {2}Modelling Returns}{3}{}%
 \contentsline {section}{\numberline {2.1}Returns as Random Variables}{3}{}%
 \contentsline {section}{\numberline {2.2}Expected Value and Variance of Returns}{6}{}%
-\contentsline {chapter}{\numberline {3}Regression}{7}{}%
-\contentsline {section}{\numberline {3.1}$\beta $ estimation}{7}{}%
-\contentsline {chapter}{\numberline {4}Mimicking the Market Portfolio}{9}{}%
-\contentsline {chapter}{\numberline {5}Time Series}{11}{}%
-\contentsline {chapter}{\numberline {6}Tracking Portfolio for News}{13}{}%
-\contentsline {chapter}{\numberline {7}Climate Hedge Targets}{15}{}%
-\contentsline {section}{\numberline {7.1}Climate News Series}{15}{}%
-\contentsline {section}{\numberline {7.2}Climate News Innovation}{15}{}%
-\contentsline {subsection}{\numberline {7.2.1}Climate News Shock}{16}{}%
-\contentsline {section}{\numberline {7.3}Portfolio Exposure to Climate News Innovations}{16}{}%
-\contentsline {subsection}{\numberline {7.3.1}Multifactor Regression}{16}{}%
-\contentsline {subsection}{\numberline {7.3.2}Climate News Innovations as a Risk Factor}{16}{}%
-\contentsline {chapter}{\numberline {8}Climate Risk Mimicking Portfolio}{17}{}%
+\contentsline {section}{\numberline {2.3}Returns Algebra}{8}{}%
+\contentsline {section}{\numberline {2.4}Sample Returns}{10}{}%
+\contentsline {section}{\numberline {2.5}Exercises}{10}{}%
+\contentsline {section}{\numberline {2.6}Solutions}{10}{}%
+\contentsline {chapter}{\numberline {3}Regression}{11}{}%
+\contentsline {section}{\numberline {3.1}$\beta $ estimation}{11}{}%
+\contentsline {section}{\numberline {3.2}Matrix Algebra}{12}{}%
+\contentsline {section}{\numberline {3.3}Matrix Form}{12}{}%
+\contentsline {section}{\numberline {3.4}OLS vs. GLS}{12}{}%
+\contentsline {section}{\numberline {3.5}Exercises}{12}{}%
+\contentsline {section}{\numberline {3.6}Solutions}{12}{}%
+\contentsline {chapter}{\numberline {4}Mimicking the Market Portfolio}{13}{}%
+\contentsline {chapter}{\numberline {5}Time Series}{15}{}%
+\contentsline {section}{\numberline {5.1}Unconditional and Conditional Expectations}{15}{}%
+\contentsline {section}{\numberline {5.2}White Noise}{15}{}%
+\contentsline {section}{\numberline {5.3}Means and Trends}{15}{}%
+\contentsline {chapter}{\numberline {6}Tracking Portfolio for News}{17}{}%
+\contentsline {chapter}{\numberline {7}Climate Hedge Targets}{19}{}%
+\contentsline {section}{\numberline {7.1}Climate News Series}{19}{}%
+\contentsline {section}{\numberline {7.2}Climate News Innovation}{19}{}%
+\contentsline {subsection}{\numberline {7.2.1}Climate News Shock}{20}{}%
+\contentsline {section}{\numberline {7.3}Portfolio Exposure to Climate News Innovations}{20}{}%
+\contentsline {subsection}{\numberline {7.3.1}Multifactor Regression}{20}{}%
+\contentsline {subsection}{\numberline {7.3.2}Climate News Innovations as a Risk Factor}{20}{}%
+\contentsline {chapter}{\numberline {8}Climate Risk Mimicking Portfolio}{21}{}%

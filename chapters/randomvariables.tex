@@ -193,3 +193,171 @@ you how much $R$ is far away from its mean. It
 measures the spread of the distribution. High 
 variance is not a good thing. It will be 
 our measure of \textit{risk}.
+
+Using our previous example, the Python code is:
+
+\begin{python}
+import numpy as np
+
+# Define the values that R can take (R_i) and their associated probabilities (pi_i)
+values = np.array([1.1, 1.2, 0.7, 0.0])  # Example values R_i
+probabilities = np.array([0.6, 0.1, 0.25, 0.05])  # Corresponding probabilities pi_i
+
+# Calculate the expected value (mean) of R
+expected_value = np.sum(values * probabilities)
+print("Expected Value E(R):", expected_value)
+
+# Calculate the variance of R
+variance = np.sum((values - expected_value)**2 * probabilities)
+print("Variance of R:", variance)
+
+\end{python}
+
+
+The \textit{covariance} is:
+
+\begin{equation}
+    \text{Cov}(R^a, R^b) = E[(R^a - E(R^a))(R^b - E(R^b))]
+    = \sum_{i} \pi_{i}[(R^a_i - E(R^a))(R^b_i - E(R^b))]
+\end{equation}
+
+It measures the tendency of two returns to move 
+together. It's positive if they tend to move in the 
+same direction, negative if one tends to go up when
+the other goes down. It's zero if they are independent.
+
+The size of the covariance depends on the unit 
+of measurement. For example, if we measure 
+one return in cents, the covariance goes up by 
+a factor of 100, even though the relationship
+between the two returns is the same. The 
+\textit{correlation coefficient} resolves this problem:
+
+\begin{equation}
+    \text{Corr}(R^a, R^b) = \frac{\text{Cov}(R^a, R^b)}{\sigma(R^a)\sigma(R^b)}
+\end{equation}
+
+The correlation coefficient is always between -1 and 1.
+
+Keeping the same example as before but adding a second return, 
+the Python code is:
+
+\begin{python}
+import numpy as np
+
+# Define the values and probabilities for two random variables R^a and R^b
+values_a = np.array([1.1, 1.2, 0.7, 0.0])  # Example values R^a_i
+values_b = np.array([1.0, 1.3, 0.4, 0.1])  # Example values R^b_i
+probabilities = np.array([0.6, 0.1, 0.25, 0.05])  # Corresponding probabilities pi_i
+
+# Calculate the expected values (means) of R^a and R^b
+expected_value_a = np.sum(values_a * probabilities)
+expected_value_b = np.sum(values_b * probabilities)
+
+# Calculate the covariance between R^a and R^b
+covariance = np.sum(probabilities * (values_a - expected_value_a) * (values_b - expected_value_b))
+print("Covariance between R^a and R^b:", covariance)
+
+# Calculate the variances of R^a and R^b
+variance_a = np.sum((values_a - expected_value_a)**2 * probabilities)
+variance_b = np.sum((values_b - expected_value_b)**2 * probabilities)
+
+# Calculate the standard deviations of R^a and R^b
+std_dev_a = np.sqrt(variance_a)
+std_dev_b = np.sqrt(variance_b)
+
+# Calculate the correlation coefficient
+correlation_coefficient = covariance / (std_dev_a * std_dev_b)
+print("Correlation Coefficient between R^a and R^b:", correlation_coefficient)
+\end{python}
+
+\section{Returns Algebra}
+
+We will have to do a lot of manipulation of random variables. 
+For example, we will want to know what is the mean 
+and standard deviation of a \textit{portfolio} of 
+two returns. To derive any of these rules, we have to keep in mind
+ the definitions in the previous section.
+
+First interesting fact: constants come out of 
+expectations and expectations of sums are equals 
+to sums of expectations. For example, if $c$ and $d$
+are real numbers:
+
+\begin{equation}
+    E(cR^a) = cE(R^a)
+\end{equation}
+
+\begin{equation}
+    E(R^a + R^b) = E(R^a) + E(R^b)
+\end{equation}
+
+\begin{equation}
+    E(cR^a + dR^b) = cE(R^a) + dE(R^b)
+\end{equation}
+
+You can derive this by using the definition of 
+expectations $E(R) = \sum_i R_i \pi_i$:
+
+\begin{equation}
+    E(cR^a) = \sum_i \pi_i c R^a_i  = c\sum_i  \pi_i R^a_i = cE(R^a)
+\end{equation}
+
+Variance of sums works like taking a square:
+
+\begin{equation}
+    \sigma^2(R^a + R^b) = \sigma^2(R^a) + \sigma^2(R^b) + 2\text{Cov}(R^a, R^b)
+\end{equation}
+
+You can derive this with the definition of variance $\sigma^2(R) = E[(R - E(R))^2]$ and 
+the definition of covariance $\text{Cov}(R^a, R^b) = E[(R^a - E(R^a))(R^b - E(R^b))]$:
+
+\begin{align}
+    \sigma^2(R^a + R^b) &= E[(R^a + R^b - E(R^a + R^b))^2] \\
+    &= E[(R^a + R^b - E(R^a) - E(R^b))^2] \\
+    &= E[(R^a - E(R^a) + R^b - E(R^b))^2] \\
+    &= E[(R^a - E(R^a))^2 + (R^b - E(R^b))^2 + 2(R^a - E(R^a))(R^b - E(R^b))] \\
+    &= \sigma^2(R^a) + \sigma^2(R^b) + 2\text{Cov}(R^a, R^b)
+\end{align}
+
+With constants $c$ and $d$:	
+
+\begin{equation}
+    \sigma^2(cR^a + dR^b) = c^2\sigma^2(R^a) + d^2\sigma^2(R^b) + 2cd\text{Cov}(R^a, R^b)
+\end{equation}
+
+The covariance works linearly with constants:
+
+\begin{equation}
+    \text{Cov}(cR^a, dR^b) = cd\text{Cov}(R^a, R^b)
+\end{equation}
+
+Normal distributions have an extra property. 
+Linear combinations of normally distributed random variables 
+are again normally distributed. 
+Precisely, if $R^a$ and $R^b$ are normally distributed and:
+
+\begin{equation}
+    R^p = cR^a + dR^b
+\end{equation}
+
+then $R^p$ is normally distributed. Its mean is:
+
+\begin{equation}
+    E(R^p) = cE(R^a) + dE(R^b)
+\end{equation}
+
+and its variance is:
+
+\begin{equation}
+    \sigma^2(R^p) = c^2\sigma^2(R^a) + d^2\sigma^2(R^b) + 2cd\text{Cov}(R^a, R^b)
+\end{equation}
+
+
+\section{Sample Returns}
+
+
+\section{Exercises}
+
+\section{Solutions}
+
