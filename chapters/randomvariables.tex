@@ -101,7 +101,6 @@ given by the formula:
 \end{equation}
 
 The graph of this function looks like this:
-
 \begin{figure}[!htbp]
     \centering
     \begin{tikzpicture}
@@ -109,19 +108,18 @@ The graph of this function looks like this:
             axis lines=middle,
             xlabel={$R$},
             ylabel={$f(R)$},
-            xtick=\empty, % Removes x ticks
-            ytick=\empty, % Removes y ticks
+            xtick=\empty,  % Removes x ticks
+            ytick=\empty,  % Removes y ticks
             enlargelimits,
             clip=false,
-            domain=-3:3,
+            domain=0.8:1.2,  % Adjusted domain to focus around the mean
             samples=100,
             ymin=0,
-            ymax=0.45,
-            % title={Normal Distribution of Returns}
+            ymax=9,  % Adjusted y-max for better visibility
         ]
         % Normal distribution parameters mu and sigma
-        \def\mucomp{0}
-        \def\sigmacomp{1}
+        \def\mucomp{1}
+        \def\sigmacomp{0.05}
         % Normal distribution formula
         \addplot[blue, thick] {1/(sqrt(2*pi*\sigmacomp^2)) * exp(-((x-\mucomp)^2)/(2*\sigmacomp^2))};
         
@@ -129,7 +127,7 @@ The graph of this function looks like this:
         \node[pin={[pin edge={thick}, pin distance=0mm]90:{$\mu$}}] at (axis cs:\mucomp, 0) {};
     
         % Highlighting the spread influenced by sigma
-        \draw[red, thick, <->] (axis cs:\mucomp-\sigmacomp,0.24) -- (axis cs:\mucomp+\sigmacomp,0.24)
+        \draw[red, thick, <->] (axis cs:\mucomp-\sigmacomp,5) -- (axis cs:\mucomp+\sigmacomp,5)
             node[pos=0.5, fill=white] {$\sigma$};
     
     \end{axis}
@@ -393,7 +391,56 @@ Precisely, if $R^a$ and $R^b$ are normally distributed and:
 
 then $R^p$ is normally distributed. 
 
+A variable $R$ is \textit{lognormally} distributed 
+if $r := \ln(R)$ is normally distributed.
+This is a nice model for stock returns since you 
+can never lose more than all your money (\textit{i.e.}
+you can never see $R < 0$). A lognormal distribution
+captures this property.
+A normal distribution always includes events 
+in which $R < 0$, which is not possible for stock returns.
+
 \section{Sample Returns}
+
+So far, we have worked as if we knew the probabilities
+of each return. In reality, we don't. We have to
+\textit{estimate} them from \textit{sample returns}.
+Similarly, if we don't know the mean, variance, regression
+coefficients, etc., we have to estimate them as well.
+That's what \textit{statistics} is about.
+
+The \textit{average} or \textit{sample mean} is:
+
+\begin{equation}
+    \bar{R} = \frac{1}{T}\sum_{i=1}^N R_t
+\end{equation}
+
+where $\{R_0, R_1, \ldots, R_{T}\}$ is a \textit{sample}
+of data on a stock returns. We need to keep the 
+\textit{sample mean} and the true, or \textit{population mean}
+separate in our heads. For example, the true 
+probabilities that a coin will lands heads is $0.5$, 
+so the mean of a bet on a coin toss (1\$ if heads, -1\$ if tails)
+is $0.5 \times 1 + 0.5 \times -1 = 0$.
+A \textit{sample} of coin tosses might be $\{H, T, H, H, T\}$,
+In that \textit{sample}, the frequency of heads is $3/5 = 0.6$ and 
+the frequency of tails is $2/5 = 0.4$. So the \textit{sample mean}
+of a coin toss bet is $0.6 \times 1 + 0.4 \times -1 = 0.2$.
+
+As the sample gets bigger, the \textit{sample mean} 
+will gets closer to the \textit{population mean}. 
+That property of the sample mean is called \textit{consistency}.
+It makes it a good estimator of the population mean.
+But the sample and population mean are not the same thing 
+for any finite sample.
+
+Also, sample means approach population means only if 
+you are repeatedly doing the same thing, like tossing
+a fair coin. This may not be true for stock returns. 
+If there are days when expected returns are high and
+days when they are low, then the average return 
+will not necessarily recover the expected return.
+
 
 
 \section{Conclusion}

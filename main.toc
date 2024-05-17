@@ -4,17 +4,17 @@
 \contentsline {section}{\numberline {2.2}Expected Value and Variance of Returns}{6}{}%
 \contentsline {section}{\numberline {2.3}Returns Algebra}{8}{}%
 \contentsline {section}{\numberline {2.4}Sample Returns}{11}{}%
-\contentsline {section}{\numberline {2.5}Conclusion}{11}{}%
-\contentsline {section}{\numberline {2.6}Exercises}{12}{}%
-\contentsline {subsection}{\numberline {2.6.1}}{12}{}%
-\contentsline {subsection}{\numberline {2.6.2}}{12}{}%
-\contentsline {subsection}{\numberline {2.6.3}}{12}{}%
-\contentsline {subsection}{\numberline {2.6.4}}{12}{}%
-\contentsline {section}{\numberline {2.7}Solutions}{13}{}%
-\contentsline {subsection}{\numberline {2.7.1}}{13}{}%
-\contentsline {subsection}{\numberline {2.7.2}}{13}{}%
-\contentsline {subsection}{\numberline {2.7.3}}{13}{}%
-\contentsline {subsection}{\numberline {2.7.4}}{13}{}%
+\contentsline {section}{\numberline {2.5}Conclusion}{12}{}%
+\contentsline {section}{\numberline {2.6}Exercises}{13}{}%
+\contentsline {subsection}{\numberline {2.6.1}}{13}{}%
+\contentsline {subsection}{\numberline {2.6.2}}{13}{}%
+\contentsline {subsection}{\numberline {2.6.3}}{13}{}%
+\contentsline {subsection}{\numberline {2.6.4}}{13}{}%
+\contentsline {section}{\numberline {2.7}Solutions}{14}{}%
+\contentsline {subsection}{\numberline {2.7.1}}{14}{}%
+\contentsline {subsection}{\numberline {2.7.2}}{14}{}%
+\contentsline {subsection}{\numberline {2.7.3}}{14}{}%
+\contentsline {subsection}{\numberline {2.7.4}}{14}{}%
 \contentsline {chapter}{\numberline {3}Regression}{15}{}%
 \contentsline {section}{\numberline {3.1}$\beta $ estimation}{15}{}%
 \contentsline {section}{\numberline {3.2}Matrix Algebra}{16}{}%
