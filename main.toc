@@ -27,7 +27,9 @@
 \contentsline {section}{\numberline {5.1}Unconditional and Conditional Expectations}{19}{}%
 \contentsline {section}{\numberline {5.2}White Noise}{19}{}%
 \contentsline {section}{\numberline {5.3}Means and Trends}{19}{}%
-\contentsline {chapter}{\numberline {6}Predictability with Returns}{21}{}%
+\contentsline {chapter}{\numberline {6}Predictability and Returns}{21}{}%
+\contentsline {section}{\numberline {6.1}Time-Varying Expected Returns}{21}{}%
+\contentsline {section}{\numberline {6.2}Present-Value Identity and Predictability}{21}{}%
 \contentsline {chapter}{\numberline {7}Tracking Portfolio for News}{23}{}%
 \contentsline {chapter}{\numberline {8}Climate Hedge Targets}{25}{}%
 \contentsline {section}{\numberline {8.1}Climate News Series}{25}{}%
