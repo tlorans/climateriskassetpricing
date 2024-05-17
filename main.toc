@@ -1,29 +1,15 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{}%
-\contentsline {chapter}{\numberline {2}Mimicking Portfolio}{3}{}%
-\contentsline {section}{\numberline {2.1}Random Variables}{3}{}%
-\contentsline {section}{\numberline {2.2}Regression}{4}{}%
-\contentsline {subsection}{\numberline {2.2.1}$\beta $ estimation}{5}{}%
-\contentsline {section}{\numberline {2.3}Mimicking the Market Portfolio}{5}{}%
-\contentsline {section}{\numberline {2.4}Time Series}{5}{}%
-\contentsline {section}{\numberline {2.5}Tracking Portfolio for News}{5}{}%
-\contentsline {section}{\numberline {2.6}Climate Hedge Target}{5}{}%
-\contentsline {section}{\numberline {2.7}Climate Risk Mimicking Portfolio}{5}{}%
-\contentsline {section}{\numberline {2.8}Conclusion}{6}{}%
-\contentsline {chapter}{\numberline {3}Climate Hedge Targets}{7}{}%
-\contentsline {section}{\numberline {3.1}Climate News Series}{7}{}%
-\contentsline {section}{\numberline {3.2}Climate News Innovation}{7}{}%
-\contentsline {subsection}{\numberline {3.2.1}AR(1) Model}{8}{}%
-\contentsline {subsection}{\numberline {3.2.2}Climate News Shock}{8}{}%
-\contentsline {section}{\numberline {3.3}Portfolio Exposure to Climate News Innovations}{8}{}%
-\contentsline {subsection}{\numberline {3.3.1}Multifactor Regression}{8}{}%
-\contentsline {subsection}{\numberline {3.3.2}Climate News Innovations as a Risk Factor}{8}{}%
-\contentsline {chapter}{\numberline {4}The Narrative Approach}{9}{}%
-\contentsline {section}{\numberline {4.1}Green-Minus-Brown Portfolio}{9}{}%
-\contentsline {section}{\numberline {4.2}Industry Strategy}{9}{}%
-\contentsline {chapter}{\numberline {5}The Quantity-Based Approach}{11}{}%
-\contentsline {section}{\numberline {5.1}The Model}{11}{}%
-\contentsline {section}{\numberline {5.2}Idiosyncratic Beliefs Shocks and Portfolio Changes}{11}{}%
-\contentsline {subsection}{\numberline {5.2.1}Idiosyncratic Beliefs Shocks}{11}{}%
-\contentsline {subsection}{\numberline {5.2.2}Portfolio Changes}{11}{}%
-\contentsline {subsection}{\numberline {5.2.3}Portfolio Changes Response to Idiosyncratic Climate Shocks}{11}{}%
-\contentsline {section}{\numberline {5.3}Portfolio Construction}{11}{}%
+\contentsline {chapter}{\numberline {2}Random Variables}{3}{}%
+\contentsline {chapter}{\numberline {3}Regression}{5}{}%
+\contentsline {section}{\numberline {3.1}$\beta $ estimation}{5}{}%
+\contentsline {chapter}{\numberline {4}Mimicking the Market Portfolio}{7}{}%
+\contentsline {chapter}{\numberline {5}Time Series}{9}{}%
+\contentsline {chapter}{\numberline {6}Tracking Portfolio for News}{11}{}%
+\contentsline {chapter}{\numberline {7}Climate Hedge Targets}{13}{}%
+\contentsline {section}{\numberline {7.1}Climate News Series}{13}{}%
+\contentsline {section}{\numberline {7.2}Climate News Innovation}{13}{}%
+\contentsline {subsection}{\numberline {7.2.1}Climate News Shock}{14}{}%
+\contentsline {section}{\numberline {7.3}Portfolio Exposure to Climate News Innovations}{14}{}%
+\contentsline {subsection}{\numberline {7.3.1}Multifactor Regression}{14}{}%
+\contentsline {subsection}{\numberline {7.3.2}Climate News Innovations as a Risk Factor}{14}{}%
+\contentsline {chapter}{\numberline {8}Climate Risk Mimicking Portfolio}{15}{}%

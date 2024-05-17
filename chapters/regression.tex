@@ -1,0 +1,50 @@
+\chapter{Regression}
+
+
+We will run regression, for example of a return 
+on the market return:
+
+\begin{equation}
+    \label{eq:regression}
+    R_t = \alpha + \beta R_{m,t} + \epsilon_t
+\end{equation}
+
+where $R_t$ is the return on the asset, $R_{m,t}$ is the return on the market
+portfolio, $\alpha$ is the intercept, $\beta$ is the slope coefficient and
+$\epsilon_t$ is the regression residual.
+
+We may sometimes run multiple regressions of returns on the return
+of several portfolios, for example:
+
+\begin{equation}
+    \label{eq:multiregression}
+    R_t = \alpha + \beta R_{m,t} + \gamma R_{p,t} + \epsilon_t
+\end{equation}
+
+where $R_p$ is the return on the portfolio of interest.
+
+The generic form is:
+
+\begin{equation}
+    \label{eq:genericregression}
+    y_t = \alpha + \beta_1 x_{1,t} + \beta_2 x_{2,t} + \ldots + \beta_n x_{n,t} + \epsilon_t
+\end{equation}
+
+\section{$\beta$ estimation}
+
+Starting with:
+
+\begin{equation}
+y_t = \alpha + \beta x_t + \epsilon_t
+\end{equation}
+
+With the usual assumption that errors are uncorrelated, we have 
+the right hand variables $E(\epsilon_t x_t) = 0$ and $E(\epsilon_t) = 0$.
+
+Multiplying both sides by $x_t - E(x_t)$ and taking expectations:
+
+
+\begin{equation}
+    \label{eq:population}
+    \beta = \frac{Cov(y,x)}{Var(x)}
+\end{equation}
