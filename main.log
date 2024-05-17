@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.1)  17 MAY 2024 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.1)  17 MAY 2024 11:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -439,7 +439,7 @@ File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
-) (./main.aux (./chapters/intro.aux) (./chapters/randomvariables.aux) (./chapters/regression.aux) (./chapters/mimickingmarket.aux) (./chapters/timeseries.aux) (./chapters/trackingnews.aux) (./chapters/hedgetarget.aux) (./chapters/climateriskmimicking.aux
+) (./main.aux (./chapters/intro.aux) (./chapters/randomvariables.aux) (./chapters/regression.aux) (./chapters/mimickingmarket.aux) (./chapters/timeseries.aux) (./chapters/predictability.aux) (./chapters/trackingnews.aux) (./chapters/hedgetarget.aux) (./chapters/climateriskmimicking.aux
 
 LaTeX Warning: Label `eq:regression' multiply defined.
 
@@ -554,27 +554,27 @@ Overfull \hbox (12.32095pt too wide) detected at line 222
 [][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]; R[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 [(\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 ))(\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 ))] = [] \OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 [(\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 ))(\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 ))]
  []
 
-[7] [8] [9] [10] [11]
-Overfull \hbox (27.08362pt too wide) detected at line 463
+[7] [8] [9] [10] [11] [12]
+Overfull \hbox (27.08362pt too wide) detected at line 466
 []
  []
 
-) [12]
+) [13]
 \openout2 = `chapters/regression.aux'.
 
- (./chapters/regression.tex
+ (./chapters/regression.tex [14
+
+
+
+
+]
 Chapter 3.
-[13
-
-
-
-
-]) [14]
+[15]) [16]
 \openout2 = `chapters/mimickingmarket.aux'.
 
  (./chapters/mimickingmarket.tex
 Chapter 4.
-) [15
+) [17
 
 
 
@@ -582,7 +582,7 @@ Chapter 4.
 ]
 \openout2 = `chapters/timeseries.aux'.
 
- (./chapters/timeseries.tex [16
+ (./chapters/timeseries.tex [18
 
 
 
@@ -594,46 +594,56 @@ Overfull \hbox (3.8192pt too wide) in paragraph at lines 3--3
 []\T1/cmr/bx/n/17.28 (-20) Unconditional and Con-di-tional Ex-pec-ta-tions 
  []
 
-) [17]
-\openout2 = `chapters/trackingnews.aux'.
+) [19]
+\openout2 = `chapters/predictability.aux'.
 
- (./chapters/trackingnews.tex [18
+ (./chapters/predictability.tex [20
 
 
 
 
 ]
 Chapter 6.
-) [19]
-\openout2 = `chapters/hedgetarget.aux'.
+) [21]
+\openout2 = `chapters/trackingnews.aux'.
 
- (./chapters/hedgetarget.tex [20
+ (./chapters/trackingnews.tex [22
 
 
 
 
 ]
 Chapter 7.
+) [23]
+\openout2 = `chapters/hedgetarget.aux'.
 
-LaTeX Warning: Citation `engle2020hedging' on page 21 undefined on input line 15.
+ (./chapters/hedgetarget.tex [24
 
-[21]) [22]
+
+
+
+]
+Chapter 8.
+
+LaTeX Warning: Citation `engle2020hedging' on page 25 undefined on input line 15.
+
+[25]) [26]
 \openout2 = `chapters/climateriskmimicking.aux'.
 
  (./chapters/climateriskmimicking.tex
-Chapter 8.
-) [23
+Chapter 9.
+) [27
 
 
 
 
-] [24
+] [28
 
 
 
 ]
 No file main.bbl.
-(./main.aux (./chapters/intro.aux) (./chapters/randomvariables.aux) (./chapters/regression.aux) (./chapters/mimickingmarket.aux) (./chapters/timeseries.aux) (./chapters/trackingnews.aux) (./chapters/hedgetarget.aux) (./chapters/climateriskmimicking.aux))
+(./main.aux (./chapters/intro.aux) (./chapters/randomvariables.aux) (./chapters/regression.aux) (./chapters/mimickingmarket.aux) (./chapters/timeseries.aux) (./chapters/predictability.aux) (./chapters/trackingnews.aux) (./chapters/hedgetarget.aux) (./chapters/climateriskmimicking.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -647,18 +657,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 30471 strings out of 474136
- 750460 string characters out of 5748497
+ 30496 strings out of 474136
+ 751398 string characters out of 5748497
  2311190 words of memory out of 5000000
- 52188 multiletter control sequences out of 15000+600000
+ 52206 multiletter control sequences out of 15000+600000
  580125 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,107p,1039b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfst1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (28 pages, 348243 bytes).
+Output written on main.pdf (32 pages, 351320 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 200 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  44562 words of extra memory for PDF output out of 51595 (max. 10000000)
 
