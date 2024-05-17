@@ -441,7 +441,36 @@ If there are days when expected returns are high and
 days when they are low, then the average return 
 will not necessarily recover the expected return.
 
+The \textit{sample variance} is:
 
+\begin{equation}
+    s^2 = \hat{\sigma}^2 = \frac{1}{T - 1}\sum_{i=1}^T (R_t - \bar{R})^2
+\end{equation}
+
+The sample mean and sample variance vary from sample to sample.
+Let's flip a coin, with $Heads = +1$ and $Tails = -1$.
+If we get $\{H, T, H, H, T\}$, the sample mean is 
+$0.2$, but if we get $\{H, H, H, H, H\}$, the sample mean is $1$.
+The true population mean, of course, is $0$.
+Thus, the sample mean, the standard deviation, and other 
+statistics are also \textit{random variables}, as 
+they vary from sample to sample.
+They are random variables that depends on the whole sample, 
+not just what happened one day, but they are random variables
+nonetheless. The population mean and variance are just 
+numbers. 
+
+We can then ask, "how much does the sample mean vary from
+sample to sample?" If a mutual fund manager tells you
+that his fund has a mean return of $10\%$ while the 
+market has a mean return of $8\%$, you want to know 
+if it was just luck or if it means that his true,
+population mean, which you are likely to earn in the 
+next 5 years, is $2\%$ higher than the market.
+In other words, was the \textit{realization} of the
+random variable called "my estimate of manager A's 
+mean return" near the mean of the true or population mean
+of the random variable called "manager A's return"?
 
 \section{Conclusion}
 
