@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.1)  17 MAY 2024 08:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.1)  17 MAY 2024 09:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -534,7 +534,7 @@ Chapter 2.
 (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 28.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 30.
  (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -543,28 +543,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 29.
-<images/randomvariables/fig1.png, id=31, 578.16pt x 289.08pt>
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 31.
+ [3]
+<images/randomvariables/fig1.png, id=39, 578.16pt x 289.08pt>
 File: images/randomvariables/fig1.png Graphic file (type png)
 <use images/randomvariables/fig1.png>
-Package pdftex.def Info: images/randomvariables/fig1.png  used on input line 51.
+Package pdftex.def Info: images/randomvariables/fig1.png  used on input line 53.
 (pdftex.def)             Requested size: 312.00119pt x 155.9994pt.
- [3]) [4 <./images/randomvariables/fig1.png>]
+ [4 <./images/randomvariables/fig1.png>] [5]) [6]
 \openout2 = `chapters/regression.aux'.
 
  (./chapters/regression.tex
 Chapter 3.
-[5
+[7
 
 
 
 
-]) [6]
+]) [8]
 \openout2 = `chapters/mimickingmarket.aux'.
 
  (./chapters/mimickingmarket.tex
 Chapter 4.
-) [7
+) [9
 
 
 
@@ -572,27 +573,27 @@ Chapter 4.
 ]
 \openout2 = `chapters/timeseries.aux'.
 
- (./chapters/timeseries.tex [8
+ (./chapters/timeseries.tex [10
 
 
 
 
 ]
 Chapter 5.
-) [9]
+) [11]
 \openout2 = `chapters/trackingnews.aux'.
 
- (./chapters/trackingnews.tex [10
+ (./chapters/trackingnews.tex [12
 
 
 
 
 ]
 Chapter 6.
-) [11]
+) [13]
 \openout2 = `chapters/hedgetarget.aux'.
 
- (./chapters/hedgetarget.tex [12
+ (./chapters/hedgetarget.tex [14
 
 
 
@@ -600,19 +601,19 @@ Chapter 6.
 ]
 Chapter 7.
 
-LaTeX Warning: Citation `engle2020hedging' on page 13 undefined on input line 15.
+LaTeX Warning: Citation `engle2020hedging' on page 15 undefined on input line 15.
 
-[13]) [14]
+[15]) [16]
 \openout2 = `chapters/climateriskmimicking.aux'.
 
  (./chapters/climateriskmimicking.tex
 Chapter 8.
-) [15
+) [17
 
 
 
 
-] [16
+] [18
 
 
 
@@ -632,18 +633,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29820 strings out of 474136
- 734104 string characters out of 5748497
+ 30388 strings out of 474136
+ 749307 string characters out of 5748497
  2005190 words of memory out of 5000000
- 51578 multiletter control sequences out of 15000+600000
- 576691 words of font info for 122 fonts, out of 8000000 for 9000
+ 52127 multiletter control sequences out of 15000+600000
+ 577963 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,9n,107p,1039b,1654s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfst1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (20 pages, 287255 bytes).
+ 99i,11n,107p,1039b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfst1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (22 pages, 312596 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 168 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 38418 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 40466 words of extra memory for PDF output out of 42996 (max. 10000000)
 
