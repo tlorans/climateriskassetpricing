@@ -1,1 +1,91 @@
-\chapter{Tracking Portfolio for News}
+\chapter{Economic Tracking Portfolio for News}
+
+\section{Basics}
+
+\subsection{Time Series}
+
+\subsection{Predicability}
+
+\section{Tracking the Unexpected}
+
+PREDICTABILITY EXPLANATIONS HERE
+
+This paper constructs portfolios with unexpected returns 
+that are maximally correlated with unexpected components 
+of future $y$. Specifically, the target variable is \textit{news}
+about $y_{t+k}$, where $y_{t+k}$ is a macroeconomic variable
+in period $t+k$. 
+
+News is innovation in expectations about $y_{t+k}$, with 
+notations:
+\begin{equation}
+    \Delta E_t(y_{t+k}) = E_t(y_{t+k}) - E_{t-1}(y_{t+k})
+\end{equation}
+
+For example, $\Delta E_t(y_{t+k})$ can be the news the market 
+learns in July 2021 about the GDP growth rate in 2022.
+
+The tracking portfolio returns are: 
+\begin{equation}
+    r_{t-1,t} = bR_{t-1,t}
+\end{equation}
+
+where $r_{t-1,t}$ is the return of the tracking portfolio,
+$R{t-1,t}$ is a column vector of asset returns from the end 
+of period $t-1$ to the end of period $t$, and $b$ is a row 
+vector of portfolio weights.
+
+The tracking portfolio is constructed using unexpected returns 
+on the base assets. The unexpected returns are actual returns 
+minus expected returns:
+
+\begin{equation}
+    \tilde{R}_{t-1,t} = R_{t-1,t} - E_{t-1}(R_{t-1,t})
+\end{equation}
+
+The portfolio weights are chosen so that $\tilde{r}_{t-1,t}$
+is maximally correlated with $\Delta E_t(y_{t+k})$.
+
+Estimating tracking portfolios for news is only slightly 
+more complicated than estimating simple tracking portfolios. 
+One can always write a projection equation of news on 
+unexpected returns. The key assumption in this paper 
+is that innovations in returns reflect innovations in 
+expectations about future variables, so that the vector $a$
+has non-zero elements in the projection equation:
+
+\begin{equation}
+    \Delta E_t(y_{t+k}) = a\tilde{R}_{t-1,t} + \eta_t
+\end{equation}
+
+where $\eta_t$ is the component of news that is orthogonal
+to the unexpected returns. Since unexpected returns reflect
+news about future cash flows and discount rates, $a$
+will generally be non-zero for any variable correlated 
+with future cash flows or discount rates (there is no 
+intercept in the equation above).
+
+It seems at first glance that one needs to obtain $\Delta E_t(y_{t+k})$,
+the period $t$ news about $y_{t+k}$, to run the regression.
+In fact, all that is needed is $\tilde{R}_{t-1,t}$, the
+unexpected returns. The realization of $y_{t+k}$ 
+can be written as the sum of the expectation in period $t-1$,
+the innovation in expectations in period $t$, and the
+innovation in expectations from period $t$ to period $t+k$:
+
+\begin{equation}
+    y_{t+k} = E_{t}(y_{t+k}) + e_{t,t+k} = E_{t-1}(y_{t+k}) + \Delta E_t(y_{t+k}) + e_{t,t+k}
+\end{equation}
+
+The second assumption made here is that expected returns 
+on the base assets in period $t$ are linear functions 
+of $Z_{t-1}$, a vector of control variables known at 
+period $t-1$:
+
+\begin{equation}
+    E_t(R_{t-1,t}) = d Z_{t-1}
+\end{equation}
+
+\section{Python Project: Tracking GDP}
+
+\section{Conclusion}

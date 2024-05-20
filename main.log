@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.1)  20 MAY 2024 08:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.1)  20 MAY 2024 10:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -439,11 +439,7 @@ File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
-) (./main.aux (./chapters/intro.aux) (./chapters/randomvariables.aux) (./chapters/regression.aux) (./chapters/mimickingmarket.aux) (./chapters/timeseries.aux) (./chapters/predictability.aux) (./chapters/trackingnews.aux) (./chapters/hedgetarget.aux) (./chapters/climateriskmimicking.aux
-
-LaTeX Warning: Label `eq:regression' multiply defined.
-
-))
+) (./main.aux (./chapters/intro.aux) (./chapters/simple.aux) (./chapters/trackingnews.aux) (./chapters/climateriskmimicking.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -507,11 +503,13 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2
 
-] (./main.toc [3])
+] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [4]
+ [3] [4
+
+]
 \openout2 = `chapters/intro.aux'.
 
  (./chapters/intro.tex
@@ -519,156 +517,57 @@ Chapter 1.
 ) [1
 
 
-
 ]
-\openout2 = `chapters/randomvariables.aux'.
+\openout2 = `chapters/simple.aux'.
 
- (./chapters/randomvariables.tex [2
+ (./chapters/simple.tex [2
 
 
 
 
 ]
 Chapter 2.
-(c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2024/02/21 1.10 listings language file
-)
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 30.
- (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 31.
- [3]
-<images/randomvariables/fig1.png, id=39, 578.16pt x 289.08pt>
-File: images/randomvariables/fig1.png Graphic file (type png)
-<use images/randomvariables/fig1.png>
-Package pdftex.def Info: images/randomvariables/fig1.png  used on input line 53.
-(pdftex.def)             Requested size: 312.00119pt x 155.9994pt.
- [4 <./images/randomvariables/fig1.png>] [5] [6]
-Overfull \hbox (12.32095pt too wide) detected at line 220
-[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]; R[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 [(\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 ))(\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 ))] = [] \OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 [(\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 ))(\OML/cmm/m/it/12 R[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 R[]\OT1/cmr/m/n/12 ))]
- []
-
-[7] [8] [9] [10] [11] [12] [13] [14] [15]
-Overfull \hbox (27.08362pt too wide) detected at line 625
-[]
- []
-
-) [16]
-\openout2 = `chapters/regression.aux'.
-
- (./chapters/regression.tex
-Chapter 3.
-[17
-
-
-
-
-]) [18]
-\openout2 = `chapters/mimickingmarket.aux'.
-
- (./chapters/mimickingmarket.tex
-Chapter 4.
-) [19
-
-
-
-
-]
-\openout2 = `chapters/timeseries.aux'.
-
- (./chapters/timeseries.tex [20
-
-
-
-
-]
-Chapter 5.
-
-Overfull \hbox (3.8192pt too wide) in paragraph at lines 3--3
-[]\T1/cmr/bx/n/17.28 (-20) Unconditional and Con-di-tional Ex-pec-ta-tions 
- []
-
-) [21]
-\openout2 = `chapters/predictability.aux'.
-
- (./chapters/predictability.tex [22
-
-
-
-
-]
-Chapter 6.
-) [23]
+[3]) [4]
 \openout2 = `chapters/trackingnews.aux'.
 
- (./chapters/trackingnews.tex [24
+ (./chapters/trackingnews.tex
+Chapter 3.
+[5
 
 
 
 
-]
-Chapter 7.
-) [25]
-\openout2 = `chapters/hedgetarget.aux'.
-
- (./chapters/hedgetarget.tex [26
-
-
-
-
-]
-Chapter 8.
-
-LaTeX Warning: Citation `engle2020hedging' on page 27 undefined on input line 15.
-
-[27]) [28]
+]) [6] [7]
 \openout2 = `chapters/climateriskmimicking.aux'.
 
- (./chapters/climateriskmimicking.tex
-Chapter 9.
-) [29
+ (./chapters/climateriskmimicking.tex [8
 
-
-
-
-] [30
 
 
 
 ]
+Chapter 4.
+) [9] [10]
 No file main.bbl.
-(./main.aux (./chapters/intro.aux) (./chapters/randomvariables.aux) (./chapters/regression.aux) (./chapters/mimickingmarket.aux) (./chapters/timeseries.aux) (./chapters/predictability.aux) (./chapters/trackingnews.aux) (./chapters/hedgetarget.aux) (./chapters/climateriskmimicking.aux))
+(./main.aux (./chapters/intro.aux) (./chapters/simple.aux) (./chapters/trackingnews.aux) (./chapters/climateriskmimicking.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 30523 strings out of 474136
- 751661 string characters out of 5748497
- 2310190 words of memory out of 5000000
- 52205 multiletter control sequences out of 15000+600000
- 581269 words of font info for 158 fonts, out of 8000000 for 9000
+ 29010 strings out of 474136
+ 722544 string characters out of 5748497
+ 1933190 words of memory out of 5000000
+ 50795 multiletter control sequences out of 15000+600000
+ 574891 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,107p,1039b,2056s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfst1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (34 pages, 365456 bytes).
+ 99i,6n,107p,1039b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (14 pages, 206299 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
+ 129 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 44562 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 34829 words of extra memory for PDF output out of 35830 (max. 10000000)
 
