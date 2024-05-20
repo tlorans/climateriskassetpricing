@@ -472,6 +472,87 @@ random variable called "my estimate of manager A's
 mean return" near the mean of the true or population mean
 of the random variable called "manager A's return"?
 
+Figuring out the variation of the sample mean is 
+a good use of statistics. The sample mean is:
+
+\begin{equation}
+    \bar{R} = \frac{1}{T}\sum_{i=1}^T R_t
+\end{equation}
+
+Therefore,
+
+\begin{equation}
+    E(\bar{R}) = \frac{1}{T}\sum_{i=1}^T E(R_t) = E(R)
+\end{equation}
+
+assuming all the $R_t$ are drawn from the same distribution.
+This verifies that the sample mean is \textit{unbiased}.
+On average, across many samples, the sample mean 
+will reveal the true mean. The variance of the sample mean is:
+
+\begin{equation}
+    \sigma^2(\bar{R}) = \sigma^2(\frac{1}{T}\sum_{i=1}^T R_t) 
+    = \frac{1}{T^2}\sum_{i=1}^T \sigma^2(R_t) + \text{covariance terms}
+\end{equation}
+
+If we assume that all the covariances are zero ($R_t$ are 
+independent), then the variance of the sample mean is:
+
+\begin{equation}
+    \sigma^2(\bar{R}) = \frac{1}{T}\sigma^2(R)
+\end{equation}
+
+and the standard deviation:
+
+\begin{equation}
+    \sigma(\bar{R}) = \frac{1}{\sqrt{T}}\sigma(R)
+\end{equation}
+
+For stock returns, $\text{Cov}(R_t, R_{t+1}) = 0$ 
+is a good assumption. It's a great assumption for 
+coin tosses: seeing heads this time makes not 
+more likely to see heads next time. 
+
+We don't know $\sigma$. We have to \textit{estimate}
+the sampling variation of the sample mean by using 
+your estimate of $\sigma$, namely the sample standard
+deviation. If we use hats to denote estimate:
+
+\begin{equation}
+    \hat{\sigma}(\bar{R}) = \frac{1}{\sqrt{T}}\hat{\sigma}(R)
+\end{equation}
+
+The classic use of this formula is to give a standard error
+or measure of uncertainty of the sample mean, and 
+to test whether the sample mean is equal to some value,
+usually zero. 
+
+The test is based on a \textit{condifence interval}. 
+Assuming normal distribution, the confidence interval 
+for the mean is the sample mean plus or minus 2 (in fact 1.96)
+standard errors. The meaning of this interval 
+is that if the true mean was outside the interval, 
+there would be less than $5\%$ chance of seeing a 
+sample mean as high or low as the one you got.
+
+There is an easier method. We can just calculate the
+probability that the sample mean comes out at its 
+actual value (or higher) given the null hypothesis,
+\textit{i.e.} calculate the area under the distribution 
+of the sample mean past the sample mean we have,
+given an assumption (hypothesis) about the true mean.
+This is the \textit{p-value}.
+
+Usually, tests are run using the \textit{t-distribution}.
+When you take account of sampling variation in $\hat{\sigma}$,
+you can show that the ratio:
+
+\begin{equation}
+    \sqrt{T}\frac{\bar{R} - E(R)}{\hat{\sigma}}
+\end{equation}
+
+is not a normal distribution with mean zero and variance 
+one, but a \textit{t-distribution} with $t$ degrees of freedom.
 
 
 \section{Conclusion}
