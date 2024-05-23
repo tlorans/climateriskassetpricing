@@ -150,19 +150,46 @@ uncorrelated errors ($u_t$).}
 
 \section{Climate Factor Signal}
 
-\begin{equation}
-    CC_t = w^T \tilde{R}_t + \epsilon_t 
-\end{equation}
-
-We can use the same basic idea to find the portfolios 
-that mimic the behavior of a climate factor. For each portfolio $i$, we can run:
+In the case of climate risk, we have:
 
 \begin{equation}
-    R_{i,t} = \beta_i CC_t + \gamma_i^T \text{Factors}_t + \epsilon_{i,t}
+    \Delta E_t (CC_{t+k}) = E_t (CC_{t+k}) - E_{t-1} (CC_{t+k})
 \end{equation}
 
-With the estimated $\beta_i$ can be a first 
-estimate for portfolio's weights that 
-mimic the climate factor.
+with $CC_{t+k}$ the climate risk at an undefined horizon $k$.
 
-Long-only factor mimicking.
+We have seen in the chapter 1 how to use text to proxy for 
+the market expectation of the climate risk $E_t(CC_{t+k})$.
+
+Therefore, we can estimate:
+
+\begin{equation}
+    R_{i,t} = \beta_i \Delta E_t(CC_{t+k}) + \gamma_i^T \text{Factors}_t + \epsilon_{i,t}
+\end{equation}
+
+The $\beta_i$ for each portfolio is the signal 
+upon which we want to derive our mimicking portfolio.
+The higher is $\beta_i$, the higher will be the weight 
+of the portfolio in the mimicking portfolio.
+
+However, if $\beta_i$ is negative, it means that
+we should short the portfolio. In practice, 
+it is less common to short portfolios, so we
+can set $\beta_i = 0$ if it is negative. In that 
+case, the mimicking portfolio would be a \textit{long-only}
+portfolio.
+
+A simple method to go from the $\beta_i$ to the
+weights of the mimicking portfolio is to normalize it:
+\begin{equation}
+    w_i = \frac{\tilde{\beta_i}}{\sum_{i=1}^{N} \tilde{\beta_i}}
+\end{equation}
+
+with $\tilde{\beta_i} = \max(\beta_i, 0)$.
+
+The vector of weights $w$ is already an intuitive 
+long-only mimicking portfolio: it simply 
+\textbf{weights the portfolios based on their positive 
+$\beta_i$ on the climate innovation signal 
+$\Delta E_t(CC_{t+k})$ we wish to mimic}.
+ 
