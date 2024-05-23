@@ -2,12 +2,12 @@
 
 Even though the mimicking portfolio we have 
 seen in the previous chapter is very intuitive, 
-it is suboptimal as it is inefficient. 
+it is suboptimal as it is \textbf{inefficient}. 
 We now want to improve upon this first portfolio 
 by including more sophisticated optimized mimicking 
-portfolio construction, by taking into account 
+portfolio construction, by \textbf{taking into account 
 the information on the covariance between the 
-assets.
+assets}.
 
 \section{Portfolio Optimization}
 
@@ -27,6 +27,7 @@ The return of the portfolio is given by:
 \begin{equation}
     R_p = \sum^N_{i=1} w_i R_i = w^T R
 \end{equation}
+
 The vector of expected asset returns is denoted by $\mu = E(R)$.
 The covariance matrix of the asset returns is denoted by $\Sigma$:
 
@@ -50,14 +51,14 @@ The variance of the portfolio is given by:
 The problem of the investor can be formulated as:
 
 \begin{enumerate}
-    \item Maximize the expected return of the portfolio
-    under a volatility constraint ($\sigma_p \leq \sigma^*$)
-    \item Minimize the volatility of the portfolio under a
-    return constraint ($\mu_p \geq R^*$)
+    \item \textbf{Maximize the expected return of the portfolio
+    under a volatility constraint ($\sigma_p \leq \sigma^*$)}
+    \item \textbf{Minimize the volatility of the portfolio under a
+    return constraint ($\mu_p \geq R^*$)}
 \end{enumerate}
 
-The key idea of Markowitz (1956) is to combine 
-the two objectives into a single optimization problem:
+\textbf{The key idea of Markowitz (1956) is to combine 
+the two objectives into a single quadratic optimization problem}:
 
 \begin{equation}
     \begin{aligned}
