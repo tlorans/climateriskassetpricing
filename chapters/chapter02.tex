@@ -1,17 +1,168 @@
 \chapter{Factor Signal}
 
-\section{Regression}
+\section{Regression and Few Statistics}
+
+We will run \textit{regression} to estimate the 
+\textit{beta coefficient}. For example, we can 
+regress a return on the market return:
+
+\begin{equation}
+    R_{t} = \alpha + \beta R_{m,t} + \epsilon_{t}
+\end{equation}
+
+We can also do it with the returns of several other portfolios:
+
+\begin{equation}
+    R_{t} = \alpha + \beta_m R_{m,t} + \gamma R_{p,t} + \epsilon_{t}
+\end{equation}
+
+The \textit{population value} of the beta coefficient with the single factor model is:
+
+\begin{equation}
+    \beta = \frac{Cov(R,R_m)}{Var(R_m)}
+\end{equation}
+
+The regression recovers the \textit{true} (\textit{i.e.} unbiased) 
+$\beta$ only if the \textit{error term} $\epsilon$ is \textit{uncorrelated}
+with the right hand variables ($R_m$ in our first case).
+
+In the multiple regression example, 
+$\beta_m$ captures the effect on the return of only movements in the market portfolio 
+that are not correlated with movement in the other portfolio $p$.
+
 
 \section{Simple Factor Mimicking Portfolio}
 
-Simple example to mimick a factor with portfolios.
+\textit{Factor mimicking} is a useful practice in finance. 
+The core idea is to replace some variables with 
+a linear combination of other variables. More
+specifically, \textbf{some variable of interest can be
+written as a portfolio of \textit{tradable assets}}.
+It can be used to proxy economic variable that 
+are not directly observable with tradable assets.
 
-\section{Climate Factor Signal}
+This is the idea from Lamont (2001): 
+we can construct, from financial assets, 
+a "matching portfolio" of some economic factor
+that is not directly observable (in the case of 
+Lamont, the idea was to forecast variables).
 
-Explain why we are doing:
+Say you want to estimate current (this is \textit{nowcasting})
+GDP or inflation. You can construct the portfolio 
+of assets that best mimics the movements of GDP or inflation.
+Once you've run your regression, you can use your 
+estimate of returns to predict the macro variable.
+
+Let's say we don't have individual 
+stock returns and we want to estimate 
+the market return. All what we have is
+the return of $K$ industry portfolios. We 
+can estimate the market return as a 
+linear combination of the industry returns:
 
 \begin{equation}
-    r_{i,t} = \hat{\beta}_i CC_t + \gamma_i^T Factors_t + \hat{\epsilon}_{i,t}
+R_{m,t} = \beta_{\text{energy}} R_{\text{energy},t} + \beta_{\text{financials}} R_{\text{financials},t} + \ldots + \beta_{k} R_{k,t} + \epsilon_{t}
+\end{equation}
+
+It looks very much like a portfolio, with 
+the estimated $\beta$ as the weights of the assets.
+
+\section{Mimicking Factor Signal}
+
+Now, let's say we want to form a portfolio that 
+mimics the behavior of a \textit{factor signal} $y$.
+Specifically, our target is "news" or \textit{innovations} about the signal,
+defined as the difference between the current expectation 
+and the previous expectation:
+
+\begin{equation}
+    \Delta E_t(y_{t+1}) := E_t(y_{t+1}) - E_{t-1}(y_{t+1})
+\end{equation}
+
+In can be for example the news that the market 
+learns about the industrial production in May about 
+the industrial production in June.
+
+The mimicking portfolio portfolio returns are:
+
+\begin{equation}
+    R_{y, t} = w^T R_t
+\end{equation}
+
+where $R_t$ is the vector of returns of the tradable assets.
+You construct the mimicking portfolio with 
+\textit{unexpected returns} of the tradable assets. Unexpected 
+returns are actual returns minus expected returns:
+
+\begin{equation}
+    \tilde{R_t} := R_t - E_{t-1}(R_t)
+\end{equation}
+
+with the assumption that \textbf{the expected returns are a linear 
+function of factors $F_{t}$}:
+
+\begin{equation}
+    E_{t-1}(R_t) = \gamma^T F_{t}
 \end{equation}
 
 
+The porfolio weights of the mimicking portfolio of $y$ 
+are chosen so that $\tilde{R}_{y,t}$ is as close as possible
+to $\Delta E_t(y_{t+1})$ (maximally correlated).
+
+To do this, the key assumption is that 
+\textbf{innovations in returns (unexpected returns)
+reflect innovations in expectations about 
+the factor signal}, such that:
+
+\begin{equation}
+    \Delta E_t(y_{t+1}) = \beta^T \tilde{R}_t + \epsilon_t
+\end{equation}
+
+If the factor signal $y$ is correlated 
+with future cash flows and discount rates,
+then we may find something in the $\beta$, relating
+news reflected in the unexpected returns. 
+Again, this is based on the assumption that 
+the unexpected returns reflect news about the
+future cash flows and discount rates (\textit{i.e.}
+about $\Delta E_t(y_{t+1})$).
+
+Recalling that the returns are $R_t = E_{t-1}(R_t) + \tilde{R}$,
+we can therefore rewrite it with the factors:
+
+\begin{equation}
+    R_t = \gamma^T F_{t} + \tilde{R}
+\end{equation}
+
+and then includes the innovations in the factor signal:
+
+\begin{equation}
+    R_t = \gamma^T F_{t} + \eta \Delta E_t(y_{t+1}) + u_{t}
+\end{equation}
+
+What we have here? 
+\textbf{The returns of any asset can be written 
+as a function of its expected returns ($\gamma^T F_{t}$)
+and the unexpected returns. The unexpected returns are 
+decomposed into the news about the factor signal $\Delta E_t (y_{t+1})$ and
+uncorrelated errors ($u_t$).}
+
+\section{Climate Factor Signal}
+
+\begin{equation}
+    CC_t = w^T \tilde{R}_t + \epsilon_t 
+\end{equation}
+
+We can use the same basic idea to find the portfolios 
+that mimic the behavior of a climate factor. For each portfolio $i$, we can run:
+
+\begin{equation}
+    R_{i,t} = \beta_i CC_t + \gamma_i^T \text{Factors}_t + \epsilon_{i,t}
+\end{equation}
+
+With the estimated $\beta_i$ can be a first 
+estimate for portfolio's weights that 
+mimic the climate factor.
+
+Long-only factor mimicking.

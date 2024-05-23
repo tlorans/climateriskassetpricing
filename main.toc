@@ -1,15 +1,16 @@
 \contentsline {chapter}{\numberline {1}From Text to Data}{1}{}%
 \contentsline {section}{\numberline {1.1}Some Linear Algebra}{1}{}%
 \contentsline {section}{\numberline {1.2}Representing Text as Data}{1}{}%
-\contentsline {section}{\numberline {1.3}Statistical Method}{1}{}%
+\contentsline {section}{\numberline {1.3}Statistical Methods}{1}{}%
 \contentsline {section}{\numberline {1.4}Climate Attention Time Series}{1}{}%
 \contentsline {chapter}{\numberline {2}Factor Signal}{3}{}%
-\contentsline {section}{\numberline {2.1}Regression}{3}{}%
-\contentsline {section}{\numberline {2.2}Simple Factor Mimicking Portfolio}{3}{}%
-\contentsline {section}{\numberline {2.3}Climate Factor Signal}{3}{}%
-\contentsline {chapter}{\numberline {3}Efficient Porfolio}{5}{}%
-\contentsline {section}{\numberline {3.1}Portfolio Optimization}{5}{}%
-\contentsline {section}{\numberline {3.2}Efficient Mimicking Portfolio}{5}{}%
-\contentsline {chapter}{\numberline {4}Estimation of the Covariance Matrix}{7}{}%
-\contentsline {section}{\numberline {4.1}Covariance Matrix Estimation}{7}{}%
-\contentsline {section}{\numberline {4.2}Shrinkage Estimation}{7}{}%
+\contentsline {section}{\numberline {2.1}Regression and Few Statistics}{3}{}%
+\contentsline {section}{\numberline {2.2}Simple Factor Mimicking Portfolio}{4}{}%
+\contentsline {section}{\numberline {2.3}Mimicking Factor Signal}{4}{}%
+\contentsline {section}{\numberline {2.4}Climate Factor Signal}{6}{}%
+\contentsline {chapter}{\numberline {3}Efficient Porfolio}{7}{}%
+\contentsline {section}{\numberline {3.1}Portfolio Optimization}{7}{}%
+\contentsline {section}{\numberline {3.2}Efficient Mimicking Portfolio}{7}{}%
+\contentsline {chapter}{\numberline {4}Estimation of the Covariance Matrix}{9}{}%
+\contentsline {section}{\numberline {4.1}Covariance Matrix Estimation}{9}{}%
+\contentsline {section}{\numberline {4.2}Shrinkage Estimation}{9}{}%
