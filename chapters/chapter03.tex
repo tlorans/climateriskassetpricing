@@ -1,13 +1,13 @@
 \chapter{Efficient Porfolio}
-
-Even though the mimicking portfolio we have 
-seen in the previous chapter is very intuitive, 
-it is suboptimal as it is \textbf{inefficient}. 
+ 
 We now want to improve upon this first portfolio 
 by including more sophisticated optimized mimicking 
 portfolio construction, by \textbf{taking into account 
 the information on the covariance between the 
-assets}.
+assets}. Indeed, even though the mimicking portfolio we have 
+seen in the previous chapter is very intuitive, 
+it can be \textbf{suboptimal depending on the 
+risk appetite of the investor}.
 
 \section{Portfolio Optimization}
 
@@ -72,14 +72,23 @@ the two objectives into a single quadratic optimization problem}:
 where $\lambda$ is a parameter that allows to trade-off
 between the two objectives (this is the risk appetite in this case).
 
-\section{Efficient Mimicking Portfolio}
+If we set $\lambda = 0$, we are minimizing the volatility of the portfolio
+and obtain the minimum variance portfolio.
+If we set $\lambda = \infty$, we are maximizing the return of the portfolio
+without taking into account the volatility of the portfolio.
+
+The exact value of $\lambda$ depends on the risk 
+preference of the investor: the higher $\lambda$, the more
+higher the risk appetite.
+
+\section{Climate Efficient Mimicking Portfolio}
 
 We can use the derived signal $b$ to compute 
 a constrained long-only portfolio ($w_i \geq 0$)
 and fully invested ($w^T \mathbf{1} = 1$) mimicking 
 portfolio.
 
-The optimization problem is:
+The optimization problem is now:
 \begin{equation}
     \begin{aligned}
         & \underset{w}{\min}
@@ -90,6 +99,8 @@ The optimization problem is:
     \end{aligned}
 \end{equation}
 
+We are now using the covariance matrix $\Sigma$ of the assets
+to construct the \textit{efficient mimicking portfolio}, 
+along the signal $b$.
 
 
-\section{Performance Measures}
