@@ -1,0 +1,39 @@
+\chapter{Performance Measures}
+
+We can use mainly two measures to evaluate the performance of the mimicking portfolio. 
+
+\section{Some Empirical Methods}
+
+EMPIRICAL NOTES
+
+\section{Factors Exposure and Risk Premia}
+
+\section{Climate Risk Exposure and Risk Premium}
+
+The first one is the \textbf{$\beta$ (exposure) to the innovation $\Delta E_t(CC_{t+k})$}.
+We can regress the mimicking portfolio returns on the 
+climate news and the factors returns:
+
+\begin{equation}
+    R_{CEP,t} = \beta \Delta E_t(CC_{t+k}) + \gamma^T F_t + \epsilon_t
+\end{equation}
+
+We expect the estimated $\beta$ to be positive and the bigger the better.
+This regression should be run as an \textit{out-of-sample} test (i.e. the regression is run on a period that is not used to estimate the signal $b$).
+
+
+The second measure is \textbf{the $\alpha$ (risk premium) of the mimicking portfolio}:
+
+\begin{equation}
+    R_{CEP,t} - rf_t = \alpha + \gamma^T F_t + \epsilon_t
+\end{equation}
+
+The estimated $\alpha$ should be positive and the bigger the better.
+
+\section{Further Reading}
+
+\section{Exercises}
+
+\section{Solutions}
+
+\section{Python Project}
