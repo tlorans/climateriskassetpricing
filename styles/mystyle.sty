@@ -7,5 +7,17 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
-\usepackage{tcolorbox}
+\usepackage{mdframed}
 \usepackage{pythonhighlight}
+
+% Define a new mdframed environment for examples
+\newmdenv[
+  topline=true,
+  bottomline=true,
+  rightline=true,
+  leftline=true,
+  innerleftmargin=10pt,
+  innerrightmargin=10pt,
+  innertopmargin=10pt,
+  innerbottommargin=10pt
+]{examplebox}

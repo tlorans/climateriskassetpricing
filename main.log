@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  23 MAY 2024 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  23 MAY 2024 16:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -388,54 +388,158 @@ Package pgfplots: loading complementary utilities for your pgf version...
 File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (c:/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2023/09/26 version 6.1.0 text color boxes
- (c:/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks46
-\verbatim@line=\toks47
-\verbatim@in@stream=\read3
-) (c:/texlive/2023/texmf-dist/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
- (c:/texlive/2023/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-))
-\tcb@titlebox=\box67
-\tcb@upperbox=\box68
-\tcb@lowerbox=\box69
-\tcb@phantombox=\box70
-\c@tcbbreakpart=\count307
-\c@tcblayer=\count308
-\c@tcolorbox@number=\count309
-\tcb@temp=\box71
-\tcb@temp=\box72
-\tcb@temp=\box73
-\tcb@temp=\box74
-)) (c:/texlive/2023/texmf-dist/tex/latex/pythonhighlight/pythonhighlight.sty
+))) (c:/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+ (c:/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (c:/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
+) (c:/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
+ (c:/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (c:/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count307
+Package zref Info: New property: abspage on input line 67.
+) (c:/texlive/2023/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip54
+\c@mdf@globalstyle@cnt=\count308
+\mdf@skipabove@length=\skip55
+\mdf@skipbelow@length=\skip56
+\mdf@leftmargin@length=\skip57
+\mdf@rightmargin@length=\skip58
+\mdf@innerleftmargin@length=\skip59
+\mdf@innerrightmargin@length=\skip60
+\mdf@innertopmargin@length=\skip61
+\mdf@innerbottommargin@length=\skip62
+\mdf@splittopskip@length=\skip63
+\mdf@splitbottomskip@length=\skip64
+\mdf@outermargin@length=\skip65
+\mdf@innermargin@length=\skip66
+\mdf@linewidth@length=\skip67
+\mdf@innerlinewidth@length=\skip68
+\mdf@middlelinewidth@length=\skip69
+\mdf@outerlinewidth@length=\skip70
+\mdf@roundcorner@length=\skip71
+\mdf@footenotedistance@length=\skip72
+\mdf@userdefinedwidth@length=\skip73
+\mdf@needspace@length=\skip74
+\mdf@frametitleaboveskip@length=\skip75
+\mdf@frametitlebelowskip@length=\skip76
+\mdf@frametitlerulewidth@length=\skip77
+\mdf@frametitleleftmargin@length=\skip78
+\mdf@frametitlerightmargin@length=\skip79
+\mdf@shadowsize@length=\skip80
+\mdf@extratopheight@length=\skip81
+\mdf@subtitleabovelinewidth@length=\skip82
+\mdf@subtitlebelowlinewidth@length=\skip83
+\mdf@subtitleaboveskip@length=\skip84
+\mdf@subtitlebelowskip@length=\skip85
+\mdf@subtitleinneraboveskip@length=\skip86
+\mdf@subtitleinnerbelowskip@length=\skip87
+\mdf@subsubtitleabovelinewidth@length=\skip88
+\mdf@subsubtitlebelowlinewidth@length=\skip89
+\mdf@subsubtitleaboveskip@length=\skip90
+\mdf@subsubtitlebelowskip@length=\skip91
+\mdf@subsubtitleinneraboveskip@length=\skip92
+\mdf@subsubtitleinnerbelowskip@length=\skip93
+ (c:/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box67
+\mdf@footnotebox=\box68
+\mdf@splitbox@one=\box69
+\mdf@splitbox@two=\box70
+\mdf@splitbox@save=\box71
+\mdfsplitboxwidth=\skip94
+\mdfsplitboxtotalwidth=\skip95
+\mdfsplitboxheight=\skip96
+\mdfsplitboxdepth=\skip97
+\mdfsplitboxtotalheight=\skip98
+\mdfframetitleboxwidth=\skip99
+\mdfframetitleboxtotalwidth=\skip100
+\mdfframetitleboxheight=\skip101
+\mdfframetitleboxdepth=\skip102
+\mdfframetitleboxtotalheight=\skip103
+\mdffootnoteboxwidth=\skip104
+\mdffootnoteboxtotalwidth=\skip105
+\mdffootnoteboxheight=\skip106
+\mdffootnoteboxdepth=\skip107
+\mdffootnoteboxtotalheight=\skip108
+\mdftotallinewidth=\skip109
+\mdfboundingboxwidth=\skip110
+\mdfboundingboxtotalwidth=\skip111
+\mdfboundingboxheight=\skip112
+\mdfboundingboxdepth=\skip113
+\mdfboundingboxtotalheight=\skip114
+\mdf@freevspace@length=\skip115
+\mdf@horizontalwidthofbox@length=\skip116
+\mdf@verticalmarginwhole@length=\skip117
+\mdf@horizontalspaceofbox=\skip118
+\mdfsubtitleheight=\skip119
+\mdfsubsubtitleheight=\skip120
+\c@mdfcountframes=\count309
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count310
+\c@mdf@env@i=\count311
+\c@mdf@env@ii=\count312
+\c@mdf@zref@counter=\count313
+Package zref Info: New property: mdf@pagevalue on input line 895.
+) (c:/texlive/2023/texmf-dist/tex/latex/pythonhighlight/pythonhighlight.sty
 Package: pythonhighlight 2017/02/09 python code highlighting; provided by Olivier Verdier <olivier.verdier@gmail.com>
  (c:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count310
-\lst@gtempboxa=\box75
-\lst@token=\toks48
-\lst@length=\count311
+\lst@mode=\count314
+\lst@gtempboxa=\box72
+\lst@token=\toks46
+\lst@length=\count315
 \lst@currlwidth=\dimen273
-\lst@column=\count312
-\lst@pos=\count313
+\lst@column=\count316
+\lst@pos=\count317
 \lst@lostspace=\dimen274
 \lst@width=\dimen275
-\lst@newlines=\count314
-\lst@lineno=\count315
+\lst@newlines=\count318
+\lst@lineno=\count319
 \lst@maxwidth=\dimen276
  (c:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count316
-\lst@skipnumbers=\count317
-\lst@framebox=\box76
+\c@lstnumber=\count320
+\lst@skipnumbers=\count321
+\lst@framebox=\box73
 ) (c:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
-) (./main.aux (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/chapter04.aux))
+)) (./main.aux (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/chapter04.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -454,17 +558,17 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
+\scratchcounter=\count322
 \scratchdimen=\dimen277
-\scratchbox=\box77
-\nofMPsegments=\count319
-\nofMParguments=\count320
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count321
+\scratchbox=\box74
+\nofMPsegments=\count323
+\nofMParguments=\count324
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count325
 \MPscratchDim=\dimen278
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
-\everyMPtoPDFconversion=\toks50
+\MPnumerator=\count326
+\makeMPintoPDFobject=\count327
+\everyMPtoPDFconversion=\toks48
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -492,7 +596,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 )
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\c@lstlisting=\count324
+\c@lstlisting=\count328
 [1
 
 
@@ -520,55 +624,78 @@ Underfull \vbox (badness 7963) has occurred while \output is active []
 
  (./chapters/chapter02.tex
 Chapter 2.
-
-Underfull \vbox (badness 1127) has occurred while \output is active []
-
- [3
-
-
-
-
-] [4] [5]) [6]
-\openout2 = `chapters/chapter03.aux'.
-
- (./chapters/chapter03.tex
-Chapter 3.
-[7
-
-
-
-
-] [8]) [9]
-\openout2 = `chapters/chapter04.aux'.
-
- (./chapters/chapter04.tex [10
+Package mdframed Info: mdframed works in twoside mode on input line 30.
+Package mdframed Info: mdframed works in twoside mode on input line 41.
+[3
 
 
 
 
 ]
+Package mdframed Info: Not enough space on this page on input line 47.
+Package mdframed Info: mdframed works in twoside mode on input line 68.
+ [4] [5]
+Package mdframed Info: mdframed works in twoside mode on input line 184.
+) [6] [7]
+\openout2 = `chapters/chapter03.aux'.
+
+ (./chapters/chapter03.tex [8
+
+
+
+
+]
+Chapter 3.
+[9]
+Package mdframed Info: mdframed works in twoside mode on input line 55.
+Package mdframed Info: mdframed works in twoside mode on input line 94.
+ [10]
+Package mdframed Info: mdframed works in twoside mode on input line 143.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-7' on page 11 undefined on input line 146.
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11] [12]
+\openout2 = `chapters/chapter04.aux'.
+
+ (./chapters/chapter04.tex
 Chapter 4.
-[11]) [12]
+[13
+
+
+
+
+]) [14]
 No file main.bbl.
 (./main.aux (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/chapter04.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 29040 strings out of 474504
- 720994 string characters out of 5756725
- 1932043 words of memory out of 5000000
- 50401 multiletter control sequences out of 15000+600000
- 579444 words of font info for 153 fonts, out of 8000000 for 9000
+ 28522 strings out of 474504
+ 698622 string characters out of 5756725
+ 1933043 words of memory out of 5000000
+ 49837 multiletter control sequences out of 15000+600000
+ 579643 words of font info for 154 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,107p,1034b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (16 pages, 295635 bytes).
+Output written on main.pdf (18 pages, 300091 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 156 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  45069 words of extra memory for PDF output out of 51595 (max. 10000000)
 

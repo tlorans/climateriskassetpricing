@@ -26,10 +26,25 @@ The regression recovers the \textit{true} (\textit{i.e.} unbiased)
 $\beta$ only if the \textit{error term} $\epsilon$ is \textit{uncorrelated}
 with the right hand variables ($R_m$ in our first case).
 
+\begin{examplebox}
+    \textbf{Example X.1.} 
+    \textit{example that illustrates the idea
+    that the beta coefficient is unbiased if 
+    error term is uncorrelated with the right hand variables.}
+\end{examplebox}
+
 In the multiple regression example, 
 $\beta_m$ captures the effect on the return of only movements in the market portfolio 
 that are not correlated with movement in the other portfolio $p$.
 
+\begin{examplebox}
+\textbf{Example X.1.} 
+\textit{example that illustrates the idea 
+that in multiple regression, 
+the beta coefficient captures the effect of the
+market return on the portfolio return that is not
+explained by the other portfolio.}
+\end{examplebox}
 
 \section{Factor Mimicking Portfolio}
 
@@ -47,25 +62,31 @@ a "matching portfolio" of some economic factor
 that is not directly observable (in the case of 
 Lamont, the idea was to forecast variables).
 
-Say you want to estimate current (this is \textit{nowcasting})
-GDP or inflation. You can construct the portfolio 
-of assets that best mimics the movements of GDP or inflation.
-Once you've run your regression, you can use your 
-estimate of returns to predict the macro variable.
 
-Let's say we don't have individual 
-stock returns and we want to estimate 
-the market return. All what we have is
-the return of $K$ industry portfolios. We 
-can estimate the market return as a 
-linear combination of the industry returns:
 
-\begin{equation}
-R_{m,t} = \beta_{\text{energy}} R_{\text{energy},t} + \beta_{\text{financials}} R_{\text{financials},t} + \ldots + \beta_{k} R_{k,t} + \epsilon_{t}
-\end{equation}
+\begin{examplebox}
+    \textbf{Example X.1.}    
+    Say you want to estimate current (this is \textit{nowcasting})
+    GDP or inflation. You can construct the portfolio 
+    of assets that best mimics the movements of GDP or inflation.
+    Once you've run your regression, you can use your 
+    estimate of returns to predict the macro variable.
+    Let's say we don't have individual 
+    stock returns and we want to estimate 
+    the market return. All what we have is
+    the return of $K$ industry portfolios. We 
+    can estimate the market return as a 
+    linear combination of the industry returns:
+    
+    \begin{equation}
+    R_{m,t} = \beta_{\text{energy}} R_{\text{energy},t} + \beta_{\text{financials}} R_{\text{financials},t} + \ldots + \beta_{k} R_{k,t} + \epsilon_{t}
+    \end{equation}
+    
+    It looks very much like a portfolio, with 
+    the estimated $\beta$ as the weights of the assets.
+\end{examplebox}
 
-It looks very much like a portfolio, with 
-the estimated $\beta$ as the weights of the assets.
+
 
 Now, let's say we want to form a portfolio that 
 mimics the behavior of a \textit{factor signal} $y$.
@@ -155,9 +176,15 @@ In the case of climate risk, we have:
 \end{equation}
 
 with $CC_{t+k}$ the climate risk at an undefined horizon $k$.
-
 We have seen in the chapter 1 how to use text to proxy for 
 the market expectation of the climate risk $E_t(CC_{t+k})$.
+
+
+\begin{examplebox}
+    \textbf{Example X.1.}    
+    \textit{illustrates use of demean vs. AR(1) to estimate}
+\end{examplebox}
+
 
 Therefore, we can estimate:
 

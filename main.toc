@@ -9,24 +9,24 @@
 \contentsline {chapter}{\numberline {2}Factor Signal}{3}{}%
 \contentsline {section}{\numberline {2.1}Regression and Few Statistics}{3}{}%
 \contentsline {section}{\numberline {2.2}Factor Mimicking Portfolio}{4}{}%
-\contentsline {section}{\numberline {2.3}Climate Factor Signal}{5}{}%
-\contentsline {section}{\numberline {2.4}Further Reading}{6}{}%
-\contentsline {section}{\numberline {2.5}Exercises}{6}{}%
-\contentsline {section}{\numberline {2.6}Solutions}{6}{}%
-\contentsline {section}{\numberline {2.7}Python Project}{6}{}%
-\contentsline {chapter}{\numberline {3}Efficient Mimicking Porfolio}{7}{}%
-\contentsline {section}{\numberline {3.1}A Bunch of Optimization}{7}{}%
-\contentsline {section}{\numberline {3.2}Portfolio Optimization}{7}{}%
-\contentsline {section}{\numberline {3.3}Climate Efficient Mimicking Portfolio}{8}{}%
-\contentsline {section}{\numberline {3.4}Further Reading}{9}{}%
-\contentsline {section}{\numberline {3.5}Exercises}{9}{}%
-\contentsline {section}{\numberline {3.6}Solutions}{9}{}%
-\contentsline {section}{\numberline {3.7}Python Project}{9}{}%
-\contentsline {chapter}{\numberline {4}Performance Measures}{11}{}%
-\contentsline {section}{\numberline {4.1}Some Empirical Methods}{11}{}%
-\contentsline {section}{\numberline {4.2}Factors Exposure and Risk Premia}{11}{}%
-\contentsline {section}{\numberline {4.3}Climate Risk Exposure and Risk Premium}{11}{}%
-\contentsline {section}{\numberline {4.4}Further Reading}{12}{}%
-\contentsline {section}{\numberline {4.5}Exercises}{12}{}%
-\contentsline {section}{\numberline {4.6}Solutions}{12}{}%
-\contentsline {section}{\numberline {4.7}Python Project}{12}{}%
+\contentsline {section}{\numberline {2.3}Climate Factor Signal}{6}{}%
+\contentsline {section}{\numberline {2.4}Further Reading}{7}{}%
+\contentsline {section}{\numberline {2.5}Exercises}{7}{}%
+\contentsline {section}{\numberline {2.6}Solutions}{7}{}%
+\contentsline {section}{\numberline {2.7}Python Project}{7}{}%
+\contentsline {chapter}{\numberline {3}Efficient Mimicking Porfolio}{9}{}%
+\contentsline {section}{\numberline {3.1}A Bunch of Optimization}{9}{}%
+\contentsline {section}{\numberline {3.2}Portfolio Optimization}{9}{}%
+\contentsline {section}{\numberline {3.3}Climate Efficient Mimicking Portfolio}{11}{}%
+\contentsline {section}{\numberline {3.4}Further Reading}{12}{}%
+\contentsline {section}{\numberline {3.5}Exercises}{12}{}%
+\contentsline {section}{\numberline {3.6}Solutions}{12}{}%
+\contentsline {section}{\numberline {3.7}Python Project}{12}{}%
+\contentsline {chapter}{\numberline {4}Performance Measures}{13}{}%
+\contentsline {section}{\numberline {4.1}Some Empirical Methods}{13}{}%
+\contentsline {section}{\numberline {4.2}Factors Exposure and Risk Premia}{13}{}%
+\contentsline {section}{\numberline {4.3}Climate Risk Exposure and Risk Premium}{13}{}%
+\contentsline {section}{\numberline {4.4}Further Reading}{14}{}%
+\contentsline {section}{\numberline {4.5}Exercises}{14}{}%
+\contentsline {section}{\numberline {4.6}Solutions}{14}{}%
+\contentsline {section}{\numberline {4.7}Python Project}{14}{}%
