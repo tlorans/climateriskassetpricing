@@ -86,9 +86,12 @@ higher the risk appetite.
 We can use the derived signal $b$ to compute 
 a constrained long-only portfolio ($w_i \geq 0$)
 and fully invested ($w^T \mathbf{1} = 1$) mimicking 
-portfolio.
+portfolio. 
+We are now using the covariance matrix $\Sigma$ of the assets
+to construct the \textit{efficient mimicking portfolio}, 
+along the signal $b$.
 
-The optimization problem is now:
+The optimization problem is:
 \begin{equation}
     \begin{aligned}
         & \underset{w}{\min}
@@ -99,8 +102,22 @@ The optimization problem is now:
     \end{aligned}
 \end{equation}
 
-We are now using the covariance matrix $\Sigma$ of the assets
-to construct the \textit{efficient mimicking portfolio}, 
-along the signal $b$.
+For the sake of simplicity, let's define $\Sigma = I$ (the identity matrix)
+and $\lambda = 2$.
+The minimization function becomes $w^T w - 2 w^T b$. The solution of this problem is given by:
+\begin{equation}
+    2w - 2b = 0 \Rightarrow w^* = b
+\end{equation}
+
+This case corresponds to the intuitive weighting scheme 
+we have seen in the previous chapter, with the weights defined 
+as the signal $b$. Therefore, our previous case 
+is a special case of the efficient mimicking portfolio 
+when the covariance matrix is the identity matrix. 
+In other words, weighting the assets by the signal $b$
+is the optimal weighting scheme only when the assets are
+uncorrelated (\textit{i.e.} the covariance matrix is the identity matrix).
 
 
+
+\section{Performance Measures}
