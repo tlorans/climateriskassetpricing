@@ -1,9 +1,94 @@
 \chapter{Efficient Porfolio}
 
+Even though the mimicking portfolio we have 
+seen in the previous chapter is very intuitive, 
+it is suboptimal as it is inefficient. 
+We now want to improve upon this first portfolio 
+by including more sophisticated optimized mimicking 
+portfolio construction, by taking into account 
+the information on the covariance between the 
+assets.
 
 \section{Portfolio Optimization}
 
+Let's consider an universe of $N$ assets. 
+We have $w = \begin{bmatrix}
+    w_1 & w_2 & \ldots & w_N
+\end{bmatrix}^T$ the vector of weights in the
+portfolio.
+We suppose the portfolio is fully invested, i.e.
+$w^T \mathbf{1} = 1$.
+We have $R = \begin{bmatrix}
+    R_1 & R_2 & \ldots & R_N
+\end{bmatrix}^T$ the vector of returns of the assets.
+
+The return of the portfolio is given by:
+
+\begin{equation}
+    R_p = \sum^N_{i=1} w_i R_i = w^T R
+\end{equation}
+The vector of expected asset returns is denoted by $\mu = E(R)$.
+The covariance matrix of the asset returns is denoted by $\Sigma$:
+
+\begin{equation}
+    \Sigma = E[(R - \mu)(R - \mu)^T]
+\end{equation}
+
+The variance of the portfolio is given by:
+
+\begin{equation}
+    \begin{aligned}
+        \sigma^2_p &= E[(R_p - E(R_p))^2] \\
+        &= E[(w^T R - w^T \mu)^2] \\
+        &= E[(w^T (R - \mu))^2] \\
+        &= E[w^T (R - \mu)(R - \mu)^T w] \\
+        &= w^T E[(R - \mu)(R - \mu)^T] w \\
+        &= w^T \Sigma w
+    \end{aligned}
+\end{equation}
+
+The problem of the investor can be formulated as:
+
+\begin{enumerate}
+    \item Maximize the expected return of the portfolio
+    under a volatility constraint ($\sigma_p \leq \sigma^*$)
+    \item Minimize the volatility of the portfolio under a
+    return constraint ($\mu_p \geq R^*$)
+\end{enumerate}
+
+The key idea of Markowitz (1956) is to combine 
+the two objectives into a single optimization problem:
+
+\begin{equation}
+    \begin{aligned}
+        & \underset{w}{\min}
+        & &  \frac{1}{2} w^T \Sigma w - \lambda w^T \mu \\
+        & \text{subject to}
+        & & w^T \mathbf{1} = 1
+    \end{aligned}
+\end{equation}
+    
+where $\lambda$ is a parameter that allows to trade-off
+between the two objectives (this is the risk appetite in this case).
 
 \section{Efficient Mimicking Portfolio}
 
+We can use the derived signal $b$ to compute 
+a constrained long-only portfolio ($w_i \geq 0$)
+and fully invested ($w^T \mathbf{1} = 1$) mimicking 
+portfolio.
 
+The optimization problem is:
+\begin{equation}
+    \begin{aligned}
+        & \underset{w}{\min}
+        & &  \frac{1}{2} w^T \Sigma w - \lambda w^T b \\
+        & \text{subject to}
+        & & w^T \mathbf{1} = 1 \\
+        & & & w_i \geq 0
+    \end{aligned}
+\end{equation}
+
+
+
+\section{Performance Measures}
