@@ -1,25 +1,83 @@
 \chapter{From Text to Data}
 
 
- Text as Data
+Text is high dimensional. 
+Suppose we have a bunch of documents, each of 
+which is $w$ words long. Each word is 
+drawn from a vocabulary of $p$ possible 
+words. The unique representation of these 
+documents has dimension $p^w$. 
+
+Analysis can 
+summarized in three steps:
+
+\begin{enumerate}
+    \item Represent raw text $D$ as a numerical 
+    array $C$
+    \item Map $C$ to predicted 
+    values $\hat{V}$ of unknown outcomes 
+    $V$
+    \item Use $\hat{V}$ in subsequent analysis
+\end{enumerate}
 
 \section{Some Linear Algebra}
 
 \section{Representing Text as Data}
+ 
 
- Explaining tf-idf:
+The first step in constructing $C$ is 
+to divide the raw text $D$ into individual documents 
+$D_i$. The way to divide the raw text 
+is dictated by the value of interest $V$. 
+If $V$ is daily stock price, it might makes sense
+to divide the raw text into daily news articles.
+To reduce the number of features, 
+a common first step is to strip out elements 
+of $D_i$ that are not words (punctuation,
+numbers, etc.). 
+It is also common to remove common and rare words.
+
+
+% The result is a mapping from raw text $D$ to 
+% a numerical array $C$. A row of $c_i$ 
+% is a numerical vector with each element 
+% indicating the presence or count of a particular 
+% language \textit{token} (words, phrases, etc.) in document $i$.
+To begin with the transformation from raw text $D$ to
+a numerical array $C$, we can first count 
+the number of times each word appears in each document, $c_{i,j}$.
+This is the \textit{term frequency} of word $j$ in document $i$. You 
+may want to normalize this count by the total number of words in the document:
+
+\begin{equation}
+tf_{i,j} = \frac{c_{i,j}}{n_i}
+\end{equation}
+
+where $n_i$ is the total number of words in document $i$.
+
+
+
+this is the \textit{term frequency-inverse document frequency} (tf-idf).
 
 \begin{equation}
 tf_{i,j} - idf_{j} = \frac{c_{i,j}}{n_i} \times \log (\frac{n}{d_j})
 \end{equation}
 
 
+\begin{examplebox}
+    \textbf{Example X.1.} 
+    \textit{example of tf-idf and why it is 
+    more useful than term frequency.}
+\end{examplebox}
+
+\section{Mapping Data to Predicted Values}
+
 Explaining cosine similarity
 
 
 
 
-\section{Climate Attention}
+\section{Climate Attention Index}
 
 
 \section{Further Reading}
