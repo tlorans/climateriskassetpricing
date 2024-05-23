@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {2.2}Simple Factor Mimicking Portfolio}{4}{}%
 \contentsline {section}{\numberline {2.3}Mimicking Factor Signal}{4}{}%
 \contentsline {section}{\numberline {2.4}Climate Factor Signal}{6}{}%
-\contentsline {chapter}{\numberline {3}Efficient Porfolio}{7}{}%
+\contentsline {chapter}{\numberline {3}Efficient Mimicking Porfolio}{7}{}%
 \contentsline {section}{\numberline {3.1}Portfolio Optimization}{7}{}%
 \contentsline {section}{\numberline {3.2}Climate Efficient Mimicking Portfolio}{8}{}%
 \contentsline {section}{\numberline {3.3}Performance Measures}{9}{}%
