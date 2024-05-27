@@ -1,160 +1,282 @@
-\chapter{From Text to Data}
+\chapter{Hedging Climate Risk with Climate News}
+
+Because of the long-term nature of climate risk,
+standard futures or insurance 
+contracts in which one party agrees 
+to pay the other in the event of a climate 
+disaster are difficult to implement. 
+Rather than buying a security that pays off
+in the event of a climate disaster, 
+you can construct 
+portfolio whose short-term returns hedge
+\textit{news} about climate risk.
+By hedging, period by period, the innovations 
+in news about long-run climate risk, 
+an investor can ultimately hedge her 
+long-run exposure to climate risk.
+
+\section{Climate Long-Run Risk}
+
+Climate risk is a long-run risk.
+It is usually separated into two components:
+\begin{itemize}
+    \item \textbf{Physical risk}: the risk that 
+    climate change will have direct effects on 
+    the value of assets. For example, 
+    a rise in sea levels could affect the value 
+    of real estate.
+    \item \textbf{Transition risk}: the risk that 
+    the transition to a low-carbon economy will 
+    affect the value of assets. For example, 
+    a carbon tax could affect the value of 
+    fossil fuel companies.
+\end{itemize}
+
+While global warming already has physical effects,
+most of the potential damages are still in the future.
+The transition to a low-carbon economy is also
+a long-run process, with a lot of uncertainty
+about the timing and the nature of the transition.
+
+CLIMATE SCENARIOS.
+
+$CC_{t+\tau}$ is the climate risk at time $t+\tau$.
+
+\section{Uncovering Long-Run Climate Risk
+with Changes in Expectation}
+
+We are facing a strong uncertainty about 
+$CC_{t+\tau}$, the climate risk at time $t+\tau$,
+and it is not directly observable.
+
+We can draw inspiration from the literature
+on nowcasting and forecasting to estimate
+the current expectation of $CC_{t+\tau}$, 
+with the idea of \textit{factor mimicking}, 
+following Lamont (2001) \cite{lamont2001economic}.
+
+The first core idea is to replace some variables with 
+a linear combination of other variables. More
+specifically, \textbf{some variable of interest can be
+written as a portfolio of \textit{tradable assets}}.
+It can be used to proxy economic 
+variable that 
+are not directly observable with tradable assets.
+We can construct, from financial assets, 
+a "matching portfolio" of some economic factor
+that is not directly observable.
+
+The second core idea is that 
+we can \textbf{uncover expectations about any variable
+correlated with future cash flows and discount rates
+by looking at the unexpected returns of tradable assets.}
+
+For climate risk, let's start by defining the current expectation
+of $CC_{t+\tau}$ as:
+
+\begin{equation}
+    E_{t}(CC_{t+\tau}) = E_{t-1}(CC_{t+\tau}) + \Delta E_{t}(CC_{t+\tau})
+\end{equation}
+
+That is, the current expectation is the previous
+expectation plus the news or "surprise" about the climate risk.
+On a similar vein, we can define realized returns as:
+
+\begin{equation}
+    R_{t} = E_{t-1}(R_{t}) + \tilde{R}_{t}
+\end{equation}
+
+with $\tilde{R}_{t}$ the unexpected returns.
+It's simply the difference between the 
+expected returns and the actual returns
+$\tilde{R}_{t} = R_{t} - E_{t-1}(R_{t})$.
+
+Our key assumption now is that \textbf{innovations 
+in returns (unexpected returns) reflect innovations
+in expectations about the climate risk}, such that:
+
+\begin{equation}
+    \Delta E_{t}(CC_{t+\tau}) = \beta^T \tilde{R}_{t} + \epsilon_{t}
+\end{equation}
+
+If the climate risk $CC_{t+\tau}$ is correlated
+with future cash flows and discount rates,
+then we may find something in the $\beta$, relating
+news reflected in the unexpected returns.
+This is based on the assumption that the unexpected
+returns reflect news about the future cash flows
+and discount rates (\textit{i.e.} about
+$\Delta E_{t}(CC_{t+\tau})$).
+
+The other key assumption is that 
+the long-run climate risk is simply 
+the sum of the news about the climate risk:
+
+\begin{equation}
+    E_t(CC_{t+\tau}) = \sum_{k=1}^{\tau} \Delta E_{t}(CC_{t+k})
+\end{equation}
+
+which is true if $E_t(CC_{t+\tau}) = E_{t-1}(CC_{t+\tau})
++ \Delta E_t(CC_{t+\tau})$.
 
 
-Text is high dimensional. 
-Suppose we have a bunch of documents, each of 
-which is $w$ words long. Each word is 
-drawn from a vocabulary of $p$ possible 
-words. The unique representation of these 
-documents has dimension $p^w$. 
+\begin{examplebox}
+    \textbf{Example X.1.}    
+    Say you want to estimate current (this is \textit{nowcasting})
+    GDP or inflation. You can construct the portfolio 
+    of assets that best mimics the movements of GDP or inflation.
+    Once you've run your regression, you can use your 
+    estimate of returns to predict the macro variable.
+    Let's say we don't have individual 
+    stock returns and we want to estimate 
+    the market return. All what we have is
+    the return of $K$ industry portfolios. We 
+    can estimate the market return as a 
+    linear combination of the industry returns:
+    
+    \begin{equation}
+    R_{m,t} = \beta_{\text{energy}} R_{\text{energy},t} + \beta_{\text{financials}} R_{\text{financials},t} + \ldots + \beta_{k} R_{k,t} + \epsilon_{t}
+    \end{equation}
+    
+    It looks very much like a portfolio, with 
+    the estimated $\beta$ as the weights of the assets.
+\end{examplebox}
 
-Analysis can 
-summarized in three steps:
+Now, let's say we want to form a portfolio that 
+mimics the behavior of a \textit{factor signal} $y$.
+Specifically, our target is "news" or \textit{innovations} about the signal,
+defined as the difference between the current expectation 
+and the previous expectation:
 
-\begin{enumerate}
-    \item Represent raw text $D$ as a numerical 
-    array $C$
-    \item Map $C$ to predicted 
-    values $\hat{V}$ of unknown outcomes 
-    $V$
-    \item Use $\hat{V}$ in subsequent analysis
-\end{enumerate}
+\begin{equation}
+    \Delta E_t(y_{t+1}) := E_t(y_{t+1}) - E_{t-1}(y_{t+1})
+\end{equation}
+
+In can be for example the news that the market 
+learns about the industrial production in May about 
+the industrial production in June.
+
+The mimicking portfolio portfolio returns are:
+
+\begin{equation}
+    R_{y, t} = w^T R_t
+\end{equation}
+
+where $R_t$ is the vector of returns of the tradable assets.
+You construct the mimicking portfolio with 
+\textit{unexpected returns} of the tradable assets. Unexpected 
+returns are actual returns minus expected returns:
+
+\begin{equation}
+    \tilde{R_t} := R_t - E_{t-1}(R_t)
+\end{equation}
+
+with the assumption that \textbf{the expected returns are a linear 
+function of factors $F_{t}$}:
+
+\begin{equation}
+    E_{t-1}(R_t) = \gamma^T F_{t}
+\end{equation}
 
 
-\section{Representing Text as Data}
+The porfolio weights of the mimicking portfolio of $y$ 
+are chosen so that $\tilde{R}_{y,t}$ is as close as possible
+to $\Delta E_t(y_{t+1})$ (maximally correlated).
+
+To do this, the key assumption is that 
+\textbf{innovations in returns (unexpected returns)
+reflect innovations in expectations about 
+the factor signal}, such that:
+
+\begin{equation}
+    \Delta E_t(y_{t+1}) = \beta^T \tilde{R}_t + \epsilon_t
+\end{equation}
+
+If the factor signal $y$ is correlated 
+with future cash flows and discount rates,
+then we may find something in the $\beta$, relating
+news reflected in the unexpected returns. 
+Again, this is based on the assumption that 
+the unexpected returns reflect news about the
+future cash flows and discount rates (\textit{i.e.}
+about $\Delta E_t(y_{t+1})$).
+
+Recalling that the returns are $R_t = E_{t-1}(R_t) + \tilde{R}$,
+we can therefore rewrite it with the factors:
+
+\begin{equation}
+    R_t = \gamma^T F_{t} + \tilde{R}
+\end{equation}
+
+and then includes the innovations in the factor signal:
+
+\begin{equation}
+    R_t = \gamma^T F_{t} + \eta \Delta E_t(y_{t+1}) + u_{t}
+\end{equation}
+
+What we have here? 
+\textbf{The returns of any asset can be written 
+as a function of its expected returns ($\gamma^T F_{t}$)
+and the unexpected returns. The unexpected returns are 
+decomposed into the news about the factor signal $\Delta E_t (y_{t+1})$ and
+uncorrelated errors ($u_t$).}
+
+\section{Climate Factor Signal}
+
+In the case of climate risk, we have:
+
+\begin{equation}
+    \Delta E_t (CC_{t+k}) = E_t (CC_{t+k}) - E_{t-1} (CC_{t+k})
+\end{equation}
+
+with $CC_{t+k}$ the climate risk at an undefined horizon $k$.
+We have seen in the chapter 1 how to use text to proxy for 
+the market expectation of the climate risk $E_t(CC_{t+k})$.
+
+
+\begin{examplebox}
+    \textbf{Example X.1.}    
+    \textit{illustrates use of demean vs. AR(1) to estimate}
+\end{examplebox}
+
+
+Therefore, we can estimate:
+
+\begin{equation}
+    R_{i,t} = \beta_i \Delta E_t(CC_{t+k}) + \gamma_i^T \text{Factors}_t + \epsilon_{i,t}
+\end{equation}
+
+The $\beta_i$ for each portfolio is the signal 
+upon which we want to derive our mimicking portfolio.
+The higher is $\beta_i$, the higher will be the weight 
+of the portfolio in the mimicking portfolio.
+
+However, if $\beta_i$ is negative, it means that
+we should short the portfolio. In practice, 
+it is less common to short portfolios, so we
+can set $\beta_i = 0$ if it is negative. In that 
+case, the mimicking portfolio would be a \textit{long-only}
+portfolio.
+
+A simple method to go from the $\beta_i$ to the
+weights of the mimicking portfolio is to normalize it:
+\begin{equation}
+    w_i = \frac{\tilde{\beta_i}}{\sum_{i=1}^{N} \tilde{\beta_i}}
+\end{equation}
+
+with $\tilde{\beta_i} = \max(\beta_i, 0)$.
+
+The vector of weights $w$ is already an intuitive 
+long-only mimicking portfolio: it simply 
+\textbf{weights the portfolios based on their positive 
+$\beta_i$ on the climate innovation signal 
+$\Delta E_t(CC_{t+k})$ we wish to mimic}.
  
 
-The first step in constructing $C$ is 
-to divide the raw text $D$ into individual documents 
-$D_i$. The way to divide the raw text 
-is dictated by the value of interest $V$. 
-If $V$ is daily stock price, it might makes sense
-to divide the raw text into daily news articles.
-To reduce the number of features, 
-a common first step is to strip out elements 
-of $D_i$ that are not words (punctuation,
-numbers, etc.). It is also common to remove common and rare words.
-
-To begin with the transformation from raw text $D$ to
-a numerical array $C$, we can first count 
-the number of times each word appears in each document, $c_{i,j}$.
-This is the \textit{term frequency} of word $j$ in document $i$. You 
-may want to normalize this count by the total number of words in the document:
-
-\begin{equation}
-tf_{i,j} = \frac{c_{i,j}}{n_i}
-\end{equation}
-
-where $n_i$ is the total number of words in document $i$.
-It results into a matrix $C$ of size $n \times p$ where $n$ is the number of documents and $p$ is 
-the number of unique words in the vocabulary.
-Each row of $C$ refers to a document $i$, and each column refers to a word $j$.
-
-
-\begin{examplebox}
-    \textbf{Example X.1.} 
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|p{5cm}|}
-        $D_1$ & a rose is still a rose \\
-        $D_2$ & there is no there there \\
-        $D_3$ & rose is a rose is a rose is a rose \\
-    \end{tabular}
-    \caption{Examples of individual documents $D_i$}
-\end{table}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{c|c|c|c|c|c|c}
-        $i\setminus j$ & a & rose & is & still & there & no \\
-        \hline
-        $1$ & 2 & 2 & 1 & 1 & 0 & 0 \\
-        $2$ & 0 & 0 & 1 & 0 & 3 & 1  \\
-        $3$ & 3 & 4 & 3 & 0 & 0 & 0  \\
-    \end{tabular}
-    \caption{Term frequency matrix $C$}
-\end{table}
-
-If we use the normalized term frequency, we have
-for example:
-$tf_{1,rose} = \frac{2}{6} = \frac{1}{3}$ 
-
-and $c_1$ is the row vector:
-
-\begin{equation}
-    c_1 = \begin{bmatrix}
-        \frac{2}{6} & \frac{2}{6} & \frac{1}{6} & \frac{1}{6} & 0 & 0
-    \end{bmatrix}
-\end{equation}
-\end{examplebox}
-
-So far, we have only counted 
-the number of times each word appears in each document.
-The problem is that common words like "the" or "and"
-appear in many documents and do not provide much information.
-One way to address this is to compute the 
-\textit{inverse document frequency} (idf) of each word $j$.
-This is the log of the ratio of the total number of documents $n$ 
-to the number of documents $d_j$ 
-that contain word $j$:
-
-\begin{equation}
-idf_{j} = \log (\frac{n}{d_j})
-\end{equation}
-
-where $d_j$ is the number of documents that contain word $j$.
-
-We finally combine the term frequency and the inverse document frequency
-to get the \textit{term frequency-inverse document frequency} (tf-idf).
-
-\begin{equation}
-tf_{i,j} - idf_{j} = \frac{c_{i,j}}{n_i} \times \log (\frac{n}{d_j})
-\end{equation}
-
-Very rare words will have a low $tf-idf$, because
-they have a low $tf$. Very common words 
-will have a low $tf-idf$ because they have a low $idf$.
-
-\begin{examplebox}
-    \textbf{Example X.1.} 
-    Continuing from the previous example,
-    we have $d_{rose} = 2$ since the word "rose" appears in
-    documents $D_1$ and $D_3$.
-    The idf of "rose" is then:
-    \begin{equation}
-        idf_{rose} = \log (\frac{3}{2})
-    \end{equation}
-
-    The tf-idf of "rose" in document $D_1$ is then:
-    \begin{equation}
-        tf_{1,rose} \times idf_{rose} = \frac{1}{3} \times \log (\frac{3}{2})
-    \end{equation}
-
-    Applying this to all words in all documents, we get the tf-idf matrix $C$.
-
-\end{examplebox}
-
-\section{Mapping Data to Predicted Values}
-
-Explaining cosine similarity
-
-
-
-
-\section{Climate Attention Index}
-
-
 \section{Further Reading}
-Use of text:
-\textit{Text as Data} by Gentzkow \textit{et al.} (2019) \cite{gentzkow2019text}
-\textit{Narrative Asset Pricing} by Bybee \textit{et al.} (2023) \cite{bybee2023narrative}
 
-Climate series:
-Engle \textit{et al.} (2020) \cite{engle2020hedging}
-Apel \textit{et al.} (2023) \cite{apel2023real}
-\section{Exercises}
+Tracking portfolio: Lamont (2001) \cite{lamont2001economic}
 
-\section{Solutions}
-
-\section{Python Project}
-
+Regression: 
+Climate risk mimicking: Engle \textit{et al.} (2020) \cite{engle2020hedging}
+Alekseev \textit{et al.} (2022) \cite{alekseev2022quantity}

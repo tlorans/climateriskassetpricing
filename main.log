@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  27 MAY 2024 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  27 MAY 2024 17:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,7 +552,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@cntb=\count323
 \multirow@dima=\skip122
 \bigstrutjot=\dimen277
-)) (./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/chapter04.aux) (./chapters/conclusion.aux))
+)) (./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/conclusion.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -616,17 +616,17 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2
 
-] (./main.toc [3])
+] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [4]
+ [3]
 \openout2 = `chapters/intro.aux'.
 
- (./chapters/intro.tex) [5
+ (./chapters/intro.tex [4
 
 
-] [6
+]) [5] [6
 
 
 
@@ -638,106 +638,97 @@ Chapter 1.
 [1
 
 
-]
-Package mdframed Info: mdframed works in twoside mode on input line 55.
+{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-Overfull \hbox (0.83505pt too wide) in paragraph at lines 78--81
-[]\T1/cmr/m/n/12 (-20) If we use the nor-mal-ized term fre-quency, we have for ex-am-ple: $\OML/cmm/m/it/12 tf[] \OT1/cmr/m/n/12 (-20) =
- []
+LaTeX Warning: Citation `lamont2001economic' on page 2 undefined on input line 56.
 
 [2]
-Package mdframed Info: mdframed works in twoside mode on input line 119.
+Package mdframed Info: mdframed works in twoside mode on input line 124.
+
+Overfull \hbox (82.98177pt too wide) has occurred while \output is active
+\T1/cmr/m/sl/12 1.2.  UNCOVERING LONG-RUN CLIMATE RISK WITH CHANGES IN EXPECTATION \T1/cmr/m/n/12 3
+ []
+
+[3] [4]
+Package mdframed Info: mdframed works in twoside mode on input line 238.
 
 
-LaTeX Warning: Citation `gentzkow2019text' on page 3 undefined on input line 149.
+LaTeX Warning: Citation `lamont2001economic' on page 5 undefined on input line 278.
 
 
-LaTeX Warning: Citation `bybee2023narrative' on page 3 undefined on input line 150.
+LaTeX Warning: Citation `engle2020hedging' on page 5 undefined on input line 281.
 
 
-LaTeX Warning: Citation `engle2020hedging' on page 3 undefined on input line 153.
+LaTeX Warning: Citation `alekseev2022quantity' on page 5 undefined on input line 282.
 
-
-LaTeX Warning: Citation `apel2023real' on page 3 undefined on input line 154.
-
-)
-Underfull \vbox (badness 1478) has occurred while \output is active []
-
- [3] [4]
+) [5]
 \openout2 = `chapters/chapter02.aux'.
 
- (./chapters/chapter02.tex
-Chapter 2.
-Package mdframed Info: mdframed works in twoside mode on input line 30.
-Package mdframed Info: mdframed works in twoside mode on input line 41.
-[5
+ (./chapters/chapter02.tex [6
 
 
 
 
 ]
-Package mdframed Info: Not enough space on this page on input line 47.
-Package mdframed Info: mdframed works in twoside mode on input line 68.
- [6] [7]
-Package mdframed Info: mdframed works in twoside mode on input line 184.
+Chapter 2.
+[7]
+Package mdframed Info: mdframed works in twoside mode on input line 54.
+Package mdframed Info: mdframed works in twoside mode on input line 97.
+ [8]
+
+LaTeX Warning: Citation `gentzkow2019text' on page 9 undefined on input line 172.
 
 
-LaTeX Warning: Citation `lamont2001economic' on page 8 undefined on input line 224.
+LaTeX Warning: Citation `bybee2023narrative' on page 9 undefined on input line 173.
 
 
-LaTeX Warning: Citation `engle2020hedging' on page 8 undefined on input line 227.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+
+LaTeX Warning: Citation `engle2020hedging' on page 10 undefined on input line 176.
 
 
-LaTeX Warning: Citation `alekseev2022quantity' on page 8 undefined on input line 228.
+LaTeX Warning: Citation `apel2023real' on page 10 undefined on input line 177.
 
-[8]) [9]
+) [10]
 \openout2 = `chapters/chapter03.aux'.
 
- (./chapters/chapter03.tex [10
+ (./chapters/chapter03.tex
+Chapter 3.
+[11
 
 
 
 
 ]
-Chapter 3.
-[11]
-Package mdframed Info: mdframed works in twoside mode on input line 55.
-Package mdframed Info: mdframed works in twoside mode on input line 94.
+Package mdframed Info: mdframed works in twoside mode on input line 53.
+Package mdframed Info: mdframed works in twoside mode on input line 92.
  [12]
-Package mdframed Info: mdframed works in twoside mode on input line 143.
+Package mdframed Info: mdframed works in twoside mode on input line 141.
 
 
-LaTeX Warning: Citation `roncalli2013introduction' on page 13 undefined on input line 152.
+LaTeX Warning: Citation `roncalli2013introduction' on page 13 undefined on input line 150.
 
 
-LaTeX Warning: Citation `de2024factor' on page 13 undefined on input line 155.
+LaTeX Warning: Citation `de2024factor' on page 13 undefined on input line 153.
 
-) [13] [14]
-\openout2 = `chapters/chapter04.aux'.
-
- (./chapters/chapter04.tex
-Chapter 4.
-[15
-
-
-
-
-]) [16]
+) [13]
 \openout2 = `chapters/conclusion.aux'.
 
- (./chapters/conclusion.tex
-Chapter 5.
-) [17
+ (./chapters/conclusion.tex [14
 
 
 
 
-] [18
+]
+Chapter 4.
+) [15] [16
 
 
 ]
 No file main.bbl.
-(./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/chapter04.aux) (./chapters/conclusion.aux))
+(./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/conclusion.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -748,18 +739,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 28720 strings out of 474504
- 702553 string characters out of 5756725
- 1935043 words of memory out of 5000000
- 50005 multiletter control sequences out of 15000+600000
- 579879 words of font info for 158 fonts, out of 8000000 for 9000
+ 28700 strings out of 474504
+ 701890 string characters out of 5756725
+ 1944043 words of memory out of 5000000
+ 49994 multiletter control sequences out of 15000+600000
+ 579704 words of font info for 157 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,107p,1034b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (24 pages, 314649 bytes).
+Output written on main.pdf (22 pages, 311951 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 174 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 45069 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 47117 words of extra memory for PDF output out of 51595 (max. 10000000)
 
