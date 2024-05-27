@@ -20,7 +20,6 @@ summarized in three steps:
     \item Use $\hat{V}$ in subsequent analysis
 \end{enumerate}
 
-\section{Some Linear Algebra}
 
 \section{Representing Text as Data}
  
@@ -34,15 +33,8 @@ to divide the raw text into daily news articles.
 To reduce the number of features, 
 a common first step is to strip out elements 
 of $D_i$ that are not words (punctuation,
-numbers, etc.). 
-It is also common to remove common and rare words.
+numbers, etc.). It is also common to remove common and rare words.
 
-
-% The result is a mapping from raw text $D$ to 
-% a numerical array $C$. A row of $c_i$ 
-% is a numerical vector with each element 
-% indicating the presence or count of a particular 
-% language \textit{token} (words, phrases, etc.) in document $i$.
 To begin with the transformation from raw text $D$ to
 a numerical array $C$, we can first count 
 the number of times each word appears in each document, $c_{i,j}$.
@@ -54,20 +46,92 @@ tf_{i,j} = \frac{c_{i,j}}{n_i}
 \end{equation}
 
 where $n_i$ is the total number of words in document $i$.
+It results into a matrix $C$ of size $n \times p$ where $n$ is the number of documents and $p$ is 
+the number of unique words in the vocabulary.
+Each row of $C$ refers to a document $i$, and each column refers to a word $j$.
 
 
+\begin{examplebox}
+    \textbf{Example X.1.} 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|p{5cm}|}
+        $D_1$ & a rose is still a rose \\
+        $D_2$ & there is no there there \\
+        $D_3$ & rose is a rose is a rose is a rose \\
+    \end{tabular}
+    \caption{Examples of individual documents $D_i$}
+\end{table}
 
-this is the \textit{term frequency-inverse document frequency} (tf-idf).
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c|c}
+        $i\setminus j$ & a & rose & is & still & there & no \\
+        \hline
+        $1$ & 2 & 2 & 1 & 1 & 0 & 0 \\
+        $2$ & 0 & 0 & 1 & 0 & 3 & 1  \\
+        $3$ & 3 & 4 & 3 & 0 & 0 & 0  \\
+    \end{tabular}
+    \caption{Term frequency matrix $C$}
+\end{table}
+
+If we use the normalized term frequency, we have
+for example:
+$tf_{1,rose} = \frac{2}{6} = \frac{1}{3}$ 
+
+and $c_1$ is the row vector:
+
+\begin{equation}
+    c_1 = \begin{bmatrix}
+        \frac{2}{6} & \frac{2}{6} & \frac{1}{6} & \frac{1}{6} & 0 & 0
+    \end{bmatrix}
+\end{equation}
+\end{examplebox}
+
+So far, we have only counted 
+the number of times each word appears in each document.
+The problem is that common words like "the" or "and"
+appear in many documents and do not provide much information.
+One way to address this is to compute the 
+\textit{inverse document frequency} (idf) of each word $j$.
+This is the log of the ratio of the total number of documents $n$ 
+to the number of documents $d_j$ 
+that contain word $j$:
+
+\begin{equation}
+idf_{j} = \log (\frac{n}{d_j})
+\end{equation}
+
+where $d_j$ is the number of documents that contain word $j$.
+
+We finally combine the term frequency and the inverse document frequency
+to get the \textit{term frequency-inverse document frequency} (tf-idf).
 
 \begin{equation}
 tf_{i,j} - idf_{j} = \frac{c_{i,j}}{n_i} \times \log (\frac{n}{d_j})
 \end{equation}
 
+Very rare words will have a low $tf-idf$, because
+they have a low $tf$. Very common words 
+will have a low $tf-idf$ because they have a low $idf$.
 
 \begin{examplebox}
     \textbf{Example X.1.} 
-    \textit{example of tf-idf and why it is 
-    more useful than term frequency.}
+    Continuing from the previous example,
+    we have $d_{rose} = 2$ since the word "rose" appears in
+    documents $D_1$ and $D_3$.
+    The idf of "rose" is then:
+    \begin{equation}
+        idf_{rose} = \log (\frac{3}{2})
+    \end{equation}
+
+    The tf-idf of "rose" in document $D_1$ is then:
+    \begin{equation}
+        tf_{1,rose} \times idf_{rose} = \frac{1}{3} \times \log (\frac{3}{2})
+    \end{equation}
+
+    Applying this to all words in all documents, we get the tf-idf matrix $C$.
+
 \end{examplebox}
 
 \section{Mapping Data to Predicted Values}
