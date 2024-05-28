@@ -1,5 +1,5 @@
 \contentsline {chapter}{Introduction}{v}{}%
-\contentsline {chapter}{\numberline {1}Hedging Climate Risk with Climate News}{1}{}%
+\contentsline {chapter}{\numberline {1}Uncovering Climate Risk with Climate News}{1}{}%
 \contentsline {section}{\numberline {1.1}Climate Risk}{1}{}%
 \contentsline {section}{\numberline {1.2}Uncovering Long-Run Climate Risk with Changes in Expectation}{2}{}%
 \contentsline {subsection}{\numberline {1.2.1}Portfolio Mimicking of Non-Tradable Assets}{2}{}%
