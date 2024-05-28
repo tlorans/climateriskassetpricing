@@ -1,15 +1,17 @@
 \contentsline {chapter}{Introduction}{v}{}%
 \contentsline {chapter}{\numberline {1}Hedging Climate Risk with Climate News}{1}{}%
-\contentsline {section}{\numberline {1.1}Climate Long-Run Risk}{1}{}%
+\contentsline {section}{\numberline {1.1}Climate Risk}{1}{}%
 \contentsline {section}{\numberline {1.2}Uncovering Long-Run Climate Risk with Changes in Expectation}{2}{}%
-\contentsline {section}{\numberline {1.3}Climate Factor Signal}{5}{}%
-\contentsline {section}{\numberline {1.4}Further Reading}{5}{}%
-\contentsline {chapter}{\numberline {2}Measuring Climate News}{7}{}%
-\contentsline {section}{\numberline {2.1}Representing Text as Data}{7}{}%
-\contentsline {section}{\numberline {2.2}Dictionary-based Mapping}{8}{}%
-\contentsline {section}{\numberline {2.3}Further Reading}{10}{}%
-\contentsline {chapter}{\numberline {3}Efficient Climate Mimicking Porfolio}{11}{}%
-\contentsline {section}{\numberline {3.1}Portfolio Optimization}{11}{}%
-\contentsline {section}{\numberline {3.2}Climate Efficient Mimicking Portfolio}{13}{}%
-\contentsline {section}{\numberline {3.3}Further Reading}{13}{}%
-\contentsline {chapter}{\numberline {4}Conclusion}{15}{}%
+\contentsline {subsection}{\numberline {1.2.1}Portfolio Mimicking of Non-Tradable Assets}{2}{}%
+\contentsline {subsection}{\numberline {1.2.2}Unexpected Returns and Changes in Expectations}{3}{}%
+\contentsline {section}{\numberline {1.3}Implications about Climate Risk Pricing}{3}{}%
+\contentsline {section}{\numberline {1.4}Conclusion}{4}{}%
+\contentsline {chapter}{\numberline {2}Measuring Climate News}{5}{}%
+\contentsline {section}{\numberline {2.1}Representing Text as Data}{5}{}%
+\contentsline {section}{\numberline {2.2}Dictionary-based Mapping}{6}{}%
+\contentsline {section}{\numberline {2.3}Further Reading}{8}{}%
+\contentsline {chapter}{\numberline {3}Efficient Climate Mimicking Porfolio}{9}{}%
+\contentsline {section}{\numberline {3.1}Portfolio Optimization}{9}{}%
+\contentsline {section}{\numberline {3.2}Climate Efficient Mimicking Portfolio}{11}{}%
+\contentsline {section}{\numberline {3.3}Further Reading}{11}{}%
+\contentsline {chapter}{\numberline {4}Conclusion}{13}{}%
