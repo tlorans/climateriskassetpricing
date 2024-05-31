@@ -1,22 +1,72 @@
 \chapter{Factor Mimicking Portfolios}
 
 
-\section{Risk is Innovation}
+Ross (1976) \cite{ross1976apt} introduced 
+the concept of \textit{arbitrage pricing theory} (APT).
+In this model, the expected return of an asset is
+a linear function of a set of risk factors. Famous examples of risk factors are the
+\textit{Fama-French factors} (see Fama and French (1993) \cite{fama1993common}).
+Those factors are the excess return of the market,
+the excess return of small cap stocks over big cap stocks
+and the excess return of high book-to-market stocks over low book-to-market stocks:
 
-We have a vector of $K$ factors of risks $F_{t+h}$, with $h$ the 
+\begin{equation}
+    E(R_i) = \beta_m R_m + \beta_{smb} R_{smb} + \beta_{hml} R_{hml}
+\end{equation}
+
+with $E(R_i)$ the expected return of asset $i$,
+$R_m$ the excess return of the market, $R_{smb}$ the excess return of small cap stocks over big cap stocks,
+$R_{hml}$ the excess return of high book-to-market stocks over low book-to-market stocks,
+$\beta_m$ the market beta of asset $i$, $\beta_{smb}$ the size beta of asset $i$ and $\beta_{hml}$ the value beta of asset $i$.
+Those factors are tradable, as 
+they are directly traded in financial markets (you can buy 
+the market, small cap stocks and high book-to-market stocks
+and short sell the opposite side of the trade).
+
+Macroeconomic factors are examples of 
+\textit{non-tradable factors} (think about inflation, 
+industrial growth, \textit{etc}). Economic conditions 
+have pervasive effects on asset returns (see Flannery 
+and Protopapadakis (2002) \cite{flannery2002macroeconomic}).
+A standard way to tackle the problem of non-tradable factors
+is to use factor mimicking portfolios (FMPs), such 
+as in Jurczenko and Teiletche (2022) \cite{jurczenko2022macro}. That is,
+to construct a portfolio of tradable assets that
+mimics the behavior of non-tradable factors. 
+
+
+In some sense, climate risks are non-tradable factors,
+as they are not directly traded in financial markets
+(see Jurczenko and Teiletche (2023) \cite{jurczenko2023climate}).
+We can use the same approach of FMPs to construct
+a portfolio of tradable assets that mimics the behavior
+of climate risks.
+
+\section{Climate News}
+
+We have a vector of $K$ \textit{non-tradable} factors $F_{t+h}$, with $h$ the 
 forecast horizon. 
-Investors form expectations of these factors at time $t-1$ and
-adjust their expectations at time $t$ based on new information.
-The change in expectations is given by:
+Investors form expectations of these factors 
+adjust their expectations through time, based on new information or 
+"surprise":
 
 \begin{equation}
     \tilde{F}_{t+h} = F_{t+h} - \phi
 \end{equation}
 
-where $\tilde{F}_{t+h}$ is the \textit{innovation} in the factors of risks.
+with $\phi$ the $K \times 1$ vector of expected factors.
+$\tilde{F}_{t+h}$ is the \textit{innovation} in the factors of risks.
 
 
-\section{Innovation and Unexpected Returns}
+\subsection{Climate Risks}
+
+\subsection{Measuring Climate Risks}
+
+\subsection{Innovation in Climate Risks}
+
+
+
+\section{Climate News and Unexpected Returns}
 
 On the other hand, we have the \textit{unexpected} returns $\tilde{R}_t$:
 
@@ -119,7 +169,10 @@ Taking together all the $K$ factors, we have the matrix of weights $W$:
 
 where $B_K$ is the $K \times K$ matrix with the $k$-th column equal to $\beta_k$ and the other columns equal to $\beta_{k,l}$.
 
-\section{Risk Premia}
+\section{Climate Risk Premia}
+
+Careful about conclusion on risk premia based 
+on time average of returns on the hedging portfolio.
 
 \section{Conclusion}
 

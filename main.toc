@@ -1,11 +1,14 @@
 \contentsline {chapter}{Introduction}{v}{}%
 \contentsline {chapter}{\numberline {1}Factor Mimicking Portfolios}{1}{}%
-\contentsline {section}{\numberline {1.1}Risk is Innovation}{1}{}%
-\contentsline {section}{\numberline {1.2}Innovation and Unexpected Returns}{1}{}%
-\contentsline {section}{\numberline {1.3}Linear Factor Model}{2}{}%
-\contentsline {section}{\numberline {1.4}Factor Mimicking}{2}{}%
-\contentsline {section}{\numberline {1.5}Risk Premia}{3}{}%
-\contentsline {section}{\numberline {1.6}Conclusion}{3}{}%
+\contentsline {section}{\numberline {1.1}Climate News}{2}{}%
+\contentsline {subsection}{\numberline {1.1.1}Climate Risks}{2}{}%
+\contentsline {subsection}{\numberline {1.1.2}Measuring Climate Risks}{2}{}%
+\contentsline {subsection}{\numberline {1.1.3}Innovation in Climate Risks}{2}{}%
+\contentsline {section}{\numberline {1.2}Climate News and Unexpected Returns}{2}{}%
+\contentsline {section}{\numberline {1.3}Linear Factor Model}{3}{}%
+\contentsline {section}{\numberline {1.4}Factor Mimicking}{3}{}%
+\contentsline {section}{\numberline {1.5}Climate Risk Premia}{4}{}%
+\contentsline {section}{\numberline {1.6}Conclusion}{4}{}%
 \contentsline {chapter}{\numberline {2}Climate Risk Mimicking Porfolios}{5}{}%
 \contentsline {section}{\numberline {2.1}Two-Pass Fama-MacBeth}{5}{}%
 \contentsline {section}{\numberline {2.2}Maximum Correlation Portfolio}{6}{}%
