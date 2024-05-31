@@ -2,17 +2,17 @@
 \contentsline {chapter}{\numberline {1}Factor Mimicking Portfolios}{1}{}%
 \contentsline {section}{\numberline {1.1}Climate News}{2}{}%
 \contentsline {subsection}{\numberline {1.1.1}Climate Risks}{2}{}%
-\contentsline {subsection}{\numberline {1.1.2}Measuring Climate Risks}{2}{}%
-\contentsline {subsection}{\numberline {1.1.3}Innovation in Climate Risks}{2}{}%
-\contentsline {section}{\numberline {1.2}Climate News and Unexpected Returns}{2}{}%
+\contentsline {subsection}{\numberline {1.1.2}Measuring Climate Risks}{3}{}%
+\contentsline {subsection}{\numberline {1.1.3}Innovation in Climate Risks}{3}{}%
+\contentsline {section}{\numberline {1.2}Climate News and Unexpected Returns}{3}{}%
 \contentsline {section}{\numberline {1.3}Linear Factor Model}{3}{}%
-\contentsline {section}{\numberline {1.4}Factor Mimicking}{3}{}%
-\contentsline {section}{\numberline {1.5}Climate Risk Premia}{4}{}%
-\contentsline {section}{\numberline {1.6}Conclusion}{4}{}%
-\contentsline {chapter}{\numberline {2}Climate Risk Mimicking Porfolios}{5}{}%
-\contentsline {section}{\numberline {2.1}Two-Pass Fama-MacBeth}{5}{}%
-\contentsline {section}{\numberline {2.2}Maximum Correlation Portfolio}{6}{}%
-\contentsline {chapter}{\numberline {3}Practical Use: Hedging Climate Risk for a Fund}{7}{}%
-\contentsline {section}{\numberline {3.1}Hedging a Portfolio with FMPs}{7}{}%
-\contentsline {section}{\numberline {3.2}Backtesting a Climate Risk Hedging Strategy}{7}{}%
-\contentsline {chapter}{\numberline {4}Conclusion}{9}{}%
+\contentsline {section}{\numberline {1.4}Factor Mimicking}{4}{}%
+\contentsline {section}{\numberline {1.5}Climate Risk Premia}{5}{}%
+\contentsline {section}{\numberline {1.6}Conclusion}{5}{}%
+\contentsline {chapter}{\numberline {2}Climate Risk Mimicking Porfolios}{7}{}%
+\contentsline {section}{\numberline {2.1}Two-Pass Fama-MacBeth}{7}{}%
+\contentsline {section}{\numberline {2.2}Maximum Correlation Portfolio}{8}{}%
+\contentsline {chapter}{\numberline {3}Practical Use: Hedging Climate Risk for a Fund}{9}{}%
+\contentsline {section}{\numberline {3.1}Hedging a Portfolio with FMPs}{9}{}%
+\contentsline {section}{\numberline {3.2}Backtesting a Climate Risk Hedging Strategy}{9}{}%
+\contentsline {chapter}{\numberline {4}Conclusion}{11}{}%

@@ -44,6 +44,63 @@ of climate risks.
 
 \section{Climate News}
 
+
+\subsection{Climate Risks}
+
+A first step is to identify the factors of climate risks.
+If we go back to the example of macroeconomic factors 
+as non-tradable factors, we can think about expectations 
+of inflation, industrial growth, \textit{etc}. 
+Why a non-tradable factor could have an impact on asset prices?
+
+To get an intuition, we can start from the definition of 
+returns in a one period  (\textit{ie.} asset lasts only one period):
+
+\begin{equation}
+    R_{t+1} = \frac{D_{t+1}}{P_t}
+\end{equation}
+
+with $R_{t+1}$ the return of the asset from time $t$ to time $t+1$, 
+$D_{t+1}$ the dividend paid at time $t+1$ 
+and $P_t$ the price of the asset at time $t$.
+There is no $P_{t+1}$ in the equation, 
+as we are in a one period model and 
+the stock doesn't exist anymore at time $t+1$. Take the expectations:
+
+\begin{equation}
+    E_t(R_{t+1}) = \frac{E_t(D_{t+1})}{P_t}
+\end{equation}
+
+And solve for $P_t$:
+
+\begin{equation}
+    P_t = \frac{E_t(D_{t+1})}{E_t(R_{t+1})}
+\end{equation}
+
+These formula 
+represents the price of the asset at time $t$ 
+as the discounted value of future dividends.
+Dividends are used as a proxy for future cash flows.
+The idea is: asset prices are determined by
+expectations of future cash flows or discount rate.
+Therefore, if a non-tradable factor affects
+expectations of future cash flows or discount rate,
+it will have an impact on asset prices.
+
+The idea is quite immediately intuitive for macro factors:
+it is easy to see how industrial growth
+could affect future cash flows or discount rate. 
+But what about climate risks?
+
+
+
+
+
+\subsection{Measuring Climate Risks}
+
+\subsection{Innovation in Climate Risks}
+
+
 We have a vector of $K$ \textit{non-tradable} factors $F_{t+h}$, with $h$ the 
 forecast horizon. 
 Investors form expectations of these factors 
@@ -57,12 +114,6 @@ adjust their expectations through time, based on new information or
 with $\phi$ the $K \times 1$ vector of expected factors.
 $\tilde{F}_{t+h}$ is the \textit{innovation} in the factors of risks.
 
-
-\subsection{Climate Risks}
-
-\subsection{Measuring Climate Risks}
-
-\subsection{Innovation in Climate Risks}
 
 
 
