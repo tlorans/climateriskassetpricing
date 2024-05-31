@@ -1,0 +1,167 @@
+\chapter{Measuring Climate Risk Factors}
+
+A key challenge in implementing a dynamic 
+hedging strategy for climate risk is to 
+construct a time series that captures 
+news about long-term climate risk.
+
+We can start from the observation that 
+when there are events that 
+plausibly contains information about changes 
+in climate risk, this will likely leads 
+to newspaper coverage of these events.
+Newspapers may even be the direct source 
+that investors use to update their beliefs
+about climate risk.
+
+\section{Representing Text as Data}
+ 
+Text is high dimensional. 
+Suppose we have a bunch of documents, each of 
+which is $w$ words long. Each word is 
+drawn from a vocabulary of $p$ possible 
+words. The unique representation of these 
+documents has dimension $p^w$. 
+
+Analysis can 
+summarized in three steps:
+
+\begin{enumerate}
+    \item Represent raw text $D$ as a numerical 
+    array $C$
+    \item Map $C$ to predicted 
+    values $\hat{V}$ of unknown outcomes 
+    $V$
+    \item Use $\hat{V}$ in subsequent analysis
+\end{enumerate}
+
+
+The first step in constructing $C$ is 
+to divide the raw text $D$ into individual documents 
+$D_i$. The way to divide the raw text 
+is dictated by the value of interest $V$. 
+If $V$ is daily stock price, it might makes sense
+to divide the raw text into daily news articles.
+
+To begin with the transformation from raw text $D$ to
+a numerical array $C$, we can first count 
+the number of times each word appears in each document, $c_{i,j}$.
+It results into a matrix $C$ of size $n \times p$ where $n$ is the number of documents and $p$ is 
+the number of unique words in the vocabulary.
+Each row of $C$ refers to a document $i$, and each column refers to a word $j$.
+
+\begin{examplebox}
+    \textbf{Example X.1.} 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|p{5cm}|}
+        $D_1$ & a rose is still a rose \\
+        $D_2$ & there is no there there \\
+        $D_3$ & rose is a rose is a rose is a rose \\
+    \end{tabular}
+    \caption{Examples of individual documents $D_i$}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c|c}
+        $i\setminus j$ & a & rose & is & still & there & no \\
+        \hline
+        $1$ & 2 & 2 & 1 & 1 & 0 & 0 \\
+        $2$ & 0 & 0 & 1 & 0 & 3 & 1  \\
+        $3$ & 3 & 4 & 3 & 0 & 0 & 0  \\
+    \end{tabular}
+    \caption{Term frequency matrix $C$}
+\end{table}
+\end{examplebox}
+
+
+
+\section{Dictionary-based Mapping}
+
+Dictionary-based methods are used to map the
+counts $c_i$ to outcomes $v_i$.
+It specify $\hat{v}_i = f(c_i)$ where $f$ is a 
+function pre-specified.
+Dictionary-based methods heavily rely 
+on prior information about the function mapping 
+$c_i$ to outcomes $v_i$.
+They are more appropriate when prior information 
+is strong and reliable and where information in 
+the data is weak.
+An example is a case where the outcomes $v_i$ 
+are not observed for any $i$, so there is 
+no training data available. 
+
+\begin{examplebox}
+    \textbf{Example X.1.} 
+    Suppose we have a dictionary-based method 
+    that maps the counts $c_i$ of
+    to outcomes $v_i$.
+    The dictionary is a list of words for 
+    a specific category.
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            Category & Dictionary \\
+            \hline
+            Positive & good, great, excellent \\
+            Negative & bad, terrible, awful \\
+        \end{tabular}
+        \caption{Example of a dictionary-based method}
+    \end{table}
+
+    We have the following documents $D_i$:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            $D_1$ & good is great \\
+            $D_2$ & bad is terrible \\
+            $D_3$ & good is bad \\
+        \end{tabular}
+        \caption{Example of documents $D_i$}
+    \end{table}
+
+    The matrix $C$ is:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|c|c|c|c|c|c}
+            $i\setminus j$ & good & great & bad & terrible & is & \\
+            \hline
+            $1$ & 1 & 1 & 0 & 0 & 1  \\
+            $2$ & 0 & 0 & 1 & 1 & 1  \\
+            $3$ & 1 & 0 & 1 & 0 & 1  \\
+        \end{tabular}
+        \caption{Term frequency matrix $C$}
+    \end{table}
+
+    Mapped to the dictionary, it becomes:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|c|c}
+            $i\setminus k$ & Positive & Negative \\
+            \hline
+            $1$ & 2 & 0  \\
+            $2$ & 0 & 2  \\
+            $3$ & 1 & 1  \\
+        \end{tabular}
+        \caption{Mapped matrix $C$}
+    \end{table}
+
+    We define the function $f(c_i)$ as:
+
+    \begin{equation}
+        f(c_i) = \begin{cases}
+            \text{Positive} & \text{if } \sum_j c_{i,j} \in \text{Positive} \\
+            \text{Negative} & \text{if } \sum_j c_{i,j} \in \text{Negative} \\
+            \text{Neutral} & \text{otherwise}
+        \end{cases}
+    \end{equation}
+
+
+\end{examplebox}
+
