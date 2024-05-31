@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  31 MAY 2024 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  31 MAY 2024 16:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -678,9 +678,6 @@ Chapter 3.
 
 
 ]
-\openout2 = `chapters/conclusion.aux'.
-
- (./chapters/conclusion.tex
 Overfull \hbox (25.0056pt too wide) has occurred while \output is active
 \T1/cmr/m/n/12 10 \T1/cmr/m/sl/12 CHAPTER 3.  PRACTICAL USE: HEDGING CLIMATE RISK FOR A FUND
  []
@@ -689,15 +686,9 @@ Overfull \hbox (25.0056pt too wide) has occurred while \output is active
 
 
 
-
-]
-Chapter 4.
-) [11] [12
-
-
 ]
 No file main.bbl.
-(./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/conclusion.aux))
+(./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -708,18 +699,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 28618 strings out of 474504
- 700602 string characters out of 5756725
+ 28600 strings out of 474504
+ 699940 string characters out of 5756725
  1931043 words of memory out of 5000000
- 49955 multiletter control sequences out of 15000+600000
+ 49941 multiletter control sequences out of 15000+600000
  577319 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,107p,1034b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (18 pages, 254960 bytes).
+Output written on main.pdf (16 pages, 254030 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  38925 words of extra memory for PDF output out of 42996 (max. 10000000)
 
