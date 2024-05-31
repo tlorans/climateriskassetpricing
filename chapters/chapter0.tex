@@ -94,6 +94,23 @@ The first order condition is:
     \end{aligned}
 \end{equation}
 
+Substituting $w_k$ in the constraint, we have:
+
+\begin{equation}
+    \begin{aligned}
+        B^T w_k &= \beta_k \\
+        B^T \Sigma^{-1} B \lambda_k &= \beta_k \\
+        \Rightarrow \lambda_k &= (B^T \Sigma^{-1} B)^{-1} \beta_k
+    \end{aligned}
+\end{equation}
+
+Substituting $\lambda_k$ in $w_k$, we finally have 
+the solution to the optimization problem:
+
+\begin{equation}
+    w_k^* = \Sigma^{-1} B (B^T \Sigma^{-1} B)^{-1} \beta_k
+\end{equation}
+
 
 \section{Risk Premia}
 
