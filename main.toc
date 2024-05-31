@@ -9,7 +9,7 @@
 \contentsline {chapter}{\numberline {2}Climate Risk Mimicking Porfolios}{5}{}%
 \contentsline {section}{\numberline {2.1}Two-Pass Fama-MacBeth}{5}{}%
 \contentsline {section}{\numberline {2.2}Maximum Correlation Portfolio}{6}{}%
-\contentsline {chapter}{\numberline {3}Practical Use: Hedging Climate Risk for a Mutual Fund}{7}{}%
-\contentsline {section}{\numberline {3.1}Hedging an Existing Fund}{7}{}%
+\contentsline {chapter}{\numberline {3}Practical Use: Hedging Climate Risk for a Fund}{7}{}%
+\contentsline {section}{\numberline {3.1}Hedging a Portfolio with FMPs}{7}{}%
 \contentsline {section}{\numberline {3.2}Backtesting a Climate Risk Hedging Strategy}{7}{}%
 \contentsline {chapter}{\numberline {4}Conclusion}{9}{}%

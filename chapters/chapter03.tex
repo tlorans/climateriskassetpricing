@@ -1,8 +1,35 @@
 \chapter{Practical Use: Hedging Climate Risk 
-for a Mutual Fund}
+for a Fund}
 
+An investor might be seeking to hedge 
+the climate risks to improve 
+the risk-return profile of a portfolio.
 
-\section{Hedging an Existing Fund}
+\section{Hedging a Portfolio with FMPs}
+
+A practical way to would be to determine 
+a combination of an existing portfolio $p$ with,
+climate FMPs that minimizes the variance of 
+the combined portfolio returns.
+
+More precisely, let's assume that the 
+investors determines a vector "tilt" 
+$\omega$ that represents the weights of
+the FMPs in the combined portfolio.
+
+The vector $\omega$ would be determined by:
+
+\begin{equation}
+    \begin{aligned}
+        & \underset{\omega}{\min}
+        & &   T^{-1} \sum^T_{t=1} (R^p_t - \omega^T FMP_t)^2\\
+    \end{aligned}
+\end{equation}
 
 
 \section{Backtesting a Climate Risk Hedging Strategy}
+
+Figure 3 – Macro Risk Contributions
+
+Figure 4 – Endowment portfolio and its macro-hedged version:
+Quarterly returns and Maximum Drawdowns
