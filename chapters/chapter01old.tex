@@ -1,0 +1,294 @@
+\chapter{Uncovering Climate Risk with Climate News}
+
+Because of the long-term nature of climate risk,
+standard futures or insurance 
+contracts in which one party agrees 
+to pay the other in the event of a climate 
+disaster are difficult to implement. 
+Rather than buying a security that pays off
+in the event of a climate disaster, 
+you can construct 
+portfolio whose short-term returns hedge
+\textit{news} about climate risk.
+By hedging, period by period, the innovations 
+in news about long-run climate risk, 
+an investor can ultimately hedge her 
+long-run exposure to climate risk.
+
+\section{Climate Risk}
+
+Climate risk is a long-run risk.
+It is usually separated into two components:
+\begin{itemize}
+    \item \textbf{Physical risk}: the risk that 
+    climate change will have direct effects on 
+    the value of assets. For example, 
+    a rise in sea levels could affect the value 
+    of real estate.
+    \item \textbf{Transition risk}: the risk that 
+    the transition to a low-carbon economy will 
+    affect the value of assets. For example, 
+    a carbon tax could affect the value of 
+    fossil fuel companies.
+\end{itemize}
+
+While global warming already has physical effects,
+most of the potential damages are still in the future.
+The transition to a low-carbon economy is also
+a long-run process, with a lot of uncertainty
+about the timing and the nature of the transition.
+
+CLIMATE SCENARIOS.
+
+$CC_{t+\tau}$ is the climate risk at time $t+\tau$.
+
+\section{Uncovering Long-Run Climate Risk
+with Changes in Expectation}
+
+We are facing a strong uncertainty about 
+$CC_{t+\tau}$, the climate risk at time $t+\tau$. 
+Climate risk is not a tradable asset.
+
+We can draw inspiration from the literature
+on \textit{factor mimicking}, 
+following Lamont (2001) \cite{lamont2001economic}.
+We first explain how can we mimic the behavior 
+of a non-tradable factor signal $y$ (think about industrial 
+production, inflation, \textit{etc.}) with a portfolio of tradable assets.
+
+
+\subsection{Portfolio Mimicking of Non-Tradable Assets}
+
+The first core idea is to replace some variables with 
+a linear combination of other variables. More
+specifically, \textbf{some variable of interest can be
+written as a portfolio of \textit{tradable assets}}.
+It can be used to proxy economic 
+variable that 
+are not directly observable with tradable assets.
+We can construct, from financial assets, 
+a "matching portfolio" of some economic factor
+that is
+not directly tradable.
+
+
+Say you want to estimate current (this is \textit{nowcasting})
+GDP or inflation. You can construct the portfolio 
+of assets that best mimics the movements of GDP or inflation.
+Once you've run your regression, you can use your 
+estimate of returns to predict the macro variable.
+Let's say we don't have individual 
+stock returns and we want to estimate 
+the market return. All what we have is
+the return of $K$ industry portfolios. We 
+can estimate the market return as a 
+linear combination of the industry returns:
+
+\begin{equation}
+R_{m,t} = \beta_{\text{energy}} R_{\text{energy},t} + \beta_{\text{financials}} R_{\text{financials},t} + \ldots + \beta_{k} R_{k,t} + \epsilon_{t}
+\end{equation}
+
+It looks very much like a portfolio, with 
+the estimated $\beta$ as the weights of the assets.
+
+
+\subsection{Unexpected Returns and Changes in Expectations}
+
+The second core idea is that 
+we can \textbf{uncover expectations about any variable
+correlated with future cash flows and discount rates
+by looking at the unexpected returns of tradable assets.}
+
+For climate risk, let's start by defining the current expectation
+of $CC_{t+\tau}$ as:
+
+\begin{equation}
+    E_{t}(CC_{t+\tau}) = E_{t-1}(CC_{t+\tau}) + \Delta E_{t}(CC_{t+\tau})
+\end{equation}
+
+That is, the current expectation is the previous
+expectation plus the news or "surprise" about the climate risk.
+On a similar vein, we can define realized returns as:
+
+\begin{equation}
+    R_{t} = E_{t-1}(R_{t}) + \tilde{R}_{t}
+\end{equation}
+
+with $\tilde{R}_{t}$ the unexpected returns.
+It's simply the difference between the 
+expected returns and the actual returns
+$\tilde{R}_{t} = R_{t} - E_{t-1}(R_{t})$.
+
+Our key assumption now is that \textbf{innovations 
+in returns (unexpected returns) reflect innovations
+in expectations about the climate risk}, such that:
+
+\begin{equation}
+    \Delta E_{t}(CC_{t+\tau}) = \beta^T \tilde{R}_{t} + \epsilon_{t}
+\end{equation}
+
+If the climate risk $CC_{t+\tau}$ is correlated
+with future cash flows and discount rates,
+then we may find something in the $\beta$, relating
+news reflected in the unexpected returns.
+This is based on the assumption that the unexpected
+returns reflect news about the future cash flows
+and discount rates (\textit{i.e.} about
+$\Delta E_{t}(CC_{t+\tau})$).
+
+
+
+% Now, let's say we want to form a portfolio that 
+% mimics the behavior of a \textit{factor signal} $y$.
+% Specifically, our target is "news" or \textit{innovations} about the signal,
+% defined as the difference between the current expectation 
+% and the previous expectation:
+
+% \begin{equation}
+%     \Delta E_t(y_{t+1}) := E_t(y_{t+1}) - E_{t-1}(y_{t+1})
+% \end{equation}
+
+% In can be for example the news that the market 
+% learns about the industrial production in May about 
+% the industrial production in June.
+
+% The mimicking portfolio portfolio returns are:
+
+% \begin{equation}
+%     R_{y, t} = w^T R_t
+% \end{equation}
+
+% where $R_t$ is the vector of returns of the tradable assets.
+% You construct the mimicking portfolio with 
+% \textit{unexpected returns} of the tradable assets. Unexpected 
+% returns are actual returns minus expected returns:
+
+% \begin{equation}
+%     \tilde{R_t} := R_t - E_{t-1}(R_t)
+% \end{equation}
+
+% with the assumption that \textbf{the expected returns are a linear 
+% function of factors $F_{t}$}:
+
+% \begin{equation}
+%     E_{t-1}(R_t) = \gamma^T F_{t}
+% \end{equation}
+
+
+% The porfolio weights of the mimicking portfolio of $y$ 
+% are chosen so that $\tilde{R}_{y,t}$ is as close as possible
+% to $\Delta E_t(y_{t+1})$ (maximally correlated).
+
+% To do this, the key assumption is that 
+% \textbf{innovations in returns (unexpected returns)
+% reflect innovations in expectations about 
+% the factor signal}, such that:
+
+% \begin{equation}
+%     \Delta E_t(y_{t+1}) = \beta^T \tilde{R}_t + \epsilon_t
+% \end{equation}
+
+% If the factor signal $y$ is correlated 
+% with future cash flows and discount rates,
+% then we may find something in the $\beta$, relating
+% news reflected in the unexpected returns. 
+% Again, this is based on the assumption that 
+% the unexpected returns reflect news about the
+% future cash flows and discount rates (\textit{i.e.}
+% about $\Delta E_t(y_{t+1})$).
+
+% Recalling that the returns are $R_t = E_{t-1}(R_t) + \tilde{R}$,
+% we can therefore rewrite it with the factors:
+
+% \begin{equation}
+%     R_t = \gamma^T F_{t} + \tilde{R}
+% \end{equation}
+
+% and then includes the innovations in the factor signal:
+
+% \begin{equation}
+%     R_t = \gamma^T F_{t} + \eta \Delta E_t(y_{t+1}) + u_{t}
+% \end{equation}
+
+% What we have here? 
+% \textbf{The returns of any asset can be written 
+% as a function of its expected returns ($\gamma^T F_{t}$)
+% and the unexpected returns. The unexpected returns are 
+% decomposed into the news about the factor signal $\Delta E_t (y_{t+1})$ and
+% uncorrelated errors ($u_t$).}
+
+\section{Implications about Climate Risk Pricing}
+
+We should be able to estimate the risk premium of climate risk
+as the average of the excess returns of the mimicking portfolio. 
+However, given the fact that we have a short-time serie, 
+the resulting risk premium will be noisy. Indeed, 
+investors attention to climate risk is a relatively recent phenomenon.
+
+Unexpected rturns vs. realized returns from Dissecting Green returns:
+do no draw conclusions about the expected returns of green assets
+from cumulative unexpected returns due to climate change news.
+
+% \section{Climate Factor Signal}
+
+% In the case of climate risk, we have:
+
+% \begin{equation}
+%     \Delta E_t (CC_{t+k}) = E_t (CC_{t+k}) - E_{t-1} (CC_{t+k})
+% \end{equation}
+
+% with $CC_{t+k}$ the climate risk at an undefined horizon $k$.
+% We have seen in the chapter 1 how to use text to proxy for 
+% the market expectation of the climate risk $E_t(CC_{t+k})$.
+
+
+% \begin{examplebox}
+%     \textbf{Example X.1.}    
+%     \textit{illustrates use of demean vs. AR(1) to estimate}
+% \end{examplebox}
+
+
+% Therefore, we can estimate:
+
+% \begin{equation}
+%     R_{i,t} = \beta_i \Delta E_t(CC_{t+k}) + \gamma_i^T \text{Factors}_t + \epsilon_{i,t}
+% \end{equation}
+
+% The $\beta_i$ for each portfolio is the signal 
+% upon which we want to derive our mimicking portfolio.
+% The higher is $\beta_i$, the higher will be the weight 
+% of the portfolio in the mimicking portfolio.
+
+% However, if $\beta_i$ is negative, it means that
+% we should short the portfolio. In practice, 
+% it is less common to short portfolios, so we
+% can set $\beta_i = 0$ if it is negative. In that 
+% case, the mimicking portfolio would be a \textit{long-only}
+% portfolio.
+
+% A simple method to go from the $\beta_i$ to the
+% weights of the mimicking portfolio is to normalize it:
+% \begin{equation}
+%     w_i = \frac{\tilde{\beta_i}}{\sum_{i=1}^{N} \tilde{\beta_i}}
+% \end{equation}
+
+% with $\tilde{\beta_i} = \max(\beta_i, 0)$.
+
+% The vector of weights $w$ is already an intuitive 
+% long-only mimicking portfolio: it simply 
+% \textbf{weights the portfolios based on their positive 
+% $\beta_i$ on the climate innovation signal 
+% $\Delta E_t(CC_{t+k})$ we wish to mimic}.
+ 
+\section{Conclusion}
+
+Climate risk is a non-tradable asset, with a long-run horizon.
+Portfolio mimicking allows for replicating the behavior of
+non-tradable assets with tradable assets. Using the unexpected
+returns of tradable assets, we can uncover expectations about
+non-tradable assets. We can use this framework to hedge
+climate risk by constructing a portfolio that hedges
+the changes in expectations about climate risk.
+
+But what are changes in expectations about climate risk?
+This is the topic of the next chapter.

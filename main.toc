@@ -6,19 +6,10 @@
 \contentsline {section}{\numberline {1.4}Factor Mimicking}{2}{}%
 \contentsline {section}{\numberline {1.5}Risk Premia}{3}{}%
 \contentsline {section}{\numberline {1.6}Conclusion}{3}{}%
-\contentsline {chapter}{\numberline {2}Uncovering Climate Risk with Climate News}{5}{}%
-\contentsline {section}{\numberline {2.1}Climate Risk}{5}{}%
-\contentsline {section}{\numberline {2.2}Uncovering Long-Run Climate Risk with Changes in Expectation}{6}{}%
-\contentsline {subsection}{\numberline {2.2.1}Portfolio Mimicking of Non-Tradable Assets}{6}{}%
-\contentsline {subsection}{\numberline {2.2.2}Unexpected Returns and Changes in Expectations}{7}{}%
-\contentsline {section}{\numberline {2.3}Implications about Climate Risk Pricing}{7}{}%
-\contentsline {section}{\numberline {2.4}Conclusion}{8}{}%
-\contentsline {chapter}{\numberline {3}Measuring Climate News}{9}{}%
-\contentsline {section}{\numberline {3.1}Representing Text as Data}{9}{}%
-\contentsline {section}{\numberline {3.2}Dictionary-based Mapping}{10}{}%
-\contentsline {section}{\numberline {3.3}Further Reading}{12}{}%
-\contentsline {chapter}{\numberline {4}Climate Mimicking Porfolio}{13}{}%
-\contentsline {section}{\numberline {4.1}Portfolio Optimization}{13}{}%
-\contentsline {section}{\numberline {4.2}Climate Efficient Mimicking Portfolio}{15}{}%
-\contentsline {section}{\numberline {4.3}Further Reading}{15}{}%
-\contentsline {chapter}{\numberline {5}Conclusion}{17}{}%
+\contentsline {chapter}{\numberline {2}Measuring Climate Risk Factors}{5}{}%
+\contentsline {section}{\numberline {2.1}Representing Text as Data}{5}{}%
+\contentsline {section}{\numberline {2.2}Dictionary-based Mapping}{6}{}%
+\contentsline {chapter}{\numberline {3}Climate Risk Mimicking Porfolios}{9}{}%
+\contentsline {section}{\numberline {3.1}Two-Pass Fama-MacBeth}{9}{}%
+\contentsline {section}{\numberline {3.2}Maximum Correlation Portfolio}{9}{}%
+\contentsline {chapter}{\numberline {4}Conclusion}{11}{}%
