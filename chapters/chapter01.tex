@@ -98,7 +98,31 @@ But what about climate risks?
 
 \subsection{Measuring Climate Risks}
 
+For non-tradable factors such as macro factors, 
+creating a time series that capture expectations 
+of these factors is not so difficult. You may 
+use data from the central bank, the government,
+\textit{etc}. They publish leading indicators,
+surveys, \textit{etc}. The task is more 
+challenging for climate risks.
+
+A common approach in the literature (see Engle et al. (2020) \cite{engle2020hedging})
+is to use newspapers coverage of climate events as a proxy 
+for the average investor's beliefs about climate risks.
+As they noted, when there are events that plausibly
+contains information about changes in climate risk,
+this will likely leads to newspaper coverage of these events.
+Newspapers may even be the direct source that investors
+use to update their beliefs about climate risk.
+
 \subsection{Innovation in Climate Risks}
+
+Now what drives the changes in asset prices?
+The changes in expectations about 
+future cash flows or discount rate! So,
+we are not so much interested in the level of
+expectations of climate risks, but in the changes
+in beliefs about climate risks.
 
 
 We have a vector of $K$ \textit{non-tradable} factors $F_{t+h}$, with $h$ the 
@@ -117,7 +141,10 @@ $\tilde{F}_{t+h}$ is the \textit{innovation} in the factors of risks.
 
 
 
-\section{Climate News and Unexpected Returns}
+\section{Linear Factor Model with Climate News}
+
+
+\subsection{Climate News and Unexpected Returns}
 
 On the other hand, we have the \textit{unexpected} returns $\tilde{R}_t$:
 
@@ -137,7 +164,7 @@ where $B$ is a $N \times K$ matrix of factor loadings, $\varepsilon_t$ is a $N \
 It means that investors reprice assets (unexpected returns $\tilde{R}_t$) based on the arrival of new information on the factors of risks (innovation $\tilde{F}_{t+h}$).
 
 
-\section{Linear Factor Model}
+\subsection{Factor Model with Climate News}
 
 If:
 
@@ -160,7 +187,7 @@ vector of mean zero disturbances.
 
 
 
-\section{Factor Mimicking}
+\section{Mimicking Climate News}
 
 The vector of weights $w_k$ 
 is the solution to the following optimization problem:
