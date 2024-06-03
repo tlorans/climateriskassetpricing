@@ -8,6 +8,7 @@
 \contentsline {section}{\numberline {2.1}Mimicking Approach}{5}{}%
 \contentsline {section}{\numberline {2.2}Narrative Approach}{6}{}%
 \contentsline {section}{\numberline {2.3}Risk Premia}{6}{}%
+\contentsline {section}{\numberline {2.4}Conclusion}{6}{}%
 \contentsline {chapter}{\numberline {3}Hedging Climate Risk for a Fund}{7}{}%
 \contentsline {section}{\numberline {3.1}Hedging a Fund with Climate Risk Hedging Portfolio}{7}{}%
 \contentsline {section}{\numberline {3.2}Backtesting a Climate Risk Hedging Strategy}{7}{}%
