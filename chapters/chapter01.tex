@@ -1,43 +1,34 @@
-\chapter{Climate Risk}
+\chapter{Measuring Climate Risks}
 
+Risk is the unexpected in Finance.
+Suppose that a stock return follows an AR(1) process:
 
-Hedge target.
+\begin{equation}
+    R_{t} = \phi R_ {t-1} + \varepsilon_{t}
+\end{equation}
+
+with $\varepsilon_{t}$ with mean 0 and variance $\sigma_{\varepsilon}^2$.
+
+The conditional expectation of the stock return is:
+
+\begin{equation}
+    E_t(R_{t+1}) = \phi R_t
+\end{equation}
+
+The actual or \textit{realized} return will vary 
+around this expectation. The unexpected return is:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = \varepsilon_{t+1}
+\end{equation}
+
 
 
 \section{Climate Risks and Asset Prices}
 
+
 A first step is to identify the factors of climate risks.
 Why climate risks could have an impact on asset prices?
-
-To get an intuition, we can start from the definition of 
-returns in a one period  (\textit{ie.} asset lasts only one period):
-
-\begin{equation}
-    R_{t+1} = \frac{D_{t+1}}{P_t}
-\end{equation}
-
-with $R_{t+1}$ the return of the asset from time $t$ to time $t+1$, 
-$D_{t+1}$ the dividend paid at time $t+1$ 
-and $P_t$ the price of the asset at time $t$.
-There is no $P_{t+1}$ in the equation, 
-as we are in a one period model and 
-the stock doesn't exist anymore at time $t+1$. Take the expectations:
-
-\begin{equation}
-    E_t(R_{t+1}) = \frac{E_t(D_{t+1})}{P_t}
-\end{equation}
-
-And solve for $P_t$:
-
-\begin{equation}
-    P_t = \frac{E_t(D_{t+1})}{E_t(R_{t+1})}
-\end{equation}
-
-These formula 
-represents the price of the asset at time $t$ 
-as the discounted value of future dividends.
-Dividends are used as a proxy for future cash flows.
-The idea is: 
 
 \begin{itemize}
     \item Asset prices are determined by
@@ -51,6 +42,162 @@ Expectations about climate risks should
 already be reflected in today's asset prices.
 The expected climate risks should, 
 in theory, be already priced in.
+
+\subsection{Cash-Flows Channel}
+
+Let's define a payoff $X_{t+1}$ as the 
+cash-flows provided to the investors per dollar invested in the stock at time $t$:
+
+\begin{equation}
+    X_{t+1} = \frac{CF_{t+1}}{P_t}
+\end{equation}
+
+We assume a one-period model, with only 
+two sources of uncertainty. 
+Analysts form forecasts 
+about the future cash-flows of the firm
+based on information available at time $t$.
+The cash-flows of the firm are a function of
+two factors: macroeconomic conditions and climate change.
+The sensitivity of the firm to these factors are $\beta_m$ and $\beta_{cc}$:
+
+\begin{equation}
+    E_t(X_{t+1}) = \beta_m E_t(M_{t+1})
+    + \beta_{cc} E_t(CC_{t+1})
+\end{equation}
+
+Analysts doesn't perfectly forecast future macroeconomic conditions
+and climate change. They form expectations about these factors 
+($E_t(M_{t+1})$ and $E_t(CC_{t+1})$).
+As every forecasts, they may be wrong, 
+and \textit{realized} macroeconomic conditions and climate change
+may differ from expectations:
+
+\begin{equation}
+    M_{t+1} = E_t(M_{t+1}) + \tilde{M}_{t+1}
+\end{equation}
+
+\begin{equation}
+    CC_{t+1} = E_t(CC_{t+1}) + \tilde{CC}_{t+1}
+\end{equation}
+
+with $\tilde{M}_{t+1}$ and $\tilde{CC}_{t+1}$ the \textit{shocks} to macroeconomic conditions 
+and climate change. These shocks are unanticipated
+changes.
+Due to the possibility of unanticipated shocks,
+the realized cash-flows may also differ from expected cash-flows:
+
+\begin{equation}
+    X_{t+1} - E_{t}(X_{t+1}) = \beta_m \tilde{M}_{t+1} + \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1}
+\end{equation}
+
+$E_t(X_{t+1})$ is the expected payoff at time $t+1$,
+with forecasts based on information available at time $t$.
+
+\subsection{Discount Rate Channel}
+
+Now, how the stock is priced? 
+The price of the stock is the discounted value of the 
+cash-flows per dollar invested in the stock.
+The cash-flows are discounted according 
+to a required rate of return for the firm:
+
+\begin{equation}
+    P_{t+1} = \frac{X_{t+1}}{\rho_{t+1}}
+\end{equation}
+
+If we assume that $\beta_m = 0$,
+we have a time-varying discount rate $\rho_{t+1}$:
+
+\begin{equation}
+    \rho_{t+1} = 1 - \frac{\beta_{CC}}{\gamma} d_{t+1}
+\end{equation}
+
+with $d_{t+1}$ the perception of climate 
+risks by the average investor at time $t+1$,
+and $\gamma$ the constant risk aversion of 
+the average investor.
+
+The price in $P_{t+1}$, once 
+the shock are realized at time $t+1$, will be:
+
+\begin{equation}
+    P_{t+1} = \frac{X_{t+1}}{1 - \frac{\beta_{CC}}{\gamma}d_{t+1}}
+\end{equation}
+
+Which can be approximated as:
+
+\begin{equation}
+    P_{t+1} \approx X_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1}
+\end{equation}
+
+It's expected value at time $t$ is:
+
+\begin{equation}
+    E_t(P_{t+1}) = E_t(X_{t+1}) + \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
+\end{equation}
+
+And the unexpected return is:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = P_{t+1} - E_t(P_{t+1})
+\end{equation}
+
+because $X_{t+1}$ is the payoff per dollar invested in the stock at time $t$,
+which corresponds to the definition of a return in a 
+one-period model $R_{t+1} = \frac{CF_{t+1}}{P_t}$.
+
+We now can substitute $P_{t+1}$ and $E_t(P_{t+1})$ in the equation above:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = X_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1} - E_t(X_{t+1}) - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
+\end{equation}
+
+We recognize the unexpected payoff $X_{t+1} - E_t(X_{t+1})$:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = X_{t+1} - E_t(X_{t+1}) + \frac{\beta_{CC}}{\gamma}d_{t+1} - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
+\end{equation}
+
+We can rewrite the unexpected payoff as a function of the shocks:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = \beta_m \tilde{M}_{t+1} + \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1} - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
+\end{equation}
+
+Let's drop the macroeconomic component as 
+we assumed that $\beta_m = 0$:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1} - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
+\end{equation}
+
+We can factorize the second part, with
+the unexpected change in the average perception of climate risks $d$:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \frac{\beta_{CC}}{\gamma}(d_{t+1} - E_t(d_{t+1}))
+\end{equation}
+
+We group together the terms related to the climate change:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \beta_{CC} \left( \frac{1}{\gamma}(d_{t+1} - E_t(d_{t+1})) \right)
+\end{equation}
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \left(\tilde{CC}_{t+1} + \frac{1}{\gamma}(d_{t+1} - E_t(d_{t+1})) \right) + \varepsilon_{t+1}
+\end{equation}
+
+What does it says? In our simple model, 
+we have related the unexpected returns to the
+unexpected changes in climate risks. It can 
+either comes from the realization of an 
+unexpected climate event $\tilde{CC}_{t+1}$,
+or from the unexpected change in the average
+perception of climate risks $d_{t+1} - E_t(d_{t+1})$.
+
+
 
 Now what drives the changes in asset prices?
 Ultimately, we are interested in the changes in asset prices,
@@ -96,7 +243,12 @@ expectations about future cash flows or discount rate.
 
 \section{Measuring Climate Risks}
 
-For non-tradable factors such as macro factors, 
+We have seen that what matters for asset prices
+are expectations about climate risks. What 
+matters about returns are the changes in
+expectations about climate risks.
+
+For more traditional macroeconomic factors, 
 creating a time series that capture expectations 
 of these factors is not so difficult. You may 
 use data from the central bank, the government,
@@ -112,7 +264,19 @@ contains information about changes in climate risk,
 this will likely leads to newspaper coverage of these events.
 Newspapers may even be the direct source that investors
 use to update their beliefs about climate risk.
+Following the initial work from Engle et al. (2020) \cite{engle2020hedging},
+researchers have developed a number of climate 
+news series series capturing a variety of different climate risks.
+Each measure is signed such that a large number 
+corresponds to "bad news".
 
+
+
+
+\section{Tag Index}
+
+
+\section{Similarity Index}
 
 \section{Conclusion}
 
