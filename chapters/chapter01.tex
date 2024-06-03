@@ -1,47 +1,95 @@
-\chapter{Measuring Climate Risks}
+\chapter{Climate Risks}
 
-Risk is the unexpected in Finance.
-Suppose that a stock return follows an AR(1) process:
+Before going straight 
+on climate risks, we need to agree on 
+the definition of \textit{risk} in Finance. Suppose 
+that a stock return follows an AR(1) process:
 
 \begin{equation}
     R_{t} = \phi R_ {t-1} + \varepsilon_{t}
 \end{equation}
 
-with $\varepsilon_{t}$ with mean 0 and variance $\sigma_{\varepsilon}^2$.
+with $\varepsilon_{t}$ is a \textit{white noise} process,
+like a coin flip: completely unpredictable.
+We generaly consider 
+that it is 
+mean zero $E_t(\varepsilon_{t+1}) = E(\varepsilon_{t+1}) = 0$
+and constant variance $\sigma_t(\varepsilon_{t+1}) = \sigma(\varepsilon_{t+1})= \sigma_{\varepsilon}^2$.
+Such white noise is also unpredictable from its past:
+the \textit{autocorrelation} $\text{Corr}(\varepsilon_{t},\varepsilon_{t+1})=0$.
+Below is an example of such white noise process.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{../images/chapter01/unexpected_shocks.png}
+    \caption{$\varepsilon_t$ with $\sigma_{\varepsilon} = 0.5$}
+    \label{fig:fig01}
+\end{figure}
+
 
 The conditional expectation of the stock return is:
 
 \begin{equation}
-    E_t(R_{t+1}) = \phi R_t
+    \begin{aligned}
+    E_t(R_{t+1}) = \phi R_t + E_t(\varepsilon_{t+1}) \\
+    = \phi R_t
+    \end{aligned}
 \end{equation}
+
+because $E_t(\varepsilon_{t+1}) = 0$.
 
 The actual or \textit{realized} return will vary 
 around this expectation. The unexpected return is:
 
 \begin{equation}
-    R_{t+1} - E_t(R_{t+1}) = \varepsilon_{t+1}
+    \begin{aligned}
+    R_{t+1} - E_t(R_{t+1}) = \phi R_t + \varepsilon_{t+1} - \phi R_t \\
+    = \varepsilon_{t+1}
+    \end{aligned}
 \end{equation}
 
+and conditional variance of the stock return is:
 
+\begin{equation}
+    \begin{aligned}
+    \sigma_t^2(R_{t+1}) = \sigma^2_t(\varepsilon_{t+1}) \\
+    = \sigma_{\varepsilon}^2
+    \end{aligned}
+\end{equation}
+
+due to the definition of the white noise 
+process with constant variance, and the fact that
+we already know $R_t$ at time $t$, so 
+$\sigma_t^2(R_{t}) = 0$.
+
+Risk is the unexpected in Finance. This 
+is the fact that returns are not 
+what we expected. Either higher or lower.
+So, what matters is this $\varepsilon_{t+1}$ in 
+our stock return process and its variance $\sigma_{\varepsilon}^2$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{../images/chapter01/ar_1.png}
+    \caption{Simulation with increasing 
+    uncertainty ($\sigma_{\varepsilon}^2$) in an AR(1) process.}
+    \label{fig:fig01}
+\end{figure}
+
+Figure~\ref{fig:fig01} shows the stock return process
+with increasing uncertainty $\sigma_{\varepsilon}^2$.
+The more uncertain the process, the more
+the realized returns will vary around the
+expected returns. 
+
+With this in mind, we can now move to the question 
+of climate risks. 
 
 \section{Climate Risks and Asset Prices}
 
-
-A first step is to identify the factors of climate risks.
-Why climate risks could have an impact on asset prices?
-
-\begin{itemize}
-    \item Asset prices are determined by
-    expectations of future cash flows or discount rate.
-    \item Climate risks may 
-    affect expectations of future cash flows or discount rate.
-    \item Therefore, climate risks may have an impact on asset prices.
-\end{itemize}
-
-Expectations about climate risks should 
-already be reflected in today's asset prices.
-The expected climate risks should, 
-in theory, be already priced in.
+We have seen that what matters for risk 
+in Finance is what is unexpected, or uncertain.
+Climate risks are a potential source of uncertainty 
 
 \subsection{Cash-Flows Channel}
 
