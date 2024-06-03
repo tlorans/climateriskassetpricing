@@ -87,9 +87,12 @@ of climate risks.
 
 \section{Climate Risks and Asset Prices}
 
-We have seen that what matters for risk 
-in Finance is what is unexpected, or uncertain.
-Climate risks are a potential source of uncertainty 
+With a simple one-period model, we can
+show how climate change-related issues can add uncertainty
+to asset prices (thus, risks).
+We will consider two channels through which
+climate change adds uncertainty: the cash-flows channel
+and the discount rate channel.
 
 \subsection{Cash-Flows Channel}
 
@@ -100,47 +103,78 @@ cash-flows provided to the investors per dollar invested in the stock at time $t
     X_{t+1} = \frac{CF_{t+1}}{P_t}
 \end{equation}
 
-We assume a one-period model, with only 
-two sources of uncertainty. 
 Analysts form forecasts 
 about the future cash-flows of the firm
 based on information available at time $t$.
-The cash-flows of the firm are a function of
-two factors: macroeconomic conditions and climate change.
-The sensitivity of the firm to these factors are $\beta_m$ and $\beta_{cc}$:
+The expectations of the payoff
+are a function of climate-related
+conditions $CC_{t+1}$. $CC_{t+1}$ could represents 
+any climate-related issues that may affect the
+firm's cash-flows. But to make the things more 
+concrete, we can think of $CC_{t+1}$ as 
+a carbon tax. 
+The expected payoff is then:
 
 \begin{equation}
-    E_t(X_{t+1}) = \beta_m E_t(M_{t+1})
-    + \beta_{cc} E_t(CC_{t+1})
+    E_t(X_{t+1}) = \beta_{cc} E_t(CC_{t+1})
 \end{equation}
 
-Analysts doesn't perfectly forecast future macroeconomic conditions
-and climate change. They form expectations about these factors 
-($E_t(M_{t+1})$ and $E_t(CC_{t+1})$).
-As every forecasts, they may be wrong, 
-and \textit{realized} macroeconomic conditions and climate change
-may differ from expectations:
+with $\beta_{cc}$ the sensitivities of 
+the payoff to the carbon tax. Of course,
+the payoff may also depend on other factors
+like macroeconomic conditions. But 
+for the sake of simplicity, we will focus
+on the carbon tax example.
+In order to forecast the future payoff, analysts 
+needs to forecast future carbon tax
+$E_t(CC_{t+1})$.
+
+Suppose that the carbon tax $CC_{t+1}$ is an AR(1) process:
 
 \begin{equation}
-    M_{t+1} = E_t(M_{t+1}) + \tilde{M}_{t+1}
+    CC_{t+1} = \phi CC_t + \tilde{CC}_{t+1}
 \end{equation}
+
+with $\tilde{CC}_{t+1}$ a white noise process
+representing unexpected changes in the carbon tax.
+Again, $E_t(\tilde{CC}_{t+1}) = 0$ and
+$\sigma_t^2(\tilde{CC}_{t+1}) = \sigma_{\tilde{CC}}^2$.
+The expected value of the carbon tax at time $t+1$ is:
 
 \begin{equation}
-    CC_{t+1} = E_t(CC_{t+1}) + \tilde{CC}_{t+1}
+    E_t(CC_{t+1}) = \phi CC_t
 \end{equation}
 
-with $\tilde{M}_{t+1}$ and $\tilde{CC}_{t+1}$ the \textit{shocks} to macroeconomic conditions 
-and climate change. These shocks are unanticipated
-changes.
-Due to the possibility of unanticipated shocks,
-the realized cash-flows may also differ from expected cash-flows:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/chapter01/carbon_tax_simulations.png}
+    \caption{Simulation of the carbon tax process.}
+    \label{fig:carbon_tax}
+\end{figure}
+
+The analysts may for example think that the carbon 
+tax is supposed to increase by 5\%.
+For the sake of the illustration, 
+we simulate the carbon tax process with
+$\phi = 1.05$ and $\sigma_{\tilde{CC}}^2 = 0.25$
+with 10 periods
+in figure~\ref{fig:carbon_tax} shows the carbon tax process.
+
+
+
+Due to the possibility of unanticipated changes 
+to the carbon tax,
+the realized payoff may also differ from the expected one:
 
 \begin{equation}
-    X_{t+1} - E_{t}(X_{t+1}) = \beta_m \tilde{M}_{t+1} + \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1}
+    X_{t+1} - E_{t}(X_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1}
 \end{equation}
 
-$E_t(X_{t+1})$ is the expected payoff at time $t+1$,
-with forecasts based on information available at time $t$.
+Depending on the sensitivity of the payoff to the carbon tax $\beta_{CC}$,
+the unexpected payoff may be more or less volatile.
+The sign of $X_{t+1} - E_{t}(X_{t+1})$ will depend on the sign of $\tilde{CC}_{t+1}$
+and the sign of $\beta_{CC}$.
 
 \subsection{Discount Rate Channel}
 
