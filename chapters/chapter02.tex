@@ -5,12 +5,66 @@ have been proposed in the literature:
 (i) the two-pass cross-sectional regression (Fama and MacBeth, 1973) and
 (ii) the maximum correlation portfolio (MCP) (Huberman et al, 1987).
 
-It is possible to recover both approaches
-with the equation in the chapter 1:
+
+\section{Mimicking Climate News}
+
+The vector of weights $w_k$ 
+is the solution to the following optimization problem:
+
+\begin{equation}
+    \begin{aligned}
+        & \underset{w_k}{\min}
+        & &  \frac{1}{2} w_k^T \Sigma w_k \\
+        & \text{subject to}
+        & & B^T w_k = \beta_k
+    \end{aligned}
+\end{equation}
+
+where $B$ is the $N \times K$ matrix of factor loadings, $\beta_k$ is the $K \times 1$ vector of factor exposures,
+with the $k$-th element equal to 1 and the other elements equal to $\beta_{k,l}$, 
+and $\Sigma$ is the $N \times N$ covariance matrix of asset returns.
+
+We can form the Lagrangian:
+
+\begin{equation}
+    \mathcal{L}(w_k, \lambda) = \frac{1}{2} w_k^T \Sigma w_k - \lambda_k^T (B^T w_k - \beta_k)
+\end{equation}
+
+where $\lambda_k$ is the $K \times 1$ vector of Lagrange multipliers.
+
+The first order condition is:
+
+\begin{equation}
+    \begin{aligned}
+        \frac{\partial \mathcal{L}}{\partial w_k} &= \Sigma w_k - B \lambda = 0 \\
+        \Rightarrow w_k &= \Sigma^{-1} B \lambda_k
+    \end{aligned}
+\end{equation}
+
+Substituting $w_k$ in the constraint, we have:
+
+\begin{equation}
+    \begin{aligned}
+        B^T w_k &= \beta_k \\
+        B^T \Sigma^{-1} B \lambda_k &= \beta_k \\
+        \Rightarrow \lambda_k &= (B^T \Sigma^{-1} B)^{-1} \beta_k
+    \end{aligned}
+\end{equation}
+
+Substituting $\lambda_k$ in $w_k$, we finally have 
+the solution to the optimization problem:
+
+\begin{equation}
+    w_k^* = \Sigma^{-1} B (B^T \Sigma^{-1} B)^{-1} \beta_k
+\end{equation}
+
+Taking together all the $K$ factors, we have the matrix of weights $W$:
 
 \begin{equation}
     W = \Sigma^{-1} B (B^T \Sigma^{-1} B)^{-1} B_K
 \end{equation}
+
+where $B_K$ is the $K \times K$ matrix with the $k$-th column equal to $\beta_k$ and the other columns equal to $\beta_{k,l}$.
 
 
 \section{Two-Pass Fama-MacBeth}
@@ -75,3 +129,7 @@ FIND THE INTERMEDIARY STEPS
 FMP composition as estimated by different methods
 
 FIGURE 2 IN JURCENZKO MACRO FACTORS WITH THIS METHOD
+
+\section{Other Approaches}
+
+Narrative approach

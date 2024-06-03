@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  31 MAY 2024 16:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  3 JUN 2024 07:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,7 +552,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@cntb=\count323
 \multirow@dima=\skip122
 \bigstrutjot=\dimen277
-)) (./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux) (./chapters/conclusion.aux))
+)) (./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/chapter02.aux) (./chapters/chapter03.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -636,53 +636,48 @@ Package pgfplots notification 'compat/show suggested version=true': document has
  (./chapters/chapter01.tex
 Chapter 1.
 
-LaTeX Warning: Citation `ross1976apt' on page 1 undefined on input line 4.
+LaTeX Warning: Citation `ross1976apt' on page 1 undefined on input line 6.
 
 
-LaTeX Warning: Citation `fama1993common' on page 1 undefined on input line 8.
+LaTeX Warning: Citation `fama1993common' on page 1 undefined on input line 10.
 
 
-LaTeX Warning: Citation `flannery2002macroeconomic' on page 1 undefined on input line 30.
+LaTeX Warning: Citation `flannery2002macroeconomic' on page 1 undefined on input line 32.
 
 
-LaTeX Warning: Citation `jurczenko2022macro' on page 1 undefined on input line 33.
+LaTeX Warning: Citation `jurczenko2022macro' on page 1 undefined on input line 35.
 
 
-LaTeX Warning: Citation `jurczenko2023climate' on page 1 undefined on input line 40.
+LaTeX Warning: Citation `jurczenko2023climate' on page 1 undefined on input line 42.
 
 [1
 
 
 ] [2]
 
-LaTeX Warning: Citation `engle2020hedging' on page 3 undefined on input line 109.
+LaTeX Warning: Citation `engle2020hedging' on page 3 undefined on input line 107.
 
-[3] [4]) [5]
+[3]) [4]
 \openout2 = `chapters/chapter02.aux'.
 
- (./chapters/chapter02.tex [6
-
-
-
-
-]
+ (./chapters/chapter02.tex
 Chapter 2.
-[7]) [8]
+[5
+
+
+
+
+] [6]) [7]
 \openout2 = `chapters/chapter03.aux'.
 
- (./chapters/chapter03.tex
-Chapter 3.
-) [9
+ (./chapters/chapter03.tex [8
 
 
 
 
 ]
-Overfull \hbox (25.0056pt too wide) has occurred while \output is active
-\T1/cmr/m/n/12 10 \T1/cmr/m/sl/12 CHAPTER 3.  PRACTICAL USE: HEDGING CLIMATE RISK FOR A FUND
- []
-
-[10
+Chapter 3.
+) [9] [10
 
 
 
@@ -699,18 +694,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 28600 strings out of 474504
- 699940 string characters out of 5756725
- 1931043 words of memory out of 5000000
- 49941 multiletter control sequences out of 15000+600000
- 577319 words of font info for 134 fonts, out of 8000000 for 9000
+ 28584 strings out of 474504
+ 699653 string characters out of 5756725
+ 1930043 words of memory out of 5000000
+ 49935 multiletter control sequences out of 15000+600000
+ 576345 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,107p,1034b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (16 pages, 254030 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (16 pages, 237760 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 140 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38925 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 36877 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -1,5 +1,7 @@
-\chapter{Factor Mimicking Portfolios}
+\chapter{Climate Risk}
 
+
+Hedge target.
 
 Ross (1976) \cite{ross1976apt} introduced 
 the concept of \textit{arbitrage pricing theory} (APT).
@@ -42,10 +44,9 @@ We can use the same approach of FMPs to construct
 a portfolio of tradable assets that mimics the behavior
 of climate risks.
 
-\section{Climate News}
 
 
-\subsection{Climate Risks}
+\section{Climate Risks and Asset Prices}
 
 A first step is to identify the factors of climate risks.
 If we go back to the example of macroeconomic factors 
@@ -93,10 +94,7 @@ could affect expectations about cash flows or discount rate.
 But what about climate risks?
 
 
-
-
-
-\subsection{Measuring Climate Risks}
+\section{Measuring Climate Risks}
 
 For non-tradable factors such as macro factors, 
 creating a time series that capture expectations 
@@ -115,7 +113,7 @@ this will likely leads to newspaper coverage of these events.
 Newspapers may even be the direct source that investors
 use to update their beliefs about climate risk.
 
-\subsection{Innovation in Climate Risks}
+\section{Risk is the Unexpected}
 
 Now what drives the changes in asset prices?
 The changes in expectations about 
@@ -140,12 +138,6 @@ $\tilde{F}_{t+h}$ is the \textit{innovation} in the factors of risks.
 
 
 
-
-\section{Linear Factor Model with Climate News}
-
-
-\subsection{Climate News and Unexpected Returns}
-
 On the other hand, we have the \textit{unexpected} returns $\tilde{R}_t$:
 
 \begin{equation}
@@ -164,7 +156,7 @@ where $B$ is a $N \times K$ matrix of factor loadings, $\varepsilon_t$ is a $N \
 It means that investors reprice assets (unexpected returns $\tilde{R}_t$) based on the arrival of new information on the factors of risks (innovation $\tilde{F}_{t+h}$).
 
 
-\subsection{Factor Model with Climate News}
+\section{Factor Model with Climate News}
 
 If:
 
@@ -186,75 +178,11 @@ of factor innovations and $\varepsilon_t$ a $N \times 1$
 vector of mean zero disturbances.
 
 
-
-\section{Mimicking Climate News}
-
-The vector of weights $w_k$ 
-is the solution to the following optimization problem:
-
-\begin{equation}
-    \begin{aligned}
-        & \underset{w_k}{\min}
-        & &  \frac{1}{2} w_k^T \Sigma w_k \\
-        & \text{subject to}
-        & & B^T w_k = \beta_k
-    \end{aligned}
-\end{equation}
-
-where $B$ is the $N \times K$ matrix of factor loadings, $\beta_k$ is the $K \times 1$ vector of factor exposures,
-with the $k$-th element equal to 1 and the other elements equal to $\beta_{k,l}$, 
-and $\Sigma$ is the $N \times N$ covariance matrix of asset returns.
-
-We can form the Lagrangian:
-
-\begin{equation}
-    \mathcal{L}(w_k, \lambda) = \frac{1}{2} w_k^T \Sigma w_k - \lambda_k^T (B^T w_k - \beta_k)
-\end{equation}
-
-where $\lambda_k$ is the $K \times 1$ vector of Lagrange multipliers.
-
-The first order condition is:
-
-\begin{equation}
-    \begin{aligned}
-        \frac{\partial \mathcal{L}}{\partial w_k} &= \Sigma w_k - B \lambda = 0 \\
-        \Rightarrow w_k &= \Sigma^{-1} B \lambda_k
-    \end{aligned}
-\end{equation}
-
-Substituting $w_k$ in the constraint, we have:
-
-\begin{equation}
-    \begin{aligned}
-        B^T w_k &= \beta_k \\
-        B^T \Sigma^{-1} B \lambda_k &= \beta_k \\
-        \Rightarrow \lambda_k &= (B^T \Sigma^{-1} B)^{-1} \beta_k
-    \end{aligned}
-\end{equation}
-
-Substituting $\lambda_k$ in $w_k$, we finally have 
-the solution to the optimization problem:
-
-\begin{equation}
-    w_k^* = \Sigma^{-1} B (B^T \Sigma^{-1} B)^{-1} \beta_k
-\end{equation}
-
-Taking together all the $K$ factors, we have the matrix of weights $W$:
-
-\begin{equation}
-    W = \Sigma^{-1} B (B^T \Sigma^{-1} B)^{-1} B_K
-\end{equation}
-
-where $B_K$ is the $K \times K$ matrix with the $k$-th column equal to $\beta_k$ and the other columns equal to $\beta_{k,l}$.
-
-\subsection{Climate Risk Premia}
-
 Careful about conclusion on risk premia based 
 on time average of returns on the hedging portfolio.
 
 \section{Conclusion}
 
-In what follows, we will focus 
-on the case of climate risk factors.
-First stage is to identify how to measure 
-climate risk factors.
+In what follow we propose a method to construct
+hedge portfolios with tradable assets that
+mimic the behavior of climate risks. 
