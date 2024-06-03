@@ -3,48 +3,6 @@
 
 Hedge target.
 
-Ross (1976) \cite{ross1976apt} introduced 
-the concept of \textit{arbitrage pricing theory} (APT).
-In this model, the expected return of an asset is
-a linear function of a set of risk factors. Famous examples of risk factors are the
-\textit{Fama-French factors} (see Fama and French (1993) \cite{fama1993common}).
-Those factors are the excess return of the market,
-the excess return of small cap stocks over big cap stocks
-and the excess return of high book-to-market stocks over low book-to-market stocks:
-
-\begin{equation}
-    E(R_i) = \beta_m R_m + \beta_{smb} R_{smb} + \beta_{hml} R_{hml}
-\end{equation}
-
-with $E(R_i)$ the expected return of asset $i$,
-$R_m$ the excess return of the market, $R_{smb}$ the excess return of small cap stocks over big cap stocks,
-$R_{hml}$ the excess return of high book-to-market stocks over low book-to-market stocks,
-$\beta_m$ the market beta of asset $i$, $\beta_{smb}$ the size beta of asset $i$ and $\beta_{hml}$ the value beta of asset $i$.
-Those factors are tradable, as 
-they are directly traded in financial markets (you can buy 
-the market, small cap stocks and high book-to-market stocks
-and short sell the opposite side of the trade).
-
-Macroeconomic factors are examples of 
-\textit{non-tradable factors} (think about inflation, 
-industrial growth, \textit{etc}). Economic conditions 
-have pervasive effects on asset returns (see Flannery 
-and Protopapadakis (2002) \cite{flannery2002macroeconomic}).
-A standard way to tackle the problem of non-tradable factors
-is to use factor mimicking portfolios (FMPs), such 
-as in Jurczenko and Teiletche (2022) \cite{jurczenko2022macro}. That is,
-to construct a portfolio of tradable assets that
-mimics the behavior of non-tradable factors. 
-
-
-Climate risks are non-tradable factors,
-as they are not directly traded in financial markets
-(see Jurczenko and Teiletche (2023) \cite{jurczenko2023climate}).
-We can use the same approach of FMPs to construct
-a portfolio of tradable assets that mimics the behavior
-of climate risks.
-
-
 
 \section{Climate Risks and Asset Prices}
 
@@ -94,6 +52,48 @@ could affect expectations about cash flows or discount rate.
 But what about climate risks?
 
 
+\section{Changes in Expectations about Climate Risks}
+
+Now what drives the changes in asset prices?
+The changes in expectations about 
+future cash flows or discount rate. 
+So,
+we are not so much interested in the level of
+expectations of climate risks, but in the changes
+in beliefs about climate risks.
+
+Investors form expectations about climate risks
+in an horizon $h$ with information available (those 
+are conditional expectations).
+Each period, new information arrives and investors
+update their beliefs about climate risks:
+
+\begin{equation}
+    \Delta E_t (CC_{t+h}) = E_t(CC_{t+h}) - E_{t-1}(CC_{t+h})
+\end{equation}
+
+with $\Delta E_t (CC_{t+h})$ the \textit{innovation} or 
+\textit{news} in climate risk. On the other hand, we have the \textit{unexpected} returns $\tilde{R}_t$:
+
+\begin{equation}
+    \tilde{R}_t = R_t - E_{t-1}(R_t)
+\end{equation}
+
+with $R_t$ the \textit{realized} returns 
+and $E_{t-1}(R_t)$ the expected returns based on information available at time $t-1$.
+Because investors reprice assets based on the arrival of new information,
+we can expect that the innovation in climate risk is reflected in the unexpected returns:
+
+\begin{equation}
+    \tilde{R}_t = \beta \Delta E_t(CC_{t+h}) + \varepsilon_t
+\end{equation}
+
+
+with $\beta$ non-null as long as we expect 
+that changes in climate risks affect investors 
+expectations about future cash flows or discount rate.
+
+
 \section{Measuring Climate Risks}
 
 For non-tradable factors such as macro factors, 
@@ -113,73 +113,6 @@ this will likely leads to newspaper coverage of these events.
 Newspapers may even be the direct source that investors
 use to update their beliefs about climate risk.
 
-\section{Risk is the Unexpected}
-
-Now what drives the changes in asset prices?
-The changes in expectations about 
-future cash flows or discount rate! So,
-we are not so much interested in the level of
-expectations of climate risks, but in the changes
-in beliefs about climate risks.
-
-
-We have a vector of $K$ \textit{non-tradable} factors $F_{t+h}$, with $h$ the 
-forecast horizon. 
-Investors form expectations of these factors 
-adjust their expectations through time, based on new information or 
-"surprise":
-
-\begin{equation}
-    \tilde{F}_{t+h} = F_{t+h} - \phi
-\end{equation}
-
-with $\phi$ the $K \times 1$ vector of expected factors.
-$\tilde{F}_{t+h}$ is the \textit{innovation} in the factors of risks.
-
-
-
-On the other hand, we have the \textit{unexpected} returns $\tilde{R}_t$:
-
-\begin{equation}
-    \tilde{R}_t = R_t - \mu
-\end{equation}
-
-The main assumption behind factor mimicking portfolios is that the innovation 
-$\tilde{F_{t+h}}$ is reflected in the unexpected returns $\tilde{R}_t$:
-
-\begin{equation}
-    \tilde{R}_t = B \tilde{F}_{t+h} + \varepsilon_t
-\end{equation}
-    
-where $B$ is a $N \times K$ matrix of factor loadings, $\varepsilon_t$ is a $N \times 1$ vector of mean zero disturbances.
-
-It means that investors reprice assets (unexpected returns $\tilde{R}_t$) based on the arrival of new information on the factors of risks (innovation $\tilde{F}_{t+h}$).
-
-
-\section{Factor Model with Climate News}
-
-If:
-
-\begin{equation}
-    R_t = \mu + \tilde{R}_t
-\end{equation}
-
-Then, substituting $\tilde{R}_t$, we have the following factor model:
-
-\begin{equation}
-    R_t = \mu + B \tilde{F}_{t+h} + \varepsilon_t
-\end{equation}
-
-with $R_t$ a $N \times 1$ vector of 
-asset returns, $\mu$ a $N \times 1$ vector
-of expected returns, $B$ a $N \times K$ matrix
-of factor loadings, $F_{t+h}$ a $K \times 1$ vector
-of factor innovations and $\varepsilon_t$ a $N \times 1$
-vector of mean zero disturbances.
-
-
-Careful about conclusion on risk premia based 
-on time average of returns on the hedging portfolio.
 
 \section{Conclusion}
 
