@@ -85,7 +85,7 @@ expected returns.
 With this in mind, we can now move to the question 
 of climate risks. 
 
-\section{Climate Risks and Asset Prices}
+\section{Climate Risks and Unexpected Returns}
 
 With a simple one-period model, we can
 show how climate change-related issues can add uncertainty
@@ -179,14 +179,14 @@ payoff, because:
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{../images/chapter01/unexpected_payoff_boxplot.png}
-    \caption{Simulation of the payoff process with different values for $\sigma_{\tilde{CC}}^2$.}
+    \caption{Simulation of the unexpected payoff with different values for $\sigma_{\tilde{CC}}^2$.}
     \label{fig:payoff}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{../images/chapter01/unexpected_payoff_beta_cc.png}
-    \caption{Simulation of the payoff process with different values for $\beta_{CC}$.}
+    \caption{Simulation of the unexpected payoff with different values for $\beta_{CC}$.}
     \label{fig:payoff_beta}
 \end{figure}
 
@@ -214,20 +214,22 @@ to a required rate of return for the firm:
     P_{t+1} = \frac{X_{t+1}}{\rho_{t+1}}
 \end{equation}
 
-If we assume that $\beta_m = 0$,
-we have a time-varying discount rate $\rho_{t+1}$:
+We have a time-varying discount rate $\rho_{t+1}$:
 
 \begin{equation}
     \rho_{t+1} = 1 - \frac{\beta_{CC}}{\gamma} d_{t+1}
 \end{equation}
 
-with $d_{t+1}$ the perception of climate 
-risks by the average investor at time $t+1$,
-and $\gamma$ the constant risk aversion of 
-the average investor.
-
-The price in $P_{t+1}$, once 
-the shock are realized at time $t+1$, will be:
+with $d_{t+1}$ and $\gamma$ the perception of climate 
+risks and the risk aversion of the average investor, respectively.
+We have a time-varying discount rate because
+the perception of climate risks $d_{t+1}$ is time-varying.
+What is $d_{t+1}$? Focusing on our illustrative 
+example of the carbon tax, $d_{t+1}$ could be the
+prevalence of the belief that the carbon tax will increase.
+The higher the perception of climate risks, the higher
+the discount rate, and the lower the price of the stock.
+Once the carbon tax is announced at time $t+1$, we have:
 
 \begin{equation}
     P_{t+1} = \frac{X_{t+1}}{1 - \frac{\beta_{CC}}{\gamma}d_{t+1}}
@@ -246,55 +248,44 @@ It's expected value at time $t$ is:
 \end{equation}
 
 And the unexpected return is:
-
-\begin{equation}
+$
     R_{t+1} - E_t(R_{t+1}) = P_{t+1} - E_t(P_{t+1})
-\end{equation}
-
+$
 because $X_{t+1}$ is the payoff per dollar invested in the stock at time $t$,
 which corresponds to the definition of a return in a 
 one-period model $R_{t+1} = \frac{CF_{t+1}}{P_t}$.
 
-We now can substitute $P_{t+1}$ and $E_t(P_{t+1})$ in the equation above:
+We now can substitute $P_{t+1}$ and $E_t(P_{t+1})$:
 
 \begin{equation}
     R_{t+1} - E_t(R_{t+1}) = X_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1} - E_t(X_{t+1}) - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
 \end{equation}
 
-We recognize the unexpected payoff $X_{t+1} - E_t(X_{t+1})$:
-
-\begin{equation}
-    R_{t+1} - E_t(R_{t+1}) = X_{t+1} - E_t(X_{t+1}) + \frac{\beta_{CC}}{\gamma}d_{t+1} - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
-\end{equation}
-
-We can rewrite the unexpected payoff as a function of the shocks:
-
-\begin{equation}
-    R_{t+1} - E_t(R_{t+1}) = \beta_m \tilde{M}_{t+1} + \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1} - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
-\end{equation}
-
-Let's drop the macroeconomic component as 
-we assumed that $\beta_m = 0$:
+We recognize the unexpected payoff $X_{t+1} - E_t(X_{t+1})$
+and can rewrite the unexpected payoff as a function of the carbon tax
+unanticipated change:
 
 \begin{equation}
     R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1} - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
 \end{equation}
 
 We can factorize the second part, with
-the unexpected change in the average perception of climate risks $d$:
+the unexpected change in the investors perception of climate risks:
 
 \begin{equation}
     R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \frac{\beta_{CC}}{\gamma}(d_{t+1} - E_t(d_{t+1}))
 \end{equation}
 
-We group together the terms related to the climate change:
+We group together the terms related to the climate risks:
 
 \begin{equation}
-    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \beta_{CC} \left( \frac{1}{\gamma}(d_{t+1} - E_t(d_{t+1})) \right)
+    \begin{aligned}
+    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \beta_{CC} \left( \frac{1}{\gamma}(d_{t+1} - E_t(d_{t+1})) \right) \\
+ = \beta_{CC} \left(\tilde{CC}_{t+1} + \frac{1}{\gamma}(d_{t+1} - E_t(d_{t+1})) \right) + \varepsilon_{t+1}
+    \end{aligned}
 \end{equation}
 
 \begin{equation}
-    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \left(\tilde{CC}_{t+1} + \frac{1}{\gamma}(d_{t+1} - E_t(d_{t+1})) \right) + \varepsilon_{t+1}
 \end{equation}
 
 What does it says? In our simple model, 
@@ -307,56 +298,31 @@ perception of climate risks $d_{t+1} - E_t(d_{t+1})$.
 
 
 
-Now what drives the changes in asset prices?
-Ultimately, we are interested in the changes in asset prices,
-source of potential \textit{returns}.
-The changes in expectations about 
-future cash flows or discount rate. 
-So,
-we are not so much interested in the level of
-expectations of climate risks, but in the changes
-in beliefs about climate risks.
-
-Investors form expectations about climate risks
-in an horizon $h$ with information available (those 
-are conditional expectations).
-Each period, new information arrives and investors
-update their beliefs about climate risks:
-
-\begin{equation}
-    \Delta E_t (CC_{t+h}) = E_t(CC_{t+h}) - E_{t-1}(CC_{t+h})
-\end{equation}
-
-with $\Delta E_t (CC_{t+h})$ the \textit{innovation} or 
-\textit{news} in climate risk. On the other hand, we have the \textit{unexpected} returns $\tilde{R}_t$:
-
-\begin{equation}
-    \tilde{R}_t = R_t - E_{t-1}(R_t)
-\end{equation}
-
-with $R_t$ the \textit{realized} returns 
-and $E_{t-1}(R_t)$ the expected returns based on information available at time $t-1$.
-Because investors reprice assets based on the arrival of new information,
-we can expect that the innovation in climate risk is reflected in the unexpected returns:
-
-\begin{equation}
-    \tilde{R}_t = \beta \Delta E_t(CC_{t+h}) + \varepsilon_t
-\end{equation}
-
-
-with $\beta$ non-null as long as we expect 
-that changes in climate risks affect investors 
-expectations about future cash flows or discount rate.
-
-
 \section{Measuring Climate Risks}
 
-We have seen that what matters for asset prices
-are expectations about climate risks. What 
-matters about returns are the changes in
-expectations about climate risks.
+In our simple model above, we have seen that
+climate risks can add uncertainty to asset prices.
+However, because it is a one-period model,
+it lacks realism for our use-case.
+Climate risks are long-term risks. For example, 
+rather than the expectation of the carbon tax at time $t+1$,
+what matters in reality are the expectations
+of the carbon tax over the next 5, 10 years or more:
 
-For more traditional macroeconomic factors, 
+\begin{equation}
+    E_t(CC_{t+h}) = E_{t-1}(CC_{t+h}) + \Delta E_t(CC_{t+h})
+\end{equation}
+
+with $h$ an undefinite horizon, and $\Delta E_t(CC_{t+h})$
+the change in the expectations about the carbon tax.
+The change in the expectations comes from 
+new information about the carbon tax, like
+new scientific studies, new government policies,
+\textit{etc}. So, if we want to measure climate risks,
+we need to measure the expectations of climate risks
+over the long-term.
+
+For traditional macroeconomic factors, 
 creating a time series that capture expectations 
 of these factors is not so difficult. You may 
 use data from the central bank, the government,
@@ -380,14 +346,9 @@ corresponds to "bad news".
 
 
 
+\subsection{Climate Concern Index}
 
-\section{Tag Index}
+\subsection{Fitting an AR(1) Process
+to the Climate Concern Index}
 
 
-\section{Similarity Index}
-
-\section{Conclusion}
-
-In what follow we propose a method to construct
-hedge portfolios with tradable assets that
-mimic the behavior of climate risks. 
