@@ -171,10 +171,36 @@ the realized payoff may also differ from the expected one:
     X_{t+1} - E_{t}(X_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1}
 \end{equation}
 
-Depending on the sensitivity of the payoff to the carbon tax $\beta_{CC}$,
-the unexpected payoff may be more or less volatile.
-The sign of $X_{t+1} - E_{t}(X_{t+1})$ will depend on the sign of $\tilde{CC}_{t+1}$
-and the sign of $\beta_{CC}$.
+Therefore, we can say that 
+carbon tax uncertainty adds uncertainty to the
+payoff, because:
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/chapter01/unexpected_payoff_boxplot.png}
+    \caption{Simulation of the payoff process with different values for $\sigma_{\tilde{CC}}^2$.}
+    \label{fig:payoff}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/chapter01/unexpected_payoff_beta_cc.png}
+    \caption{Simulation of the payoff process with different values for $\beta_{CC}$.}
+    \label{fig:payoff_beta}
+\end{figure}
+
+
+
+\begin{itemize}
+    \item The highest the uncertainty in the carbon tax process ($\sigma_{\tilde{CC}}^2$),
+    the more the realized payoff will vary around the expected payoff (see figure~\ref{fig:payoff}).
+    \item The higher the sensitivity of the payoff to the carbon tax ($\beta_{CC}$),
+    the more the realized payoff will vary around the expected payoff (see figure~\ref{fig:payoff_beta}).    
+\end{itemize}
+
+
+
 
 \subsection{Discount Rate Channel}
 

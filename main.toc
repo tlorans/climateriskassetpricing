@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {1.1}Climate Risks and Asset Prices}{2}{}%
 \contentsline {subsection}{\numberline {1.1.1}Cash-Flows Channel}{2}{}%
 \contentsline {subsection}{\numberline {1.1.2}Discount Rate Channel}{6}{}%
-\contentsline {section}{\numberline {1.2}Measuring Climate Risks}{8}{}%
+\contentsline {section}{\numberline {1.2}Measuring Climate Risks}{9}{}%
 \contentsline {section}{\numberline {1.3}Tag Index}{9}{}%
 \contentsline {section}{\numberline {1.4}Similarity Index}{9}{}%
 \contentsline {section}{\numberline {1.5}Conclusion}{9}{}%

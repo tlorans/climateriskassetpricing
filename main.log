@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  3 JUN 2024 16:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  3 JUN 2024 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -659,14 +659,24 @@ File: images/../images/chapter01/carbon_tax_simulations.png Graphic file (type p
 <use images/../images/chapter01/carbon_tax_simulations.png>
 Package pdftex.def Info: images/../images/chapter01/carbon_tax_simulations.png  used on input line 151.
 (pdftex.def)             Requested size: 312.00119pt x 251.0273pt.
- [4] [5 <./images/../images/chapter01/carbon_tax_simulations.png>] [6] [7]
+<images/../images/chapter01/unexpected_payoff_boxplot.png, id=55, 716.6775pt x 366.8907pt>
+File: images/../images/chapter01/unexpected_payoff_boxplot.png Graphic file (type png)
+<use images/../images/chapter01/unexpected_payoff_boxplot.png>
+Package pdftex.def Info: images/../images/chapter01/unexpected_payoff_boxplot.png  used on input line 181.
+(pdftex.def)             Requested size: 312.00119pt x 159.72491pt.
+<images/../images/chapter01/unexpected_payoff_beta_cc.png, id=56, 721.7364pt x 366.6498pt>
+File: images/../images/chapter01/unexpected_payoff_beta_cc.png Graphic file (type png)
+<use images/../images/chapter01/unexpected_payoff_beta_cc.png>
+Package pdftex.def Info: images/../images/chapter01/unexpected_payoff_beta_cc.png  used on input line 188.
+(pdftex.def)             Requested size: 312.00119pt x 158.50111pt.
+ [4{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [5 <./images/../images/chapter01/carbon_tax_simulations.png> <./images/../images/chapter01/unexpected_payoff_boxplot.png>] [6 <./images/../images/chapter01/unexpected_payoff_beta_cc.png>] [7] [8]
 
-LaTeX Warning: Citation `engle2020hedging' on page 8 undefined on input line 341.
+LaTeX Warning: Citation `engle2020hedging' on page 9 undefined on input line 367.
 
 
-LaTeX Warning: Citation `engle2020hedging' on page 8 undefined on input line 349.
+LaTeX Warning: Citation `engle2020hedging' on page 9 undefined on input line 375.
 
-[8]) [9]
+) [9]
 \openout2 = `chapters/chapter02.aux'.
 
  (./chapters/chapter02.tex [10
@@ -721,18 +731,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 28637 strings out of 474504
- 701342 string characters out of 5756725
- 1930043 words of memory out of 5000000
- 49969 multiletter control sequences out of 15000+600000
- 577779 words of font info for 140 fonts, out of 8000000 for 9000
+ 28669 strings out of 474504
+ 702678 string characters out of 5756725
+ 1931043 words of memory out of 5000000
+ 49995 multiletter control sequences out of 15000+600000
+ 578214 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,107p,1034b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (20 pages, 885453 bytes).
+Output written on main.pdf (20 pages, 1052427 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 179 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 38940 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 40998 words of extra memory for PDF output out of 42996 (max. 10000000)
 
