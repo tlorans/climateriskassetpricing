@@ -1,17 +1,17 @@
 \contentsline {chapter}{Introduction}{v}{}%
 \contentsline {chapter}{\numberline {1}Climate Risks}{1}{}%
-\contentsline {section}{\numberline {1.1}Climate Risks and Unexpected Returns}{2}{}%
-\contentsline {subsection}{\numberline {1.1.1}Cash-Flows Channel}{2}{}%
-\contentsline {subsection}{\numberline {1.1.2}Discount Rate Channel}{6}{}%
-\contentsline {section}{\numberline {1.2}Measuring Climate Risks}{8}{}%
-\contentsline {subsection}{\numberline {1.2.1}Climate Concern Index}{8}{}%
-\contentsline {subsection}{\numberline {1.2.2}Fitting an AR(1) Process to the Climate Concern Index}{8}{}%
-\contentsline {chapter}{\numberline {2}Climate Risks Exposure}{9}{}%
-\contentsline {section}{\numberline {2.1}Mimicking Approach}{9}{}%
-\contentsline {section}{\numberline {2.2}Narrative Approach}{10}{}%
-\contentsline {section}{\numberline {2.3}Scenario-Based Approach}{10}{}%
-\contentsline {chapter}{\numberline {3}Climate Risks Hedging}{11}{}%
-\contentsline {section}{\numberline {3.1}Climate Risk Portfolios}{11}{}%
-\contentsline {subsection}{\numberline {3.1.1}Climate Risk Premia}{11}{}%
-\contentsline {section}{\numberline {3.2}Hedging a Fund with Climate Risk Hedging Portfolio}{11}{}%
-\contentsline {section}{\numberline {3.3}Backtesting a Climate Risk Hedging Strategy}{12}{}%
+\contentsline {section}{\numberline {1.1}Climate Risks and Unexpected Returns}{4}{}%
+\contentsline {subsection}{\numberline {1.1.1}Cash-Flows Channel}{4}{}%
+\contentsline {subsection}{\numberline {1.1.2}Discount Rate Channel}{7}{}%
+\contentsline {section}{\numberline {1.2}Measuring Climate Risks}{9}{}%
+\contentsline {subsection}{\numberline {1.2.1}Climate Concern Index}{9}{}%
+\contentsline {subsection}{\numberline {1.2.2}Fitting an AR(1) Process to the Climate Concern Index}{9}{}%
+\contentsline {chapter}{\numberline {2}Climate Risks Exposure}{11}{}%
+\contentsline {section}{\numberline {2.1}Mimicking Approach}{11}{}%
+\contentsline {section}{\numberline {2.2}Narrative Approach}{12}{}%
+\contentsline {section}{\numberline {2.3}Scenario-Based Approach}{12}{}%
+\contentsline {chapter}{\numberline {3}Climate Risks Hedging}{13}{}%
+\contentsline {section}{\numberline {3.1}Climate Risk Portfolios}{13}{}%
+\contentsline {subsection}{\numberline {3.1.1}Climate Risk Premia}{13}{}%
+\contentsline {section}{\numberline {3.2}Hedging a Fund with Climate Risk Hedging Portfolio}{13}{}%
+\contentsline {section}{\numberline {3.3}Backtesting a Climate Risk Hedging Strategy}{14}{}%
