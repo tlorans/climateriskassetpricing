@@ -1,11 +1,7 @@
 \contentsline {chapter}{Introduction}{v}{}%
-\contentsline {chapter}{\numberline {1}Climate Risks}{1}{}%
-\contentsline {chapter}{\numberline {2}Climate Risks Exposure}{3}{}%
-\contentsline {section}{\numberline {2.1}Mimicking Approach}{3}{}%
-\contentsline {section}{\numberline {2.2}Narrative Approach}{4}{}%
-\contentsline {section}{\numberline {2.3}Scenario-Based Approach}{4}{}%
-\contentsline {chapter}{\numberline {3}Climate Risks Hedging}{5}{}%
-\contentsline {section}{\numberline {3.1}Climate Risk Portfolios}{5}{}%
-\contentsline {subsection}{\numberline {3.1.1}Climate Risk Premia}{5}{}%
-\contentsline {section}{\numberline {3.2}Hedging a Fund with Climate Risk Hedging Portfolio}{5}{}%
-\contentsline {section}{\numberline {3.3}Backtesting a Climate Risk Hedging Strategy}{6}{}%
+\contentsline {chapter}{\numberline {1}ESG Risks Factor}{1}{}%
+\contentsline {chapter}{\numberline {2}Sources of ESG Risks}{3}{}%
+\contentsline {section}{\numberline {2.1}Cash-Flows and Discount Rate Channels}{3}{}%
+\contentsline {chapter}{\numberline {3}Practical Implications of ESG Risks}{5}{}%
+\contentsline {section}{\numberline {3.1}Measuring ESG Risks}{5}{}%
+\contentsline {section}{\numberline {3.2}Exposure to ESG Risks}{5}{}%

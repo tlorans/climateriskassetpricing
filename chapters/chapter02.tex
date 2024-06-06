@@ -1,63 +1,110 @@
-\chapter{Climate Risks Exposure}
+\chapter{Sources of ESG Risks}
+
+
+\section{Cash-Flows and Discount Rate Channels}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+
+        % Draw horizontal arrow for periods
+        \draw[->] (0,0) -- (6,0) node[anchor=north] {time};
+        
+        % Label x-axis
+        \node at (3,1) {Period};
  
+        % Draw ticks and labels on x-axis
+        \foreach \x in {1, 3, 5}
+            \draw (\x,0.1) -- (\x,-0.1);
+        \node at (2,0.5) {0};
+        \node at (4,0.5) {1};
 
 
+        % Draw vertical arrow for Generations
+        \draw[->] (0,0) -- (0,-6) node[anchor=west] {};
+ 
+        % Label y-axis
+        \node[rotate=90] at (-1,-3) {Generation (time of birth)};
+        
+        \foreach \y in {-1, -3, -5}
+            \draw (0.1,\y) -- (-0.1,\y);
+        \node at (-0.5,-1) {0};
+        \node at (-0.5,-3) {$1^{-}$};
+        \node at (-0.5,-5) {$1^{+}$};
 
-\section{Mimicking Approach}
+        % Draw the Gen-0
+        \draw[thick] (1,-1) -- (3,-1);
+        \node at (2,-0.5) {Gen-0};
+        \draw[thick] (1,-3) -- (3,-3);
+        \node at (2,-2.5) {Gen-0};
 
+        % Draw the Gen-1
+        \draw[thick] (3,-3) -- (5,-3);
+        \node at (4,-2.5) {Gen-1};
+        \draw[thick] (3,-5) -- (5,-5);
+        \node at (4,-4.5) {Gen-1};
+    \end{tikzpicture}
+    \caption{The One-Period Overlapping Generation Model}
+    \label{fig:fig01}
+\end{figure}
 
-Ross (1976) \cite{ross1976apt} introduced 
-the concept of \textit{arbitrage pricing theory} (APT).
-In this model, the expected return of an asset is
-a linear function of a set of risk factors. Famous examples of risk factors are the
-\textit{Fama-French factors} (see Fama and French (1993) \cite{fama1993common}).
-Those factors are the excess return of the market,
-the excess return of small cap stocks over big cap stocks
-and the excess return of high book-to-market stocks over low book-to-market stocks:
+$X$ the payoff (profit) by the
+firm in period 1. It is known at $1^{-}$ (the beginning
+of period 1) but received at $1^{+}$ (the end of period 1).
+We denote $\tilde{X}$ this payoff per dollar 
+invested in period 0: $\tilde{X} = \frac{X}{P_0}$.
+
+Assume we have two sources of risk (uncertainty), $\tilde{M}$
+a macroeconomic factor and $\tilde{CC}$ a climate risk factor.
+These shocks occurs at $1^{-}$.
+The unexpected payoff in period 1 is:
 
 \begin{equation}
-    E(R_i) = \beta_m R_m + \beta_{smb} R_{smb} + \beta_{hml} R_{hml}
+    \begin{aligned}
+    \tilde{X} - E_0(\tilde{X}) = \beta_m \tilde{M} + \beta_{cc} \tilde{CC} + \varepsilon_1
+    \end{aligned}
 \end{equation}
 
-with $E(R_i)$ the expected return of asset $i$,
-$R_m$ the excess return of the market, $R_{smb}$ the excess return of small cap stocks over big cap stocks,
-$R_{hml}$ the excess return of high book-to-market stocks over low book-to-market stocks,
-$\beta_m$ the market beta of asset $i$, $\beta_{smb}$ the size beta of asset $i$ and $\beta_{hml}$ the value beta of asset $i$.
-Those factors are tradable, as 
-they are directly traded in financial markets (you can buy 
-the market, small cap stocks and high book-to-market stocks
-and short sell the opposite side of the trade).
-
-Macroeconomic factors are examples of 
-\textit{non-tradable factors} (think about inflation, 
-industrial growth, \textit{etc}). Economic conditions 
-have pervasive effects on asset returns (see Flannery 
-and Protopapadakis (2002) \cite{flannery2002macroeconomic}).
-A standard way to tackle the problem of non-tradable factors
-is to use factor mimicking portfolios (FMPs), such 
-as in Jurczenko and Teiletche (2022) \cite{jurczenko2022macro}. That is,
-to construct a portfolio of tradable assets that
-mimics the behavior of non-tradable factors. 
-
-
-Climate risks are non-tradable factors,
-as they are not directly traded in financial markets
-(see Jurczenko and Teiletche (2023) \cite{jurczenko2023climate}).
-We can use the same approach of FMPs to construct
-a portfolio of tradable assets that mimics the behavior
-of climate risks.
+The payoff is known at $1^{-}$, so 
+we can comput the price of the stock:
 
 \begin{equation}
-\Delta E_t(CC_{t+h}) = w^T \tilde{R}_{t} + \varepsilon_t
+    \tilde{P_1} = \beta^{-1}\tilde{X}
 \end{equation}
 
-FIGURE 2 IN JURCENZKO MACRO FACTORS WITH THIS METHOD
-ML macro FMPs vs underlying macro factors
-\section{Narrative Approach}
+This is the payoff for $Gen-0$ at $1^{-}$.
 
-Green Factor from Pastor
+It's expected value when $Gen-0$ invested in period 0 was:
 
-\section{Scenario-Based Approach}
+\begin{equation}
+    E_0(\tilde{P_1}) = \beta^{-1} E_0(\tilde{X})
+\end{equation}
 
 
+\begin{equation}
+    \begin{aligned}
+    \tilde{P_1} = \frac{P_1}{P_0} \\
+    = R_1
+    \end{aligned}
+\end{equation}
+
+
+\begin{equation}
+    \begin{aligned}
+    E_0(\tilde{P_1}) = \frac{E_0(P_1)}{P_0} \\
+    = E_0(R_1)
+    \end{aligned}
+\end{equation}
+
+So the unexpected change in price 
+for the $Gen-0$ $\tilde{P_1} - E_0(\tilde{P_1})$ is in fact
+the unexpected return $R_1 - E_0(R_1)$:
+
+\begin{equation}
+    \begin{aligned}
+    \tilde{P_1} - E_0(\tilde{P_1}) = R_1 - E_0(R_1) \\
+    = \beta^{-1} (\tilde{X} - E_0(\tilde{X})) \\
+    = \beta^{-1} (\beta_m \tilde{M} + \beta_{cc} \tilde{CC} + \varepsilon_1)
+    \end{aligned}
+\end{equation}
 
