@@ -64,14 +64,14 @@ Figure~\ref{fig:fig01} shows the timeline of the model.
 
 \subsection{Cash-Flows Channel}
 
-We denote $X_1$ the payoff (profit) by the
+We denote $\pi_1$ the payoff (profit) by the
 firm in period 1. It is known at $1^{-}$ (the beginning
 of period 1) but received at $1^{+}$ (the end of period 1).
-We denote $\tilde{X_1}$ this payoff per dollar 
-invested in period 0: $\tilde{X_1} = \frac{X_1}{P_0}$.
+We denote $X_1$ this payoff per dollar 
+invested in period 0: $X_1 = \frac{\pi_1}{P_0}$.
 
-As in PST (2021), we have two sources of risk (uncertainty), $\tilde{M_1}$
-a macroeconomic factor and $\tilde{C_1}$ a climate risk factor.
+As in PST (2021), we have two sources of risk (uncertainty), $\tilde{M}$
+a macroeconomic factor and $\tilde{C}$ a climate risk factor.
 Those factors correspond to an unanticipated state of the world. 
 For example, we could have $C$ to be a carbon tax. In that case:
 
@@ -87,7 +87,7 @@ The unexpected payoff in period 1 is:
 
 \begin{equation}
     \begin{aligned}
-    \tilde{X_1} - E_0(\tilde{X_1}) = \beta_m \tilde{M_1} + \beta_{c} \tilde{C_1} + \varepsilon_1
+    X_1 - E_0(X_1) = \beta_m \tilde{M_1} + \beta_{c} \tilde{C_1} + \varepsilon_1
     \end{aligned}
 \end{equation}
 
@@ -99,16 +99,16 @@ and $\varepsilon_1$ is the idiosyncratic shock to the payoff.
 \textbf{Example 1.} 
 Suppose an investor in $Gen-0$ invests in a stock
 with $P_0 = 100$ million USD and
-expects a profit $E_0(X_1) = 120$ million USD.
+expects a profit $E_0(\pi_1) = 120$ million USD.
 Thus, the expected payoff 
 per dollar invested at the 
 beginning of the period is calculated as:
 
 \begin{equation}
-    \tilde{X_1} = \frac{E_0(X_1)}{P_0} = \frac{120}{100} = 1.2
+    E_0(X_1) = \frac{E_0(\pi_1)}{P_0} = \frac{120}{100} = 1.2
 \end{equation}
 
-The investor expects to earns 20\% on the investment
+The investor expects to earns a return of 20\% on the investment
 at the end of the period.
 
 However, two major unexpected events occur 
@@ -131,7 +131,7 @@ for the firm.
 The unexpected payoff is calculated as:
 
 \[
-\tilde{X}_1 - E_0(\tilde{X}_1) = (0.5 \times -0.05) + (- 0.3 \times 0.03) = -0.034
+X_1 - E_0(X_1) = (0.5 \times -0.05) + (- 0.3 \times 0.03) = -0.034
 \]
 Thus, the actual payoff per dollar 
 invested deviates from the expected 
@@ -177,12 +177,21 @@ from PST (2021):
 with $\gamma$ the investor risk aversion parameter,
 $D$ the average investor sensitivity to climate risk,
 and $\mu_m$ the expected return on the market.
-
 As PST (2021), we assume the 
-risk free rate $r_f = 0$,$\beta_m = 0$ and the investor 
+risk free rate $r_f = 0$, $\beta_m = 0$ and the investor 
 risk aversion parameter $\gamma$ and the 
 firm sensitivity to climate risk $\beta_{c}$
 doesn't change between $Gen-0$ and $Gen-1$.
+Figure~\ref{fig:fig02} shows the price of the stock 
+sensitivity to $\beta_{c}$, $D$ and $\gamma$.
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{../images/chapter02/price_vs_parameters.png}
+    \caption{Price of the stock as a function of $\beta_{c}$, $D$
+    and $\gamma$}
+    \label{fig:fig02}
+\end{figure}
+
 We assume for the moment that the average 
 investor sensitivity to climate risk $D$ 
 doesn't change between $Gen-0$ and $Gen-1$.
