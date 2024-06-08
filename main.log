@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  8 JUN 2024 08:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.17)  8 JUN 2024 08:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -655,16 +655,24 @@ Overfull \hbox (8.87872pt too wide) in paragraph at lines 119--120
 []\T1/cmr/m/n/12 (-20) Climate Risk ($[]$): The gov-ern-ment im-poses a higher-than-anticipated
  []
 
-[4] [5]
-<images/../images/chapter02/price_vs_parameters.png, id=56, 997.326pt x 346.896pt>
+[4]
+
+LaTeX Warning: Reference `fig:fig02' on page 5 undefined on input line 185.
+
+[5]
+<images/../images/chapter02/price_vs_parameters.png, id=56, 1060.2009pt x 607.068pt>
 File: images/../images/chapter02/price_vs_parameters.png Graphic file (type png)
 <use images/../images/chapter02/price_vs_parameters.png>
-Package pdftex.def Info: images/../images/chapter02/price_vs_parameters.png  used on input line 189.
-(pdftex.def)             Requested size: 390.0pt x 135.64882pt.
- [6 <./images/../images/chapter02/price_vs_parameters.png>]
-Underfull \vbox (badness 1661) has occurred while \output is active []
+Package pdftex.def Info: images/../images/chapter02/price_vs_parameters.png  used on input line 223.
+(pdftex.def)             Requested size: 390.0pt x 223.3148pt.
+ [6]
+Package mdframed Info: mdframed works in twoside mode on input line 247.
+Package mdframed Info: Not enough space on this page on input line 264.
 
- [7]) [8]
+
+LaTeX Warning: Reference `mdf@pagelabel-3' on page 7 undefined on input line 264.
+
+[7 <./images/../images/chapter02/price_vs_parameters.png>]) [8]
 \openout2 = `chapters/chapter03.aux'.
 
  (./chapters/chapter03.tex
@@ -685,17 +693,24 @@ No file main.bbl.
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 28696 strings out of 474504
- 702487 string characters out of 5756725
+ 28702 strings out of 474504
+ 702557 string characters out of 5756725
  1937043 words of memory out of 5000000
- 50047 multiletter control sequences out of 15000+600000
- 577761 words of font info for 132 fonts, out of 8000000 for 9000
+ 50049 multiletter control sequences out of 15000+600000
+ 577879 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,9n,107p,1034b,682s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (16 pages, 326773 bytes).
+Output written on main.pdf (16 pages, 358772 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams
