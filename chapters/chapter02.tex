@@ -124,7 +124,7 @@ doesn't change between $Gen-0$ and $Gen-1$.
 We assume for the moment that the average 
 investor sensitivity to climate risk $D$ 
 doesn't change between $Gen-0$ and $Gen-1$.
-We have:
+We have the payoff for $Gen-0$ at $1^{-}$:
 
 \begin{equation}
     \begin{aligned}
@@ -133,8 +133,22 @@ We have:
     \end{aligned}
 \end{equation}
 
+where we have followed the approximation
+from PST (2021)\footnote{
+With $\rho_1 := \tilde{X}_1 - 1$ and $\rho_2 := \frac{\beta_{c}}{\gamma}D$,
+we have:
+\begin{equation}
+    \begin{aligned}
+        \frac{1 + \rho_1}{1 - \rho_2} = \frac{(1 + \rho_1)(1 + \rho_2)}{1 - \rho_2^2} \\
+        \approx (1 + \rho_1)(1 + \rho_2) \\
+        = 1 + \rho_1 + \rho_2 + \rho_1 \rho_2 \\
+        \approx 1 + \rho_1 + \rho_2
+    \end{aligned}
+\end{equation}
 
-This is the payoff for $Gen-0$ at $1^{-}$.
+where the approximation are $\rho^2_2$ and $\rho_1 \rho_2$ are small.
+The assumptions are valid when $\rho_1$ and $\rho_2$ are small.
+}.
 
 It's expected value when $Gen-0$ invested in period 0 was:
 
@@ -143,7 +157,8 @@ It's expected value when $Gen-0$ invested in period 0 was:
 \end{equation}
 
 Because $\tilde{P}_1$ is the price of the payoff 
-per unit of dollar invested in period 0, we have:
+per unit of dollar invested in period 0,
+according to PST (2021), we have:
 
 \begin{equation}
     \begin{aligned}
