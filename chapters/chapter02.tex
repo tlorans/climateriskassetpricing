@@ -95,6 +95,65 @@ where $\beta_m$ and $\beta_{c}$ are the sensitivities of the payoff to the macro
 and $\varepsilon_1$ is the idiosyncratic shock to the payoff.
 
 
+\begin{example}[]
+\textbf{Example 1.} 
+Suppose an investor in $Gen-0$ invests in a stock
+with $P_0 = 100$ million USD and
+expects a profit $E_0(X_1) = 120$ million USD.
+Thus, the expected payoff 
+per dollar invested at the 
+beginning of the period is calculated as:
+
+\begin{equation}
+    \tilde{X_1} = \frac{E_0(X_1)}{P_0} = \frac{120}{100} = 1.2
+\end{equation}
+
+The investor expects to earns 20\% on the investment
+at the end of the period.
+
+However, two major unexpected events occur 
+between period 0 and period 1:
+
+\begin{enumerate}
+    \item Macroeconomic Changes (\(\tilde{M}_1\)): The economy undergoes a downturn worse than expected, represented by \(\tilde{M}_1 = -0.05\) (a 5\% negative shock).
+    \item Climate Risk (\(\tilde{C}_1\)): The government imposes a higher-than-anticipated carbon tax, leading to \(\tilde{C}_1 = 0.03\) (a 3\% additional cost).
+\end{enumerate}
+
+We assume that the idiosyncratic shock is equal to 0.
+
+We know that the sensitivity of the firm's 
+profits to economic and carbon tax shocks 
+are $\beta_m = 0.5$ and $\beta_{c} = - 0.3$, 
+respectively. Note that a negative $\beta_{c}$
+means that higher carbon taxes reduce profits
+for the firm.
+
+The unexpected payoff is calculated as:
+
+\[
+\tilde{X}_1 - E_0(\tilde{X}_1) = (0.5 \times -0.05) + (- 0.3 \times 0.03) = -0.034
+\]
+Thus, the actual payoff per dollar 
+invested deviates from the expected 
+by -0.034, resulting 
+in an actual payoff per dollar of:
+
+\begin{equation}
+    \tilde{X}_1 = 1.2-0.034 = 1.166
+\end{equation}
+
+In dollars terms, this translates 
+into an actual end-of-period profit of:
+
+\begin{equation}
+    X_1 = \tilde{X}_1 \times P_0 = 1.166 \times 100 = 116.6
+\end{equation}
+
+instead of the expected 120 million USD.
+
+\end{example}
+
+
 The price $p_1$ is calculated at $1^{-}$ when
 shocks associated with $\tilde{X_1}$ 
 have been realized. Therefore, 
