@@ -161,8 +161,7 @@ between $1^{-}$ and $1^{+}$, the payoff is
 riskless (everything is known).
 Stockholders will 
 receive the payoff at $1^{+}$.
-The payoff is known at $1^{-}$, so 
-we can compute the price of the stock:
+We compute the price of the stock:
 
 \begin{equation}
     \tilde{P_1} = \frac{\tilde{X_1}}{1 + R^e}
@@ -174,6 +173,10 @@ from PST (2021):
 \begin{equation}
     R^e = \mu_m \beta_m - \frac{D}{\gamma} \beta_{c}
 \end{equation}
+
+with $\gamma$ the investor risk aversion parameter,
+$D$ the average investor sensitivity to climate risk,
+and $\mu_m$ the expected return on the market.
 
 As PST (2021), we assume the 
 risk free rate $r_f = 0$,$\beta_m = 0$ and the investor 
@@ -208,33 +211,18 @@ we have:
 where the approximation are $\rho^2_2$ and $\rho_1 \rho_2$ are small.
 The assumptions are valid when $\rho_1$ and $\rho_2$ are small.
 }.
-
 It's expected value when $Gen-0$ invested in period 0 was:
 
 \begin{equation}
     E_0(\tilde{P_1}) = E_0(\tilde{X_1}) + \frac{\beta_{c}}{\gamma}D
 \end{equation}
 
-Because $\tilde{P}_1$ is the price of the payoff 
-per unit of dollar invested in period 0,
-according to PST (2021), we have:
+So the unexpected change in stock price 
+for the $Gen-0$ is:
 
 \begin{equation}
     \begin{aligned}
-    \tilde{P_1} = \frac{P_1}{P_0} \\
-    = R_1
-    \end{aligned}
-\end{equation}
-
-that is, $P_1$ is the (gross) return
-$R_1$ for $Gen-0$.
-So the unexpected change in price 
-for the $Gen-0$ $\tilde{P_1} - E_0(\tilde{P_1})$ is in fact
-the unexpected return $R_1 - E_0(R_1)$:
-
-\begin{equation}
-    \begin{aligned}
-    R_1 - E_0(R_1) = \tilde{X_1} + \frac{\beta_{c}}{\gamma}D - E_0(\tilde{X_1}) - \frac{\beta_{c}}{\gamma}D \\
+    P_1 - E_0(P_1) = \tilde{X_1} + \frac{\beta_{c}}{\gamma}D - E_0(\tilde{X_1}) - \frac{\beta_{c}}{\gamma}D \\
     = \tilde{X_1} + \frac{\beta_{c}}{\gamma}D - E_0(\tilde{X_1}) - \frac{\beta_{c}}{\gamma}D \\
     = \tilde{X_1} - E_0(\tilde{X_1}) \\
     = \beta_{c} \tilde{C_1} + \varepsilon_1
@@ -273,11 +261,11 @@ Taking the expectations:
     \end{aligned}
 \end{equation}
 
-The unexpected return is now:
+The unexpected loss in stock price is now:
 
 \begin{equation}
     \begin{aligned}
-    R_1 - E_0(R_1) = \tilde{X_1} + \frac{\beta_{c}}{\gamma}D_1 - E_0(\tilde{X_1}) - \frac{\beta_{c}}{\gamma}E_0(D_1) \\
+    P_1 - E_0(P_1) = \tilde{X_1} + \frac{\beta_{c}}{\gamma}D_1 - E_0(\tilde{X_1}) - \frac{\beta_{c}}{\gamma}E_0(D_1) \\
     = \tilde{X_1} - E_0(\tilde{X_1}) + \frac{\beta_{c}}{\gamma}(D_1 - E_0(D_1)) \\
     = \beta_{c} \tilde{C_1} + \varepsilon_1 + \frac{\beta_{c}}{\gamma}(D_1 - E_0(D_1)) \\
     = \beta_{c}(\tilde{C_1} + \frac{1}{\gamma}(D_1 - E_0(D_1))) + \varepsilon_1
