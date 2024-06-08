@@ -2,6 +2,8 @@
 \contentsline {chapter}{\numberline {1}ESG Risks Factor}{1}{}%
 \contentsline {chapter}{\numberline {2}Sources of ESG Risks}{3}{}%
 \contentsline {section}{\numberline {2.1}Cash-Flows and Discount Rate Channels}{3}{}%
-\contentsline {chapter}{\numberline {3}Practical Implications of ESG Risks}{5}{}%
-\contentsline {section}{\numberline {3.1}Measuring ESG Risks}{5}{}%
-\contentsline {section}{\numberline {3.2}Exposure to ESG Risks}{5}{}%
+\contentsline {subsection}{\numberline {2.1.1}Cash-Flows Channel}{3}{}%
+\contentsline {subsection}{\numberline {2.1.2}Introducing the Discount Rate Channel}{5}{}%
+\contentsline {chapter}{\numberline {3}Practical Implications of ESG Risks}{7}{}%
+\contentsline {section}{\numberline {3.1}Measuring ESG Risks}{7}{}%
+\contentsline {section}{\numberline {3.2}Exposure to ESG Risks}{7}{}%
