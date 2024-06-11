@@ -11,6 +11,16 @@
 Let's assume a single period model, from $t=0$ to $t=1$.
 We have $N$ stocks. 
 
+We have a $N \times 1$ vector of returns $\tilde{r}_1$ at period 1, 
+assumed to be normally distributed: 
+
+\begin{equation}
+    \tilde{r}_1 = \mu + \tilde{\epsilon}_1
+\end{equation}
+
+with $\mu$ the equilibrium expected excess returns and $\tilde{\epsilon}_1$ the
+random component of the returns $\tilde{\epsilon}_1 \sim N(0, \Sigma)$.
+
 The investor $i$ has an exponential CARA utility function, with 
 $\tilde{W}_{1,i}$ the wealth at period 1, and $X_i$ the
 $N \times 1$ vector of portfolio weights.
@@ -42,7 +52,7 @@ $\tilde{W}_{1,i} = W_{0,i}(1 + r_f + X_i^T \tilde{r}_1)$
 expectation the terms that we know about (in period 0), and reexpress 
 the terms within the expectation as a function of the
 portfolio weights $X_i$. The last two steps use the fact that 
-$\tilde{r}_1 \sim N(\mu, \Sigma)$.
+$\tilde{r}_1$ is normally distributed with mean $\mu$ and variance $\Sigma$.
 
 \begin{equation}
     \begin{aligned}
@@ -205,5 +215,20 @@ the wealth-weighted mean of ESG tastes $d_i$ across agents. Therefore:
 \end{equation}
 
 \subsubsection{Expected Returns}
+
+Starting from the the vector of market weights $w_m$, we now can 
+solve for $\mu$ the vector of expected returns. We have:
+
+\begin{equation}
+    \begin{aligned}
+    w_m = \frac{1}{a} \Sigma^{-1} \mu + \frac{1}{a^2} \Sigma^{-1} g \bar{d} \\
+    a w_m = \Sigma^{-1} \mu + \frac{1}{a} \Sigma^{-1} g \bar{d} \\
+    a w_m - \frac{1}{a} \Sigma^{-1} g \bar{d} = \Sigma^{-1} \mu \\
+    \Sigma (a w_m - \frac{1}{a} \Sigma^{-1} g \bar{d}) = \mu \\ 
+    \mu = a \Sigma w_m - \frac{1}{a} \Sigma \Sigma^{-1} g \bar{d} \\
+    \mu = a \Sigma w_m - \frac{1}{a} g \bar{d}
+    \end{aligned}
+\end{equation}
+
 
 \section{Climate Risk}
