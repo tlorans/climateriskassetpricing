@@ -123,9 +123,6 @@ ESG characteristics $g$ of the stocks and the investors' taste for
 nonpecuniary benefits $d_i$. 
 
 
-\subsection{Heterogeneous Investors and Expected Returns}
-
-
 \begin{figure}
     \centering
     PLACEHOLDER
@@ -134,6 +131,9 @@ nonpecuniary benefits $d_i$.
     \label{fig:esg_taste}
 \end{figure}
 
+\subsection{Heterogeneous Investors and Expected Returns}
+
+
 The $n$th element of investor $i$'s portfolio weight vector $X_i$ is:
 
 \begin{equation}
@@ -141,24 +141,41 @@ The $n$th element of investor $i$'s portfolio weight vector $X_i$ is:
 \end{equation}
 
 with $W_{0,i,n}$ the wealth invested in stock $n$ by investor $i$ at time 0.
-We define $W_{0,n} := \int_i W_{0,i,n} di$ the total wealth invested in 
-stock $n$ at time 0 by all investors.
+
+The total wealth invested in stock $n$ at time 0 is:
+
+\begin{equation}
+    W_{0,n} := \int_i W_{0,i,n} di
+\end{equation}
 
 The $n$th element of the market-weight vector $w_m$ is:
 
 \begin{equation}
     \begin{aligned}
     w_{m,n} = \frac{W_{0,n}}{W_{0}} \\
-    = \frac{1}{W_0} \int_i W_{0,i,n} di \\
-    = \frac{1}{W_0} \int_i W_{0,i} X_{i,n} di \\
-    = \int_i \frac{W_{0,i}}{W_0}X_{i,n} di \\
     \end{aligned}
+\end{equation}
+
+We can now express $W_{0,n}$ in terms of individual investors' wealths
+by using the definition of $W_{0,n}$:
+
+\begin{equation}
+    w_{m,n} = \frac{1}{W_0} \int_i W_{0,i,n} di
+\end{equation}
+
+We now that $W_{0,i,n} = W_{0,i} X_{i,n}$, so we can rewrite the equation:
+
+\begin{equation}
+    w_{m,n} = \frac{1}{W_0} \int_i W_{0,i} X_{i,n} di
 \end{equation}
 
 Defining $\omega_i = \frac{W_{0,i}}{W_0}$, we have:
 
 \begin{equation}
-    w_{m,n} = \int_i \omega_i X_{i,n} di
+    \begin{aligned}
+    w_{m,n} = \int_i \frac{W_{0,i}}{W_0} X_{i,n} di\\
+    = \int_i \omega_i X_{i,n} di
+    \end{aligned}
 \end{equation}
 
 \section{Climate Risk}
