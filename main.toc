@@ -8,12 +8,11 @@
 \contentsline {subsection}{\numberline {1.2.2}Heterogeneous Investors and Expected Returns}{4}{}%
 \contentsline {subsubsection}{Heterogeneous Market}{4}{}%
 \contentsline {subsubsection}{Expected Returns}{5}{}%
-\contentsline {subsubsection}{Expected Excess Returns}{7}{}%
-\contentsline {subsection}{\numberline {1.2.3}ESG Portfolio}{7}{}%
-\contentsline {subsubsection}{Portfolio Tilts}{7}{}%
-\contentsline {subsubsection}{Factor Pricing with the ESG Portfolio}{7}{}%
-\contentsline {section}{\numberline {1.3}Climate Risk}{7}{}%
-\contentsline {chapter}{\numberline {2}Sources of Risk}{9}{}%
-\contentsline {section}{\numberline {2.1}Market Risk}{9}{}%
-\contentsline {section}{\numberline {2.2}ESG Factor Risk}{9}{}%
-\contentsline {section}{\numberline {2.3}Climate Risk}{9}{}%
+\contentsline {subsubsection}{Expected Excess Returns}{6}{}%
+\contentsline {paragraph}{Proposition 1.}{7}{}%
+\contentsline {paragraph}{Corrolary 1.}{7}{}%
+\contentsline {paragraph}{Corrolary 2.}{7}{}%
+\contentsline {subsection}{\numberline {1.2.3}ESG Portfolio}{8}{}%
+\contentsline {subsubsection}{Portfolio Tilts}{8}{}%
+\contentsline {subsubsection}{Factor Pricing with the ESG Portfolio}{8}{}%
+\contentsline {section}{\numberline {1.3}Climate Risk}{8}{}%

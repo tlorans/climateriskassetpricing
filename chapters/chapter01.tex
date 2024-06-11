@@ -272,8 +272,85 @@ ESG tastes lead to higher equity premium as investors demand
 compensation for holding brown stocks.
 
 
-
 \subsubsection{Expected Excess Returns}
+
+
+For simplicity, we assume that the market portfolio is ESG-neutral:
+
+\begin{equation}
+    w_m^T g = 0
+\end{equation}
+
+which implies that the equity premium is:
+
+\begin{equation}
+    \mu_m = a \sigma_m^2
+\end{equation}
+
+that is, independent of the average ESG tastes $\bar{d}$.
+
+From the last equation, we note that $a = \frac{\mu_m}{\sigma_m^2}$, then 
+the expected excess returns can be reexpressed as: 
+
+\begin{equation}
+    \begin{aligned}
+        \mu = a \Sigma w_m - \frac{1}{a} g \bar{d} \\
+        = \frac{\mu_m}{\sigma_m^2} \Sigma w_m - \frac{1}{a} g \bar{d} \\
+        = \mu_m \beta_m - \frac{1}{a} g \bar{d} \\
+    \end{aligned}
+\end{equation}
+
+where we have used the fact that the 
+vector of market betas is $\beta_m = \frac{\Sigma w_m}{\sigma_m^2}$.
+
+This gives the first proposition of the model:
+
+\paragraph{Proposition 1.}
+Expected excess returns in equilibirium are given by:
+
+\begin{equation}
+    \mu = \mu_m \beta_m - \frac{\bar{d}}{a} g 
+\end{equation}
+
+The expected excess returns deviate from their CAPM values due to ESG 
+tastes for holding green stocks.
+
+\paragraph{Corrolary 1.}
+If $\bar{d} > 0$, the expected return on stock $n$ is decreasing in $g_n$ 
+
+Given their ESG tastes, agents are willing to pay more for greener firms, then 
+lowering the firms' expected returns.
+
+\paragraph{Corrolary 2.} Because the vector of stocks' CAPM alphas is defined as 
+$\alpha := \mu - \mu_m \beta_m$, we have:
+\begin{equation}
+    \alpha_n = - \frac{\bar{d}}{a} g_n
+\end{equation}
+If $\bar{d} > 0$, green stocks have negative alphas, and brown stocks 
+have positive alphas. Greener stocks have lower alphas.
+
+
+\begin{figure}
+    \centering
+    PLACEHOLDER
+    % \includegraphics[width=0.8\textwidth]{images/ESG_taste.png}
+    \caption{$\alpha_n$ relationship with $g_n$}
+    \label{fig:esg_returns}
+\end{figure}
+
+
+Investor $i$'s expected excess return is given by:
+\begin{equation}
+    \begin{aligned}
+E(\tilde{r}_{1,i}) = X_i^T \mu \\ 
+= X_i^T (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
+= (w_m^T + \frac{1}{a} \Sigma^{-1} (\mu + \frac{d_i}{a_i}g) - \frac{1}{a} \Sigma^{-1} \mu - \frac{\bar{d}}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
+= (w_m^T + \frac{d_i}{a^2}\Sigma^{-1}g - \frac{\bar{d}}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
+= (w_m^T + \frac{d_i - \bar{d}}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
+= (w_m^T + \frac{\delta_i}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
+= (w_m^T + \frac{\delta_i}{a^2} \Sigma^{-1} g) (\frac{\mu_m}{\sigma^2_m} \Sigma w_m - \frac{\bar{d}}{a}g) \\
+    \end{aligned}
+\end{equation}
 
 \subsection{ESG Portfolio}
 
