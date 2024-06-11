@@ -102,21 +102,18 @@ We are going to do it step by step:
             a_i^2 \Sigma X_i = a_i(\mu + \frac{b_i}{a_i}) \\
             a_i \Sigma X_i = \mu + \frac{b_i}{a_i} \\
             \Sigma X_i = \frac{1}{a_i}( \mu + \frac{b_i}{a_i}) \\
-            X^*_i = \frac{1}{a_i} \Sigma^{-1}(\mu + \frac{b_i}{a_i})
+            X_i = \frac{1}{a_i} \Sigma^{-1}(\mu + \frac{b_i}{a_i})
         \end{aligned}
     \end{equation}
 \end{enumerate}
 
-
-
-\subsection{Heterogeneous Investors and Expected Returns}
 
 For the sake of simplicity, we assume that $a_i = a$ for all investors.
 We now have:
 
 \begin{equation}
     \begin{aligned}
-    X^*_i = \frac{1}{a} \Sigma^{-1}(\mu + \frac{b_i}{a}) \\
+    X_i = \frac{1}{a} \Sigma^{-1}(\mu + \frac{b_i}{a}) \\
     = \frac{1}{a} \Sigma^{-1}(\mu + \frac{d_i}{a}g) \\
     \end{aligned}
 \end{equation}
@@ -124,5 +121,44 @@ We now have:
 Therefore, the optimal portfolio differs across investors due to the
 ESG characteristics $g$ of the stocks and the investors' taste for
 nonpecuniary benefits $d_i$. 
+
+
+\subsection{Heterogeneous Investors and Expected Returns}
+
+
+\begin{figure}
+    \centering
+    PLACEHOLDER
+    % \includegraphics[width=0.8\textwidth]{images/ESG_taste.png}
+    \caption{Efficient Frontier with ESG Preferences}
+    \label{fig:esg_taste}
+\end{figure}
+
+The $n$th element of investor $i$'s portfolio weight vector $X_i$ is:
+
+\begin{equation}
+    X_{i,n} = \frac{W_{0,i,n}}{W_{0,i}}
+\end{equation}
+
+with $W_{0,i,n}$ the wealth invested in stock $n$ by investor $i$ at time 0.
+We define $W_{0,n} := \int_i W_{0,i,n} di$ the total wealth invested in 
+stock $n$ at time 0 by all investors.
+
+The $n$th element of the market-weight vector $w_m$ is:
+
+\begin{equation}
+    \begin{aligned}
+    w_{m,n} = \frac{W_{0,n}}{W_{0}} \\
+    = \frac{1}{W_0} \int_i W_{0,i,n} di \\
+    = \frac{1}{W_0} \int_i W_{0,i} X_{i,n} di \\
+    = \int_i \frac{W_{0,i}}{W_0}X_{i,n} di \\
+    \end{aligned}
+\end{equation}
+
+Defining $\omega_i = \frac{W_{0,i}}{W_0}$, we have:
+
+\begin{equation}
+    w_{m,n} = \int_i \omega_i X_{i,n} di
+\end{equation}
 
 \section{Climate Risk}
