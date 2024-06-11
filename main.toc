@@ -4,3 +4,6 @@
 \contentsline {subsection}{\numberline {1.1.1}Expected Utility and Optimal Portfolio}{1}{}%
 \contentsline {subsection}{\numberline {1.1.2}Heterogeneous Investors and Expected Returns}{3}{}%
 \contentsline {section}{\numberline {1.2}Climate Risk}{4}{}%
+\contentsline {chapter}{\numberline {2}Sources of ESG Factor and Climate Risk}{5}{}%
+\contentsline {section}{\numberline {2.1}ESG Factor Risk}{5}{}%
+\contentsline {section}{\numberline {2.2}Climate Risk}{5}{}%
