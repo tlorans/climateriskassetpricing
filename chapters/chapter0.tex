@@ -56,17 +56,56 @@ $\tilde{r}_1 \sim N(\mu, \Sigma)$.
 The investors choose their optimal portfolios at time 0. 
 The optimal portfolio $X_i$ is the one that maximizes the expected utility.
 To find it, we differentiate the expected utility with respect to $X_i$ and 
-set it to zero, to obtain the first-order condition:
+set it to zero, to obtain the first-order condition.
 
-\begin{equation}
-    -a_i(\mu + \frac{b_i}{a_i}) + \frac{1}{2}a_i^2(2 \Sigma X_i) = 0
-\end{equation}
+We are going to do it step by step:
 
-from each we obtain investor $i$'s optimal portfolio weights:
-
-\begin{equation}
-    X_i^* = \frac{1}{a_i}\Sigma^{-1}(\mu + \frac{1}{a_i}b_i)
-\end{equation}
+\begin{enumerate}
+    \item Combine the Exponential Terms:
+    \begin{equation}
+        E_0(V(\tilde{W}_{1,i}, X_i)) = -\exp{(-a_i(1 + r_f)-a_iX_i^T(\mu + \frac{b_i}{a_i})+\frac{1}{2}a_i^2X_i^T\Sigma X_i)}
+    \end{equation}
+    and let $f(X_i)$ be the exponent:
+    \begin{equation}
+        E_0(V(\tilde{W}_{1,i}, X_i)) = -\exp{f(X_i)}
+    \end{equation}
+    \item Differentiate $f(X_i)$ with respect to $X_i$. We have the 
+    chain rule:
+    \begin{equation}
+        \frac{\partial h}{\partial X_i} = \frac{\partial h}{\partial f} \frac{\partial f}{\partial X_i}
+    \end{equation}
+    If $h = - \exp{(f)}$, then $\frac{\partial h}{\partial f} = - \exp{(f)}$. 
+    Therefore we have:
+    \begin{equation}
+        \frac{\partial h}{\partial X_i} = -\exp{(f)} \frac{\partial f}{\partial X_i}
+    \end{equation}
+    To tackle the derivative of $f(X_i)$, we use two rules. First $\frac{\partial x^T b}{\partial x} = b$ and
+    $\frac{\partial x^T A x}{\partial x} = 2Ax$ if $A$ is symmetric. We have:
+    \begin{equation}
+        \frac{\partial f}{\partial X_i} = -a_i(\mu + \frac{b_i}{a_i}) + a_i^2 \Sigma X_i
+    \end{equation}
+    Combining:
+    \begin{equation}
+        \frac{\partial h}{\partial X_i} = -\exp{(f)} ( -a_i(\mu + \frac{b_i}{a_i}) + a_i^2 \Sigma X_i)
+    \end{equation}
+    \item Set the derivative to zero:
+    \begin{equation}
+        \begin{aligned}
+            -\exp{(f)} ( -a_i(\mu + \frac{b_i}{a_i}) + a_i^2 \Sigma X_i) = 0 \\
+            -a_i(\mu + \frac{b_i}{a_i}) + a_i^2 \Sigma X_i = 0
+        \end{aligned}
+    \end{equation}
+    where the exponential term is always positive, so we can drop it.
+    \item Rearrange and solve for $X_i$:
+    \begin{equation}
+        \begin{aligned}
+            a_i^2 \Sigma X_i = a_i(\mu + \frac{b_i}{a_i}) \\
+            a_i \Sigma X_i = \mu + \frac{b_i}{a_i} \\
+            \Sigma X_i = \frac{1}{a_i}( \mu + \frac{b_i}{a_i}) \\
+            X^*_i = \frac{1}{a_i} \Sigma^{-1}(\mu + \frac{b_i}{a_i})
+        \end{aligned}
+    \end{equation}
+\end{enumerate}
 
 
 \section{Climate Risk}
