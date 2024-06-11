@@ -178,4 +178,23 @@ Defining $\omega_i = \frac{W_{0,i}}{W_0}$, we have:
     \end{aligned}
 \end{equation}
 
+We can now plug in $X_i$ to obtain $w_m$ the vector 
+of market weights: 
+
+\begin{equation}
+    \begin{aligned}
+    w_{m} = \int_i \omega_i X_i di \\ 
+     = \int_i \omega_i \frac{1}{a} \Sigma^{-1}(\mu + \frac{d_i}{a}g)_n di \\
+     = \frac{1}{a} \sigma^{-1} \mu (\int_i \omega_i di) + \frac{1}{a^2} \Sigma^{-1} g (\int_i \omega_i d_i di)
+    \end{aligned}
+\end{equation}
+
+
+We have $\int_i \omega_i di = 1$ and we define $\bar{d} := \int_i d_i di \geq 0$,
+the wealth-weighted mean of ESG tastes $d_i$ across agents. Therefore:
+
+\begin{equation}
+    w_m = \frac{1}{a} \Sigma^{-1} \mu + \frac{1}{a^2} \Sigma^{-1} g \bar{d}
+\end{equation}
+
 \section{Climate Risk}
