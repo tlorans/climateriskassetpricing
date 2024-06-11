@@ -2,6 +2,9 @@
 
 \section{ESG Risk}
 
+
+\subsection{Expected Utility}
+
 Let's assume a single period model, from $t=0$ to $t=1$.
 We have $N$ stocks. 
 
@@ -23,8 +26,8 @@ benefits.
 with $g$ an $N \times 1$ vector and $d_i \geq 0$ a scalar measuring 
 the agent's taste for the nonpecuniary benefits.
 
-To derive the first-order condition for $X_i$, we compute 
-the expectation of agent $i$'s in period 0:
+
+The expectation of agent $i$'s in period 0 are:
 
 \begin{equation}
     E_0(V(\tilde{W}_{1,i}, X_i)) = E_0(-\exp{(-A_i \tilde{W}_{1,i}-b_i^T X_i)})
@@ -45,12 +48,25 @@ $\tilde{r}_1 \sim N(\mu, \Sigma)$.
     = E_0(-\exp{(-a_i(1 + r_f) - a_i X_i^T \tilde{r}_1 - b_i^T X_i)}) \\
     = -\exp{(-a_i(1 + r_f))} E_0(-\exp{(-a_i X_i^T \tilde{r}_1 - b_i^T X_i)}) \\
     = -\exp{(-a_i(1 + r_f))} E_0(-\exp{(-a_i X_i^T (\tilde{r}_1 + \frac{b_i}{a_i}))})  \\
-    = -\exp{(-a_i (1 + r_f))} \exp{(-a_i X_i^T (E_0(\tilde{r}_1) + \frac{b_i}{a_i})+\frac{1}{2}a_i^2 X_i^T \text{Var}(\tilde{r})X_i)} \\
+    = -\exp{(-a_i (1 + r_f))} \exp{(-a_i X_i^T (E_0(\tilde{r}_1) + \frac{b_i}{a_i})+\frac{1}{2}a_i^2 X_i^T \text{Var}(\tilde{r}_1)X_i)} \\
     = -\exp{(-a_i (1 + r_f))} \exp{(-a_i X_i^T (\mu + \frac{b_i}{a_i})+\frac{1}{2}a_i^2 X_i^T \Sigma X_i)} \\
     \end{aligned}
 \end{equation}
 
+The investors choose their optimal portfolios at time 0. 
+The optimal portfolio $X_i$ is the one that maximizes the expected utility.
+To find it, we differentiate the expected utility with respect to $X_i$ and 
+set it to zero, to obtain the first-order condition:
 
+\begin{equation}
+    -a_i(\mu + \frac{b_i}{a_i}) + \frac{1}{2}a_i^2(2 \Sigma X_i) = 0
+\end{equation}
+
+from each we obtain investor $i$'s optimal portfolio weights:
+
+\begin{equation}
+    X_i^* = \frac{1}{a_i}\Sigma^{-1}(\mu + \frac{1}{a_i}b_i)
+\end{equation}
 
 
 \section{Climate Risk}
