@@ -1,5 +1,5 @@
 \contentsline {chapter}{Introduction}{v}{}%
-\contentsline {chapter}{\numberline {1}ESG Preferences and Climate Risk Premia}{1}{}%
+\contentsline {chapter}{\numberline {1}Risk Premium}{1}{}%
 \contentsline {section}{\numberline {1.1}Capital Asset Pricing Model (CAPM)}{1}{}%
 \contentsline {section}{\numberline {1.2}ESG Preferences}{1}{}%
 \contentsline {subsection}{\numberline {1.2.1}Expected Utility and Optimal Portfolio}{1}{}%
@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{Portfolio Tilts}{6}{}%
 \contentsline {subsubsection}{Factor Pricing with the ESG Portfolio}{6}{}%
 \contentsline {section}{\numberline {1.3}Climate Risk}{6}{}%
-\contentsline {chapter}{\numberline {2}Sources of ESG Factor and Climate Risk}{7}{}%
+\contentsline {chapter}{\numberline {2}Sources of Risk}{7}{}%
 \contentsline {section}{\numberline {2.1}Market Risk}{7}{}%
 \contentsline {section}{\numberline {2.2}ESG Factor Risk}{7}{}%
 \contentsline {section}{\numberline {2.3}Climate Risk}{7}{}%
