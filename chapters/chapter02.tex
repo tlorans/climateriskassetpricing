@@ -260,6 +260,7 @@ compensation for holding brown stocks.
 
 \subsection{Expected Excess Returns}
 
+\subsubsection{Average Expected Excess Returns}
 
 For simplicity, we assume that the market portfolio is ESG-neutral:
 
@@ -292,28 +293,31 @@ vector of market betas is $\beta_m = \frac{\Sigma w_m}{\sigma_m^2}$.
 This gives the first proposition of the model:
 
 \paragraph{Proposition 1.}
-Expected excess returns in equilibirium are given by:
+\textit{Expected excess returns in equilibirium are given by:}
 
 \begin{equation}
     \mu = \mu_m \beta_m - \frac{\bar{d}}{a} g 
 \end{equation}
 
+\textit{
 The expected excess returns deviate from their CAPM values due to ESG 
-tastes for holding green stocks.
+tastes for holding green stocks.}
 
 \paragraph{Corrolary 1.}
-If $\bar{d} > 0$, the expected return on stock $n$ is decreasing in $g_n$ 
+\textit{If $\bar{d} > 0$, the expected return on stock $n$ is decreasing in $g_n$}.
 
-Given their ESG tastes, agents are willing to pay more for greener firms, then 
-lowering the firms' expected returns.
+\textit{Given their ESG tastes, agents are willing to pay more for greener firms, then 
+lowering the firms' expected returns.}
 
-\paragraph{Corrolary 2.} Because the vector of stocks' CAPM alphas is defined as 
-$\alpha := \mu - \mu_m \beta_m$, we have:
+\paragraph{Corrolary 2.} \textit{Because the vector of stocks' CAPM alphas is defined as 
+$\alpha := \mu - \mu_m \beta_m$, we have:}
+
 \begin{equation}
     \alpha_n = - \frac{\bar{d}}{a} g_n
 \end{equation}
-If $\bar{d} > 0$, green stocks have negative alphas, and brown stocks 
-have positive alphas. Greener stocks have lower alphas.
+
+\textit{If $\bar{d} > 0$, green stocks have negative alphas, and brown stocks 
+have positive alphas. Greener stocks have lower alphas.}
 
 
 \begin{figure}
@@ -324,19 +328,67 @@ have positive alphas. Greener stocks have lower alphas.
     \label{fig:esg_returns}
 \end{figure}
 
+\subsubsection{Investor's Expected Excess Returns}
 
 Investor $i$'s expected excess return is given by:
 \begin{equation}
     \begin{aligned}
 E(\tilde{r}_{1,i}) = X_i^T \mu \\ 
-= X_i^T (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
-= (w_m^T + \frac{1}{a} \Sigma^{-1} (\mu + \frac{d_i}{a_i}g) - \frac{1}{a} \Sigma^{-1} \mu - \frac{\bar{d}}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
-= (w_m^T + \frac{d_i}{a^2}\Sigma^{-1}g - \frac{\bar{d}}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
-= (w_m^T + \frac{d_i - \bar{d}}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
-= (w_m^T + \frac{\delta_i}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
-= (w_m^T + \frac{\delta_i}{a^2} \Sigma^{-1} g) (\frac{\mu_m}{\sigma^2_m} \Sigma w_m - \frac{\bar{d}}{a}g) \\
     \end{aligned}
 \end{equation}
+
+We now that $\mu = \mu_m \beta_m - \frac{\bar{d}}{a} g$ from the Proposition 1:
+
+\begin{equation}
+    \begin{aligned}
+E(\tilde{r}_{1,i}) = X_i^T (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
+    \end{aligned}
+\end{equation}
+
+We can express $X_i$ in terms of $w_m$ by susbtracting the expression $w_m$ 
+from the expression of $X_i$. Recall the assumption that $a_i = a$ and distribute:
+
+\begin{equation}
+    \begin{aligned}
+        E(\tilde{r}_{1,i}) = (w_m^T + \frac{1}{a} \Sigma^{-1} (\mu + \frac{d_i}{a}g) - \frac{1}{a} \Sigma^{-1} \mu - \frac{\bar{d}}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
+        = (w_m^T + \frac{1}{a} \Sigma^{-1}\mu - \frac{1}{a} \Sigma^{-1} \mu + \frac{d_i}{a^2}\Sigma^{-1}g - \frac{\bar{d}}{a^2} \Sigma^{-1}g)(\mu_m \beta_m - \frac{\bar{d}}{a}g)\\
+        = (w_m^T + \frac{d_i - \bar{d}}{a^2} \Sigma^{-1} g) (\mu_m \beta_m - \frac{\bar{d}}{a} g) \\
+    \end{aligned}
+\end{equation}
+
+Rewriting $d_i - \bar{d} = \delta_i$, recalling that $\beta_m = (\frac{1}{\sigma^2_m})\Sigma w_m$ and distribute:
+
+\begin{equation}
+    \begin{aligned}
+        E(\tilde{r}_{1,i}) = (w_m^T + \frac{\delta_i}{a^2} \Sigma^{-1} g) (\frac{\mu_m}{\sigma^2_m} \Sigma w_m - \frac{\bar{d}}{a}g) \\
+= w_m^T \frac{\mu_m}{\sigma^2_m} \Sigma w_m - w_m^T \frac{\bar{d}}{a} g + \frac{\delta_i \mu_m}{a^2\sigma^2_m}\Sigma^{-1}\Sigma g^T w_m - \frac{\delta_i \bar{d}}{a^3} g^T \Sigma g \\
+= w_m^T \frac{\mu_m}{\sigma^2_m} \Sigma w_m - w_m^T \frac{\bar{d}}{a} g + \frac{\delta_i \mu_m}{a^2\sigma^2_m} g^T w_m - \frac{\delta_i \bar{d}}{a^3} g^T \Sigma g\\
+    \end{aligned}
+\end{equation}
+
+We now that $w_m^T \Sigma w_m = \sigma^2_m$, so we have:
+
+\begin{equation}
+    \begin{aligned}
+        E(\tilde{r}_{1,i}) = \mu_m - w_m^T \frac{\bar{d}}{a}g + \frac{\delta_i \mu_m}{a^2\sigma^2_m} g^T w_m - \frac{\delta_i \bar{d}}{a^3} g^T \Sigma g\\
+    \end{aligned}
+\end{equation}
+
+Recalling the assumption that $w_m^T g = 0$, we finally have:
+\begin{equation}
+    \begin{aligned}
+        E(\tilde{r}_{1,i}) = \mu_m  - \frac{\delta_i \bar{d}}{a^3} g^T \Sigma g\\
+    \end{aligned}
+\end{equation}
+
+
+\paragraph{Proposition 2.} \textit{The mean of the excess return on 
+investor $i$'s portfolio is given by:}
+
+\begin{equation}
+    E(\tilde{r}_{1,i}) = \mu_m - \frac{\delta_i \bar{d}}{a^3} g^T \Sigma g
+\end{equation}
+
 
 \section{ESG Portfolio}
 
