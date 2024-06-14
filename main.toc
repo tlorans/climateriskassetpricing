@@ -15,7 +15,8 @@
 \contentsline {subsubsection}{Investor $i$'s Excess Returns Mean and Variance}{9}{}%
 \contentsline {paragraph}{Proposition 2.}{10}{}%
 \contentsline {paragraph}{Proposition 3.}{11}{}%
-\contentsline {section}{\numberline {2.3}ESG Portfolio}{11}{}%
-\contentsline {subsection}{\numberline {2.3.1}Portfolio Tilts}{11}{}%
-\contentsline {subsection}{\numberline {2.3.2}Factor Pricing with the ESG Portfolio}{11}{}%
+\contentsline {subsection}{\numberline {2.2.4}Investor's Utility in Equilibrium}{11}{}%
+\contentsline {section}{\numberline {2.3}ESG Portfolio}{12}{}%
+\contentsline {subsection}{\numberline {2.3.1}Portfolio Tilts}{12}{}%
+\contentsline {subsection}{\numberline {2.3.2}Factor Pricing with the ESG Portfolio}{12}{}%
 \contentsline {chapter}{\numberline {3}Climate Risk}{13}{}%
