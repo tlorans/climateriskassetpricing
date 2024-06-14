@@ -4,19 +4,19 @@
 \contentsline {section}{\numberline {2.1}Expected Utility and Optimal Portfolio}{3}{}%
 \contentsline {subsection}{\numberline {2.1.1}Setting the Investor's Expected Utility}{3}{}%
 \contentsline {subsection}{\numberline {2.1.2}Solving for the Investor's Optimal Portfolio}{4}{}%
-\contentsline {section}{\numberline {2.2}Heterogeneous Investors and Expected Returns}{6}{}%
-\contentsline {subsection}{\numberline {2.2.1}Heterogeneous Market}{6}{}%
-\contentsline {subsection}{\numberline {2.2.2}Expected Returns}{7}{}%
-\contentsline {subsection}{\numberline {2.2.3}Expected Excess Returns}{8}{}%
-\contentsline {subsubsection}{Average Expected Excess Returns}{8}{}%
+\contentsline {section}{\numberline {2.2}Heterogeneous Investors and Expected Returns}{7}{}%
+\contentsline {subsection}{\numberline {2.2.1}Heterogeneous Market}{7}{}%
+\contentsline {subsection}{\numberline {2.2.2}Expected Returns}{8}{}%
+\contentsline {subsection}{\numberline {2.2.3}Expected Excess Returns}{9}{}%
+\contentsline {subsubsection}{Average Expected Excess Returns}{9}{}%
 \contentsline {paragraph}{Proposition 1.}{9}{}%
-\contentsline {paragraph}{Corrolary 1.}{9}{}%
-\contentsline {paragraph}{Corrolary 2.}{9}{}%
-\contentsline {subsubsection}{Investor $i$'s Excess Returns Mean and Variance}{9}{}%
-\contentsline {paragraph}{Proposition 2.}{10}{}%
-\contentsline {paragraph}{Proposition 3.}{11}{}%
-\contentsline {subsection}{\numberline {2.2.4}Investor's Utility in Equilibrium}{11}{}%
-\contentsline {section}{\numberline {2.3}ESG Portfolio}{13}{}%
-\contentsline {subsection}{\numberline {2.3.1}Portfolio Tilts}{13}{}%
-\contentsline {subsection}{\numberline {2.3.2}Factor Pricing with the ESG Portfolio}{13}{}%
-\contentsline {chapter}{\numberline {3}Climate Risk}{15}{}%
+\contentsline {paragraph}{Corrolary 1.}{10}{}%
+\contentsline {paragraph}{Corrolary 2.}{10}{}%
+\contentsline {subsubsection}{Investor $i$'s Excess Returns Mean and Variance}{10}{}%
+\contentsline {paragraph}{Proposition 2.}{11}{}%
+\contentsline {paragraph}{Proposition 3.}{12}{}%
+\contentsline {subsection}{\numberline {2.2.4}Investor's Utility in Equilibrium}{12}{}%
+\contentsline {section}{\numberline {2.3}ESG Portfolio}{15}{}%
+\contentsline {subsection}{\numberline {2.3.1}Portfolio Tilts}{15}{}%
+\contentsline {subsection}{\numberline {2.3.2}Factor Pricing with the ESG Portfolio}{15}{}%
+\contentsline {chapter}{\numberline {3}Climate Risk}{17}{}%
