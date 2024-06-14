@@ -12,9 +12,10 @@
 \contentsline {paragraph}{Proposition 1.}{9}{}%
 \contentsline {paragraph}{Corrolary 1.}{9}{}%
 \contentsline {paragraph}{Corrolary 2.}{9}{}%
-\contentsline {subsubsection}{Investor's Expected Excess Returns}{9}{}%
+\contentsline {subsubsection}{Investor $i$'s Excess Returns Mean and Variance}{9}{}%
 \contentsline {paragraph}{Proposition 2.}{10}{}%
-\contentsline {section}{\numberline {2.3}ESG Portfolio}{10}{}%
-\contentsline {subsection}{\numberline {2.3.1}Portfolio Tilts}{10}{}%
-\contentsline {subsection}{\numberline {2.3.2}Factor Pricing with the ESG Portfolio}{10}{}%
-\contentsline {chapter}{\numberline {3}Climate Risk}{11}{}%
+\contentsline {paragraph}{Proposition 3.}{11}{}%
+\contentsline {section}{\numberline {2.3}ESG Portfolio}{11}{}%
+\contentsline {subsection}{\numberline {2.3.1}Portfolio Tilts}{11}{}%
+\contentsline {subsection}{\numberline {2.3.2}Factor Pricing with the ESG Portfolio}{11}{}%
+\contentsline {chapter}{\numberline {3}Climate Risk}{13}{}%

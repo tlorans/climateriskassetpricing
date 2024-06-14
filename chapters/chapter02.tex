@@ -328,7 +328,7 @@ have positive alphas. Greener stocks have lower alphas.}
     \label{fig:esg_returns}
 \end{figure}
 
-\subsubsection{Investor's Expected Excess Returns}
+\subsubsection{Investor $i$'s Excess Returns Mean and Variance}
 
 Investor $i$'s expected excess return is given by:
 \begin{equation}
@@ -337,7 +337,7 @@ E(\tilde{r}_{1,i}) = X_i^T \mu \\
     \end{aligned}
 \end{equation}
 
-We now that $\mu = \mu_m \beta_m - \frac{\bar{d}}{a} g$ from the Proposition 1:
+We know that $\mu = \mu_m \beta_m - \frac{\bar{d}}{a} g$ from the Proposition 1:
 
 \begin{equation}
     \begin{aligned}
@@ -388,6 +388,47 @@ investor $i$'s portfolio is given by:}
 \begin{equation}
     E(\tilde{r}_{1,i}) = \mu_m - \frac{\delta_i \bar{d}}{a^3} g^T \Sigma g
 \end{equation}
+
+\textit{Investor $i$ with $\delta_i > 0$ accepts below-market expected returns 
+in exchange for satisfying their stronger tastes for holding green stocks.
+Conversely, and as a result, investor $i$ with $\delta_i < 0$ enjoys above-market expected returns.}
+
+
+The variance of the excess return on investor $i$'s portfolio is:
+
+\begin{equation}
+    \text{Var}(\tilde{r}_{1,i}) = X_i^T \Sigma X_i
+\end{equation}
+
+Again, we can express $X_i$ in terms of $w_m$ by susbtracting the expression $w_m$
+from the expression of $X_i$, then distribute:
+
+\begin{equation}
+    \begin{aligned}
+        \text{Var}(\tilde{r}_{1,i}) = (w^T_m + \frac{\delta_i}{a^2} \Sigma^{-1}g) \Sigma (w^T_m + \frac{\delta_i}{a^2} \Sigma^{-1}g) \\
+        = w^T_m \Sigma w_m + w^T_m \Sigma \frac{\delta_i}{a^2} \Sigma^{-1}g + w^T_m \Sigma \frac{\delta_i}{a^2} \Sigma^{-1}g + \frac{\delta_i^2}{a^4} g^T \Sigma^{-1} \Sigma \Sigma^{-1} g \\
+        = w^T_m \Sigma w_m + w^T_m \frac{\delta_i}{a^2} g + w^T_m \frac{\delta_i}{a^2} g + \frac{\delta_i^2}{a^4} g^T \Sigma^{-1} g \\
+    \end{aligned}
+\end{equation}
+
+Finally, we recall that $w^T_m \Sigma w_m = \sigma^2_m$ and the assumption 
+that $w_m^T g = 0$, then we have:
+
+\begin{equation}
+    \begin{aligned}
+        \text{Var}(\tilde{r}_{1,i}) = \sigma^2_m + \frac{\delta_i^2}{a^4} g^T \Sigma^{-1} g \\
+    \end{aligned}
+\end{equation}
+
+\paragraph{Proposition 3.} \textit{The variance of the excess return on
+investor $i$'s portfolio is given by:}
+
+\begin{equation}
+    \text{Var}(\tilde{r}_{1,i}) = \sigma^2_m + \frac{\delta_i^2}{a^4} g^T \Sigma^{-1} g
+\end{equation}
+
+\textit{In departing from the market portfolio, all agents with $\delta_i \neq 0$
+incur higher volatility than that of the market portfolio.}
 
 
 \section{ESG Portfolio}
