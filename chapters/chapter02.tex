@@ -143,10 +143,11 @@ nonpecuniary benefits $d_i$.
 \end{figure}
 
 \newpage
+
 \section{Heterogeneous Investors and Expected Returns}
 
 
-\subsection{Heterogeneous Market}
+\subsection{Heterogeneous Market and Market Portfolio Weights}
 
 The $n$th element of investor $i$'s portfolio weight vector $X_i$ is:
 
@@ -205,11 +206,24 @@ of market weights:
 
 
 We have $\int_i \omega_i di = 1$ and we define $\bar{d} := \int_i d_i di \geq 0$,
-the wealth-weighted mean of ESG tastes $d_i$ across agents. Therefore:
+the wealth-weighted mean of ESG tastes $d_i$ across agents. Therefore,
+the market portfolio weights are:
 
 \begin{equation}
     w_m = \frac{1}{a} \Sigma^{-1} \mu + \frac{1}{a^2} \Sigma^{-1} g \bar{d}
 \end{equation}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{../images/chapter02/market_greenness_vs_average_esg_taste.png}
+    \caption{Relationship between Market Greenness and Average Taste for ESG}
+    \label{fig:esg_taste_market}
+\end{figure}
+
+This equation is the same as the one found 
+for the investor's optimal portfolio weights, but with the
+average ESG tastes $\bar{d}$ instead of individual tastes $d_i$.
 
 \subsection{Expected Returns}
 
@@ -240,10 +254,9 @@ where $\sigma_m^2 = w_m^T \Sigma w_m$ is the market return variance.
 
 \begin{figure}
     \centering
-    PLACEHOLDER
-    % \includegraphics[width=0.8\textwidth]{images/ESG_taste.png}
-    \caption{$\mu_m$ and $w_m^Tg$ relationship.}
-    \label{fig:green_market}
+    \includegraphics[width=1\textwidth]{../images/chapter02/market_equity_premium_vs_greenness.png}
+    \caption{Market Equity Premium vs Market Greeness}
+    \label{fig:equity_premium}
 \end{figure}
 
 The equity premium $\mu_m$ depends on the average of ESG tastes, $\bar{d}$,
@@ -320,8 +333,7 @@ have positive alphas. Greener stocks have lower alphas.}
 
 \begin{figure}
     \centering
-    PLACEHOLDER
-    % \includegraphics[width=0.8\textwidth]{images/ESG_taste.png}
+    \includegraphics[width=1\textwidth]{../images/chapter02/alphas_vs_esg_characteristics.png}
     \caption{$\alpha_n$ relationship with $g_n$}
     \label{fig:esg_returns}
 \end{figure}
