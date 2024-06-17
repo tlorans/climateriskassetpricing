@@ -1,444 +1,354 @@
-\chapter{States of the World and Asset Pricing}
+\chapter{Climate Risks}
 
-Assets give a \textit{payoff} $x_{t+1}$. In our focus on stocks, 
-$x_{t+1} = p_{t+1} + d_{t+1}$, where $p_{t+1}$ is the 
-price of the stock at time $t+1$ and $d_{t+1}$ 
-is the dividend paid at time $t+1$.
-$x_{t+1}$ is a random variable, like a coin-flip - we don't 
-know at $t$ what it will be at $t+1$. But we can assign 
-probabilities to the possible outcomes of $x_{t+1}$.
-We can think of the \textit{randomness} of $x_{t+1}$ as being
-due to the randomness of the \textit{state of the world} at $t+1$.
-$x_{t+1}$ takes on different values in 
-different \textit{states of the world}.
-We have:
+Before going straight 
+on climate risks, we need to agree on 
+the definition of \textit{risk} in Finance. Suppose 
+that a stock return follows an AR(1) process:
 
 \begin{equation}
-    E(x_{t+1}) = \sum_s \pi(s) x(s)
+    R_{t} = \phi R_ {t-1} + \varepsilon_{t}
 \end{equation}
 
-where $E(x_{t+1})$ is the expected value of $x_{t+1}$,
-$\pi(s)$ is the probability of state $s$, and $x(s)$ is the
-value of $x_{t+1}$ in state $s$.
-
-The question we are trying to answer here is: what is the price 
-or value $p_t$ of the payoff $x_{t+1}$ at time $t$?
+with $\varepsilon_{t}$ is a \textit{white noise} process,
+like a coin flip: completely unpredictable.
+We generaly consider 
+that it is 
+mean zero $E_t(\varepsilon_{t+1}) = E(\varepsilon_{t+1}) = 0$
+and constant variance $\sigma_t(\varepsilon_{t+1}) = \sigma(\varepsilon_{t+1})= \sigma_{\varepsilon}^2$.
+Such white noise is also unpredictable from its past:
+the \textit{autocorrelation} $\text{Corr}(\varepsilon_{t},\varepsilon_{t+1})=0$.
+Below is an example of such white noise process.
 
 \begin{figure}[htbp]
     \centering
-\begin{tikzpicture}[->, thick, auto, node distance=3cm]
-    % Nodes at t
-    \node[circle, draw] (t) at (0, 0) {};
-    
-    % Nodes at t+1
-    \node[circle, draw] (t1s1) at (3, 2) {\(\pi_1 \cdot x_1\)};
-    \node[circle, draw] (t1s2) at (3, 0) {\(\pi_2 \cdot x_2\)};
-    \node[circle, draw] (t1sn) at (3, -2) {\(\pi_n \cdot x_n\)};
-
-    % Edges
-    \draw (t) -- (t1s1);
-    \draw (t) -- (t1s2);
-    \draw (t) -- (t1sn);
-    
-    % Labels for time
-    \node at (0, -0.5) {t};
-    \node at (3, -3) {t+1};
-    
-    % Dots for multiple nodes
-    \node at (3, -0.3) {\(\vdots\)};
-\end{tikzpicture}
-    \caption{States of the world at time \(t+1\)}
-    \label{fig:states_of_the_world}
+    \includegraphics[width=1\textwidth]{../images/chapter01/unexpected_shocks.png}
+    \caption{$\varepsilon_t$ with $\sigma_{\varepsilon} = 0.5$}
+    \label{fig:fig01}
 \end{figure}
 
-\section{Utility and Asset Pricing}
 
-We want to find the value of the payoff $x_{t+1}$ at time $t$ to an 
-investor. We describe the investor's preferences using an 
-\textit{utility function}:
+The conditional expectation of the stock return is:
 
 \begin{equation}
-    U(c_t, c_{t+1}) = u(c_t) + \beta u(c_{t+1})
+    \begin{aligned}
+    E_t(R_{t+1}) = \phi R_t + E_t(\varepsilon_{t+1}) \\
+    = \phi R_t
+    \end{aligned}
 \end{equation}
 
-where $c_t$ is consumption at time $t$, $c_{t+1}$ is consumption at
-time $t+1$, $u(c_t)$ is the utility of consumption at time $t$.
-$\beta$ is the \textit{discount factor} that measures how much the
-investor values consumption at time $t+1$ relative to consumption at
-time $t$. 
+because $E_t(\varepsilon_{t+1}) = 0$.
 
-The point of the utility function is to capture the investor's
-aversion to \textit{risk} and \textit{delay}, and 
-discounting prices accordingly. 
-Asset pricing depends on what are people willing to pay for.
-It depends on how impatient and risk averse they are.
-An example is the logarithmic utility function. In that case,
-if $u(c) = \log(c)$, then $u'(c) = 1/c$. 
-
-$u(c)$ is the level of utility from consumption. It can be described 
-as the level of happiness of the investor. $u'(c)$ is the 
-marginal utility of consumption. It can be roughly described as 
-hunger of the investor.
-If $u'(c) > 0$ when $u(c)$ rises, it means that people 
-always want more consumption. If $u'(c) < 0$ when $u(c)$ rises,
-then $u(c)$ is concave, and hunger decrease as you eat more.
-$\beta$ is a number, typically 0.95. People prefer money now 
-than later, they dislike delay. $\beta$ captures their impatience.
-$c_{t+1}$ is random. You don't know at time $t$ how things will 
-turn out, what $c_{t+1}$ will be.
-
-\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
-    xxx
-\end{tcolorbox}
-
-A more useful utility function is the \textit{power utility function}:
+The actual or \textit{realized} return will vary 
+around this expectation. The unexpected return is:
 
 \begin{equation}
-    u(c) = \frac{c^{1-\gamma}}{1-\gamma}
+    \begin{aligned}
+    R_{t+1} - E_t(R_{t+1}) = \phi R_t + \varepsilon_{t+1} - \phi R_t \\
+    = \varepsilon_{t+1}
+    \end{aligned}
 \end{equation}
 
-In that case, $u'(c) = c^{-\gamma}$, and $\gamma$ is the \textit{risk aversion} parameter.
-If $\gamma = 1$, then $u(c) = \log(c)$ and 
-$u'(c) = 1/c$. 
-
-This functional form lets you have more or less curved function,
-that is more or less risk aversion.
-
-\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
-    power utility function and marginal utility function
-\end{tcolorbox}
-
-\section{Risk Valuation}
-
-To apply what we have learned so far to risk valuation, we can start
-from the definition of the covariance:
+and conditional variance of the stock return is:
 
 \begin{equation}
-    \text{Cov}(m, x) = E(mx) - E(m)E(x)
+    \begin{aligned}
+    \sigma_t^2(R_{t+1}) = \sigma^2_t(\varepsilon_{t+1}) \\
+    = \sigma_{\varepsilon}^2
+    \end{aligned}
 \end{equation}
 
-Thus,
+due to the definition of the white noise 
+process with constant variance, and the fact that
+we already know $R_t$ at time $t$, so 
+$\sigma_t^2(R_{t}) = 0$.
 
-\begin{equation}
-    p = E(mx) = \text{Cov}(m, x) + E(m)E(x)
-\end{equation}
-
-\begin{equation}
-    p = \frac{1}{R^f} E(x) + \text{Cov}(m, x)
-\end{equation}
-
-with the approximation
-
-\begin{equation}
-    m_{t+1} \approx 1 - \delta - \gamma \Delta c_{t+1}
-\end{equation}
-
-we have
-
-\begin{equation}
-p^i_t \approx \frac{1}{R^f} E(x^i_{t+1}) + \text{Cov}(x^i_{t+1}, \Delta c_{t+1})
-\end{equation}
-
-That is, the price is lower if the asset do well 
-when consumption is low, and vice versa. Prices are higher 
-for assets that provide insurance against consumption risks.
-Prices are low for assets that, if you buy them, make your consumption
-more risky. 
-
-In risk valuation, the covariance term really matters. 
-The same $m$ and the same $x$ can have different prices depending on the covariance between
-$m$ and $x$. 
-
-\begin{tcolorbox}[colback=white, colframe=black, title=Example 1]
-Suppose there are two states $u$ and $d$ tomorrow, with probability
-$1/2$ each. In state $u$, consumption is high, and in state $d$,
-consumption is low.
-
-\begin{equation}
-    p_t = E(m, x) = \frac{1}{2} m_u x_u + \frac{1}{2} m_d x_d
-\end{equation}
-
-
-Suppose $x$ pays off well in good times if $x_u = 2$ and 
-$x_d = 1$. Suppose also that $m_u = 0.5$ and $m_d = 1$. 
-Then,
-
-\begin{equation}
-    p_t = \frac{1}{2} \times 0.5 \times 2 + \frac{1}{2} \times 1 \times 1 = 1
-\end{equation}
-
-Now suppose we keep the same volatility but $x$ pays off well 
-in bad times and badly in good times, with $x_u = 1$ and $x_d = 2$.
-
-Then,
-
-\begin{equation}
-    p_t = \frac{1}{2} \times 0.5 \times 1 + \frac{1}{2} \times 1 \times 2 = 1.25
-\end{equation}
-
-The payoff is worth more in the second case because it pays off
-more in bad times, that is when $m$ is high (hungry) rather 
-than $m$ is low (full). 
-$m$ acts like a price: it says that payoffs 
-delivered in the bad state of nature $d$ worth more than 
-payoffs delivered in the good state of nature $u$.
-
-\end{tcolorbox}
-
-In the previous part, we had the discount factor of the form:
-
-\begin{equation}
-    p^i_t = \frac{E(x^i_{t+1})}{ER^i}
-\end{equation}
-
-where $ER^i$ is the expected return on the asset.
-Our new version is:
-
-\begin{equation}
-    p^i_t = E(m_{t+1}x^i_{t+1})
-\end{equation}
-
-where $m_{t+1}$ is the stochastic discount factor. It is 
-stochastic in the sense that it is unknown at time $t$, 
-and therefore is inside the expectation. It is the same 
-for all assets. Different covariance of 
-$m_{t+1}$ with $x^i_{t+1}$ gives different risk adjustments
-for different assets.
-
-\section{Risk and Beta}
-
-In this section, we will see that $p = E(mx)$ implies:
-
-\begin{equation}
-E(R^{ei}) = -R^f \text{Cov}(R^{ei}, m) = \beta_{R^{ei},m} \lambda_m
-\end{equation}
-
-where $\beta_{R^{ei},m}$ is the beta of the asset $i$ with respect to $m$.
-
-\subsection{Expected Excess Returns and Covariance}
-
-We start with the fact that if \textit{excess} returns or 
-zero-cost portfolios have price 0, then, when excess returns 
-$R^e = R^i - R^f$
-is the payoff, $p = E(mx)$ implies:
-
-\begin{equation}
-    0 = E_t(m_{t+1}R^{e}_{t+1})
-\end{equation}
-
-Using again the definition of the covariance and looking 
-to obtain the betas:
-
-\begin{equation}
-    \text{Cov}(m, x) = E(mx) - E(m)E(x)
-\end{equation}
-
-\begin{equation}
-    E(mx) = \text{Cov}(m, x) + E(m)E(x)
-\end{equation}
-
-Then 
-
-\begin{equation}
-    0 = E(mR^e) = E(m)E(R^e) + \text{Cov}(m, R^e)
-\end{equation}
-
-\begin{equation}
-    E(m)E(R^e) = -\text{Cov}(m, R^e)
-\end{equation}
-
-\begin{equation}
-    E(R^e) = - R^f \text{Cov}(m, R^e)
-\end{equation}
-
-\subsection{Betas Formulation}
-
-We can reformulate our previous result in terms of betas:
-
-\begin{equation}
-    E(R^e) = \frac{\text{Cov}(m, R^e)}{var(m)}[-R^f var(m)]
-\end{equation}
-
-\begin{equation}
-    E(R^e) = \beta_{R^e, m} \lambda_m
-\end{equation}
-
-We can now link it directly to consumption. If $m_{t+1} = a - bf_{t+1}$
-then:
-
-\begin{equation}
-    E(R^e) = -R^f \text{Cov}(R^e, m) = R^f \times b \times cov(R^e, f)
-\end{equation}
-
-\begin{equation}
-    E(R^e) = \frac{\text{Cov}(R^e,f)}{var(f)}[R^f \times b \times var(f)] = \beta_{R^e,f} \lambda_f
-\end{equation}
-
-So, using $m_{t+1} \approx 1 - \delta - \gamma \Delta c_{t+1}$, we have:
-
-\begin{equation}
-    E(R^e) \approx -\text{Cov}(1 - \delta - \gamma \Delta c_{t+1}, R^e) \approx \gamma \text{Cov}(\Delta c_{t+1}, R^e)
-\end{equation}
-
-where we also have assumed that $R^f \approx 1$. We finally have:
-
-\begin{equation}
-    E(R^e) \approx \beta_{R^e, \Delta c} \times \lambda_c
-\end{equation}
-
-\subsection{Interpreting Excess Return and Beta Relationship}
-
-In regression terms, it means that we can run time series 
-regressions to find betas:
-
-\begin{equation}
-    R^i_{t+1} = \alpha_i + \beta_{i,\Delta c} \Delta c_{t+1} + \epsilon^i_{t+1}
-\end{equation}
-
-The average returns should indeed be linearly related to 
-betas:
-
-\begin{equation}
-    E(R^i) = R^f + \beta_{i,\Delta c} \lambda_c
-\end{equation}
-
-where $\beta$ is the right hand variable (the usual $x$) and 
-$\lambda$ is the slope (usually the $\beta$).
+Risk is the unexpected in Finance. This 
+is the fact that returns are not 
+what we expected. Either higher or lower.
+So, what matters is this $\varepsilon_{t+1}$ in 
+our stock return process and its variance $\sigma_{\varepsilon}^2$.
 
 \begin{figure}[htbp]
     \centering
-\begin{tikzpicture}
-    % Axis
-    \draw[<->] (0, 5) node[above] {$E(R^i)$} -- (0, 0) -- (5, 0) node[right] {\(\beta_i\)};
-    
-    % Line
-    \draw[thick, blue] (0, 0) -- (4, 4) node[above] {slope \(\lambda\)};
-    
-    % Labels
-    \node[below left] at (0, 0) {0};
-    \node[below right] at (2, 2) { $E(R^i) = \lambda \beta_i$};
-    \node[below] at (4, 0) {1};
-    \node[left] at (0, 4) {1};
-\end{tikzpicture}
-    \caption{Expected Return and Beta Relationship}
-    \label{fig:expected_return_beta}
+    \includegraphics[width=1\textwidth]{../images/chapter01/ar_1.png}
+    \caption{Simulation with increasing 
+    uncertainty ($\sigma_{\varepsilon}^2$) in an AR(1) process.}
+    \label{fig:fig01}
 \end{figure}
 
-The superscript $i$ emphasizes that this is about 
-why average returns of one asset are higher than of another 
-(cross section). This is not about the fluctuation in ex-post return
-or predicting returns. $E(R^i)$ is the reward, $\beta_i$ the 
-quantity of risk that varies across assets $i$, and 
-$\lambda$ is the price of risk (it is common to all assets).
+Figure~\ref{fig:fig01} shows the stock return process
+with increasing uncertainty $\sigma_{\varepsilon}^2$.
+The more uncertain the process, the more
+the realized returns will vary around the
+expected returns. 
 
-An asset must offer high $E(R^i)$ (reward) to compensate
-the investors for high $\beta_i$ (risk). 
-Assets that covary negatively with $m$, hence positively 
-with consumption growth, must pay a higher average return. 
+With this in mind, we can now move to the question 
+of climate risks. 
 
+\section{Climate Risks and Unexpected Returns}
 
-\begin{tcolorbox}[colback=white, colframe=black, title=Example X]
-    
+With a simple one-period model, we can
+show how climate change-related issues can add uncertainty
+to asset prices (thus, risks).
+We will consider two channels through which
+climate change adds uncertainty: the cash-flows channel
+and the discount rate channel.
 
+\subsection{Cash-Flows Channel}
 
-\end{tcolorbox}
+Let's define a payoff $X_{t+1}$ as the 
+cash-flows provided to the investors per dollar invested in the stock at time $t$:
+
+\begin{equation}
+    X_{t+1} = \frac{CF_{t+1}}{P_t}
+\end{equation}
+
+Analysts form forecasts 
+about the future cash-flows of the firm
+based on information available at time $t$.
+The expectations of the payoff
+are a function of climate-related
+conditions $CC_{t+1}$. $CC_{t+1}$ could represents 
+any climate-related issues that may affect the
+firm's cash-flows. But to make the things more 
+concrete, we can think of $CC_{t+1}$ as 
+a carbon tax. 
+The expected payoff is then:
+
+\begin{equation}
+    E_t(X_{t+1}) = \beta_{cc} E_t(CC_{t+1})
+\end{equation}
+
+with $\beta_{cc}$ the sensitivities of 
+the payoff to the carbon tax. Of course,
+the payoff may also depend on other factors
+like macroeconomic conditions. But 
+for the sake of simplicity, we will focus
+on the carbon tax example.
+In order to forecast the future payoff, analysts 
+needs to forecast future carbon tax
+$E_t(CC_{t+1})$.
+
+Suppose that the carbon tax $CC_{t+1}$ is an AR(1) process:
+
+\begin{equation}
+    CC_{t+1} = \phi CC_t + \tilde{CC}_{t+1}
+\end{equation}
+
+with $\tilde{CC}_{t+1}$ a white noise process
+representing unexpected changes in the carbon tax.
+Again, $E_t(\tilde{CC}_{t+1}) = 0$ and
+$\sigma_t^2(\tilde{CC}_{t+1}) = \sigma_{\tilde{CC}}^2$.
+The expected value of the carbon tax at time $t+1$ is:
+
+\begin{equation}
+    E_t(CC_{t+1}) = \phi CC_t
+\end{equation}
 
 
 \begin{figure}[htbp]
     \centering
-    \begin{tikzpicture}
-        % Draw the axes
-        \draw[<->] (0, 5) node[above] {\(p\)} -- (0, 0) -- (3, 0) node[right] {Time};
-        
-        % Draw the lines for the two assets
-        \draw[thick, blue] (0.5, 1) -- (2.5, 4) node[near end, right, below] {};
-        \draw[thick, red] (0.5, 3) -- (2.5, 3.5) node[midway, above] {};
-        
-        % Add points for Asset 1
-        \node[below] at (0.5, 1) {\(p_1^t\)};
-        \node[above] at (2.5, 4) {\(p_1^{t+1}\)};
-        \draw[fill=blue] (0.5, 1) circle (2pt);
-        \draw[fill=blue] (2.5, 4) circle (2pt);
-        
-        % Add points for Asset 2
-        \node[below] at (0.5, 3) {};
-        \node[above] at (2.5, 3.5) {};
-        \draw[fill=red] (0.5, 3) circle (2pt);
-        \draw[fill=red] (2.5, 3.5) circle (2pt);
-        
-        % Label the times
-        \node[below] at (0.5, 0) {\(t\)};
-        \node[below] at (2.5, 0) {\(t+1\)};
-    \end{tikzpicture}
-    \caption{High $E(R^i)$ = Low $p^i$}
-    \label{fig:asset_pricing}
+    \includegraphics[width=0.8\textwidth]{../images/chapter01/carbon_tax_simulations.png}
+    \caption{Simulation of the carbon tax process.}
+    \label{fig:carbon_tax}
 \end{figure}
 
-Given a certain amount of volatility (price must move at some point),
-price (risk-discount) depends on when good/bad performance occurs.
-Average returns are high if beta on $m$ or $\Delta c$ is large.
-Stocks must pay high returns if they tend to go down 
-in bad times. Price is depressed if a payoff is low in 
-bad times, when the investor is hungry (high $m$, low $\Delta c$), 
-therefore we have high $E(R^i)$.
-Price is high if a payoff is high in bad times, when the investor
-is full (low $m$, high $\Delta c$). Therefore we have low $E(R^i)$.
-Higher $\gamma$ (risk aversion) implies larger price effects.
+The analysts may for example think that the carbon 
+tax is supposed to increase by 5\%.
+For the sake of the illustration, 
+we simulate the carbon tax process with
+$\phi = 1.05$ and $\sigma_{\tilde{CC}}^2 = 0.25$
+with 10 periods
+in figure~\ref{fig:carbon_tax} shows the carbon tax process.
 
-The variance $\sigma(R^e)$ of an individual asset 
-does not matter, only its covariance with $m$ (\textit{e.g.} consumption growth)
-matters. Recall that we have the following:
 
-\begin{equation}
-    R^{ei} = \beta_{i,m} m + \epsilon^i 
-\end{equation}
 
-Therefore the variance is:
-\begin{equation}
-    var(R^{ei}) = \beta^2_{i,m} \sigma^2_{m} + \sigma_{\epsilon^i}^2
-\end{equation}
-
-and the second component of variance has no effect on mean returns.
-
-\section{CAPM and Multifactor models}
-
-We can relate what we have seen so far to the CAPM and Fama-French model. 
-This underlines the economic rationale for $E(hml)$, $E(smb)$, and so forth.
-
-To do so, we start from:
+Due to the possibility of unanticipated changes 
+to the carbon tax,
+the realized payoff may also differ from the expected one:
 
 \begin{equation}
-    E(R^{ei}) = R^f \text{Cov}(R^{ei}, m) = \beta_{R^{ei}, m} \lambda_m
+    X_{t+1} - E_{t}(X_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1}
 \end{equation}
 
-We find reasons to say:
+Therefore, we can say that 
+carbon tax uncertainty adds uncertainty to the
+payoff, because:
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/chapter01/unexpected_payoff_boxplot.png}
+    \caption{Simulation of the unexpected payoff with different values for $\sigma_{\tilde{CC}}^2$.}
+    \label{fig:payoff}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/chapter01/unexpected_payoff_beta_cc.png}
+    \caption{Simulation of the unexpected payoff with different values for $\beta_{CC}$.}
+    \label{fig:payoff_beta}
+\end{figure}
+
+
+
+\begin{itemize}
+    \item The highest the uncertainty in the carbon tax process ($\sigma_{\tilde{CC}}^2$),
+    the more the realized payoff will vary around the expected payoff (see figure~\ref{fig:payoff}).
+    \item The higher the sensitivity of the payoff to the carbon tax ($\beta_{CC}$),
+    the more the realized payoff will vary around the expected payoff (see figure~\ref{fig:payoff_beta}).    
+\end{itemize}
+
+
+
+
+\subsection{Discount Rate Channel}
+
+Now, how the stock is priced? 
+The price of the stock is the discounted value of the 
+cash-flows per dollar invested in the stock.
+The cash-flows are discounted according 
+to a required rate of return for the firm:
 
 \begin{equation}
-    m = a -b \times f 
+    P_{t+1} = \frac{X_{t+1}}{\rho_{t+1}}
 \end{equation}
 
-to get 
+We have a time-varying discount rate $\rho_{t+1}$:
 
 \begin{equation}
-    E(R^{ei}) = \beta_{R^{ei}, f} \lambda_f
+    \rho_{t+1} = 1 - \frac{\beta_{CC}}{\gamma} d_{t+1}
 \end{equation}
 
-with the full algebra to be:
+with $d_{t+1}$ and $\gamma$ the perception of climate 
+risks and the risk aversion of the average investor, respectively.
+We have a time-varying discount rate because
+the perception of climate risks $d_{t+1}$ is time-varying.
+What is $d_{t+1}$? Focusing on our illustrative 
+example of the carbon tax, $d_{t+1}$ could be the
+prevalence of the belief that the carbon tax will increase.
+The higher the perception of climate risks, the higher
+the discount rate, and the lower the price of the stock.
+Once the carbon tax is announced at time $t+1$, we have:
 
 \begin{equation}
-    E(R^{ei}) = R^f \text{Cov}(R^{ei}, f \times b) = R^f \text{Cov}(R^{ei}, f) \times b 
-    = \frac{\text{Cov}(R^{ei}, f)}{var(f)} \times [R^f \times b \times var(f)] 
+    P_{t+1} = \frac{X_{t+1}}{1 - \frac{\beta_{CC}}{\gamma}d_{t+1}}
 \end{equation}
 
-The intuition is to say that if low $f$ indicates bad times, 
-when people are hungry, then assets which pay off badly in times 
-of low $f$ must have low prices and deliver high expected returns.
+Which can be approximated as:
+
+\begin{equation}
+    P_{t+1} \approx X_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1}
+\end{equation}
+
+It's expected value at time $t$ is:
+
+\begin{equation}
+    E_t(P_{t+1}) = E_t(X_{t+1}) + \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
+\end{equation}
+
+And the unexpected return is:
+$
+    R_{t+1} - E_t(R_{t+1}) = P_{t+1} - E_t(P_{t+1})
+$
+because $X_{t+1}$ is the payoff per dollar invested in the stock at time $t$,
+which corresponds to the definition of a return in a 
+one-period model $R_{t+1} = \frac{CF_{t+1}}{P_t}$.
+
+We now can substitute $P_{t+1}$ and $E_t(P_{t+1})$:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = X_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1} - E_t(X_{t+1}) - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
+\end{equation}
+
+We recognize the unexpected payoff $X_{t+1} - E_t(X_{t+1})$
+and can rewrite the unexpected payoff as a function of the carbon tax
+unanticipated change:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \frac{\beta_{CC}}{\gamma}d_{t+1} - \frac{\beta_{CC}}{\gamma}E_t(d_{t+1})
+\end{equation}
+
+We can factorize the second part, with
+the unexpected change in the investors perception of climate risks:
+
+\begin{equation}
+    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \frac{\beta_{CC}}{\gamma}(d_{t+1} - E_t(d_{t+1}))
+\end{equation}
+
+We group together the terms related to the climate risks:
+
+\begin{equation}
+    \begin{aligned}
+    R_{t+1} - E_t(R_{t+1}) = \beta_{CC} \tilde{CC}_{t+1} + \varepsilon_{t+1} + \beta_{CC} \left( \frac{1}{\gamma}(d_{t+1} - E_t(d_{t+1})) \right) \\
+ = \beta_{CC} \left(\tilde{CC}_{t+1} + \frac{1}{\gamma}(d_{t+1} - E_t(d_{t+1})) \right) + \varepsilon_{t+1}
+    \end{aligned}
+\end{equation}
+
+\begin{equation}
+\end{equation}
+
+What does it says? In our simple model, 
+we have related the unexpected returns to the
+unexpected changes in climate risks. It can 
+either comes from the realization of an 
+unexpected climate event $\tilde{CC}_{t+1}$,
+or from the unexpected change in the average
+perception of climate risks $d_{t+1} - E_t(d_{t+1})$.
 
 
 
+\section{Measuring Climate Risks}
 
-\section{Conclusion}
+In our simple model above, we have seen that
+climate risks can add uncertainty to asset prices.
+However, because it is a one-period model,
+it lacks realism for our use-case.
+Climate risks are long-term risks. For example, 
+rather than the expectation of the carbon tax at time $t+1$,
+what matters in reality are the expectations
+of the carbon tax over the next 5, 10 years or more:
 
-What we have seen here is the beginning of all asset pricing 
-models. In the empirical version, we'll see that 
-we use risk factors instead of $\Delta c$.
+\begin{equation}
+    E_t(CC_{t+h}) = E_{t-1}(CC_{t+h}) + \Delta E_t(CC_{t+h})
+\end{equation}
+
+with $h$ an undefinite horizon, and $\Delta E_t(CC_{t+h})$
+the change in the expectations about the carbon tax.
+The change in the expectations comes from 
+new information about the carbon tax, like
+new scientific studies, new government policies,
+\textit{etc}. So, if we want to measure climate risks,
+we need to measure the expectations of climate risks
+over the long-term.
+
+For traditional macroeconomic factors, 
+creating a time series that capture expectations 
+of these factors is not so difficult. You may 
+use data from the central bank, the government,
+\textit{etc}. They publish leading indicators,
+surveys, \textit{etc}. The task is more 
+challenging for climate risks.
+
+A common approach in the literature (see Engle et al. (2020) \cite{engle2020hedging})
+is to use newspapers coverage of climate events as a proxy 
+for the average investor's beliefs about climate risks.
+As they noted, when there are events that plausibly
+contains information about changes in climate risk,
+this will likely leads to newspaper coverage of these events.
+Newspapers may even be the direct source that investors
+use to update their beliefs about climate risk.
+Following the initial work from Engle et al. (2020) \cite{engle2020hedging},
+researchers have developed a number of climate 
+news series series capturing a variety of different climate risks.
+Each measure is signed such that a large number 
+corresponds to "bad news".
+
+
+
+\subsection{Climate Concern Index}
+
+\subsection{Fitting an AR(1) Process
+to the Climate Concern Index}
+
+
