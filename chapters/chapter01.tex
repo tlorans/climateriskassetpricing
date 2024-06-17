@@ -593,6 +593,175 @@ assets: (i) the risk-free asset,
 The ESG portfolio weights are proportional 
 to $\Sigma^{-1} g$. 
 The fraction of an investor $i$'s wealth in 
-the risk-free asset 
+the risk-free asset, $1 - \mathbf{1}^T X_i = - (\delta_i/a^2)\mathbf{1}^T \Sigma^{-1}g$, 
+can be positive or negative. 
+The investor's remaining wealth is invested 
+in stocks. Specifically, 
+the investor allocates a fraction $\phi_i$ 
+of her remaining wealth to the ESG portfolio,
+and a fraction $1 - \phi_i$ to the market portfolio.
+
+To see this, we note that the $N \times 1$ vector 
+of weights within investor $i$'s stock portfolio $w_i$ is
+$X_i$ normalized by the sum of its elements:
+
+\begin{equation}
+    \begin{aligned}
+        w_i = X_i / \mathbf{1}^T X_i \\
+        = \frac{w_m + \frac{\delta_i}{a^2} \Sigma^{-1} g}{\mathbf{1}^T (w_m + \frac{\delta_i}{a^2} \Sigma^{-1} g)} \\
+    \end{aligned}
+\end{equation}
+
+We can expand the denominator:
+
+\begin{equation}
+    \begin{aligned}
+        \mathbf{1}^T (w_m + \frac{\delta_i}{a^2} \Sigma^{-1} g) = \mathbf{1}^T w_m + \frac{\delta_i}{a^2} \mathbf{1}^T \Sigma^{-1} g \\
+        = 1 + \frac{\delta_i}{a^2} \mathbf{1}^T \Sigma^{-1} g\\
+    \end{aligned}
+\end{equation}
+
+because $\mathbf{1}^T w_m = 1$.
+Substitute back into the normalization formula
+and separate the terms in the numerator:
+
+\begin{equation}
+    \begin{aligned}
+        w_i = \frac{w_m + \frac{\delta_i}{a^2} \Sigma^{-1} g}{1 + \frac{\delta_i}{a^2} \mathbf{1}^T \Sigma^{-1} g} \\
+        = \frac{w_m}{1 + \frac{\delta_i}{a^2} \mathbf{1}^T \Sigma^{-1} g} + \frac{\frac{\delta_i}{a^2} \Sigma^{-1} g}{1 + \frac{\delta_i}{a^2} \mathbf{1}^T \Sigma^{-1} g} \\
+    \end{aligned}
+\end{equation}
+
+Using the identity $\frac{1}{1 + x} = 1 - \frac{x}{1 + x}$, 
+with $x = \frac{\delta_i}{a^2} \mathbf{1}^T \Sigma^{-1} g$,
+we can rewrite 
+the first term:
+
+\begin{equation}
+    \begin{aligned}
+        \frac{w_m}{1 + \frac{\delta_i}{a^2} \mathbf{1}^T \Sigma^{-1} g} = w_m (1 - \frac{\delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g}{1 + \delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g}) \\
+    \end{aligned}
+\end{equation}
+
+We put it back into the formula for $w_i$:
+
+\begin{equation}
+    \begin{aligned}
+        w_i = w_m (1 - \frac{\delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g}{1 + \delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g}) + \frac{\delta_i / a^2 \Sigma^{-1}g}{1 + \delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g} \\
+        \end{aligned}
+\end{equation}
+
+$\Sigma^{-1}g$ must be normalized to sum to 1:
+
+\begin{equation}
+    w_g = \frac{1}{\mathbf{1}^T \Sigma^{-1} g} \Sigma^{-1} g
+\end{equation}
+
+So we can rewrite the second term as:
+
+\begin{equation}
+    \begin{aligned}
+        w_i = w_m (1 - \frac{\delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g}{1 + \delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g}) + \frac{\delta_i / a^2}{1 + \delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g} w_g \\
+        = w_m \phi_i + w_g (1 - \phi_i) \\
+    \end{aligned}
+\end{equation}
+
+
+with $\phi_i = \frac{\delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g}{1 + \delta_i / a^2 \mathbf{1}^T \Sigma^{-1}g}$.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{../images/chapter01/allocation_fractions_vs_delta_i.png}
+    \caption{Allocation Between Market and ESG Portfolio According to $\delta_i$,
+    with $\delta_i \geq 0$}
+    \label{fig:portfolio_tilts}
+\end{figure}
+
+In the special case where $\mathbf{1}^T \Sigma^{-1} g = 0$,
+no investor holds the risk-free asset, and the ESG 
+portfolio is a zero-cost position with:
+
+\begin{equation}
+    w_g = \Sigma^{-1} g
+\end{equation}
+
+so that: 
+
+\begin{equation}
+    w_i = w_m + \phi_i \Sigma^{-1} g
+\end{equation}
+
+where $\phi_i = \delta_i / a^2$.    
+
+We denote the ESG portfolio greeness as: 
+
+\begin{equation}
+    g_g = w_g^T g 
+\end{equation}
+
+From the equation above, $g_g$ is nonzero as long as 
+$g \neq 0$. Also, 
+$g_g$ is negative if $\mathbf{1}^T \Sigma^{-1} g < 0$,
+but it is otherwise positive. We see that $\phi_i$ 
+has the same sign as the product of $\delta_i$ and $g_g$,
+if the denominator of $\phi_i$ is positive (that is, 
+if investor $i$ invests a positive fraction 
+of her wealth in stocks, so that $\mathbf{1}^T X_i > 0$).
+
+Therefore, for an investor with positive wealth 
+in stocks and $\delta_i > 0$, $\phi_i$ is positive 
+(negative) if $g_g$ is positive (negative).
+That is, such an investor tilts away from 
+the market portfolio in the direction of greeness,
+that is she tilts towards the ESG portfolio 
+when it is green and away from it when it is brown.
+Applying our previous result, the 
+ESG portfolio CAPM alpha is given by: 
+
+\begin{equation}
+    \alpha_g = - \frac{\bar{d}}{a} g_g
+\end{equation}
+
+whose sign is opposite to that of $g_g$. Therefore, 
+investors with positive (negative) value of $\delta_i$
+have ESG portfolios tilts that produce 
+negative (positive) alphas for their overall portfolios.
+
+The ESG tilt is zero (ie, $\phi_i = 0$) for 
+investors with average ESG tastes ($\delta_i = 0$).
+Those investors hold the market portfolio. In contrast,
+investors who are indifferent to ESG ($d_i = 0$, thus 
+$\delta_i < 0$) tilt away from the market portfolio.
+In a world with ESG concerns, investors indifferent 
+to ESG should tilt away from the market portfolio.
+Otherwise they are not optimizing. The market portfolio
+is optimal for investors with average ESG tastes.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{../images/chapter01/allocation_fractions_vs_delta_i_short.png}
+    \caption{Allocation Between Market and ESG Portfolio According to $\delta_i$,
+    with $\delta_i < 0$}
+    \label{fig:portfolio_tilts_short}
+\end{figure}
+
+If all agents have identical ESG concerns,
+so that $\delta_i = 0$ for all $i$, 
+then there is zero ESG tilt for each investor.
+We thus have the following corrolary:
+
+\paragraph{Corrolary 3.} \textit{If there is no 
+dispertion in ESG tastes across investors, 
+then all investors hold the market portfolio.}
+
+All investors hold the market portfolio 
+when none of them have ESG concerns, as in the 
+standard CAPM. All agents also hold the market 
+portfolio when all of them have the same ESG concerns.
+The reason is that stock prices then fully adjust 
+to reflect those tastes, again making the 
+market everybody's optimal choice. Dispersion in 
+ESG tastes is necessary for an ESG industry to exist.
+
 
 \subsection{Factor Pricing with the ESG Portfolio}
