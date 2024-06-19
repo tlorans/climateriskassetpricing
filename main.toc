@@ -22,3 +22,4 @@
 \contentsline {subsection}{\numberline {1.3.2}Factor Pricing with the ESG Portfolio}{17}{}%
 \contentsline {chapter}{\numberline {2}Sources of Risk}{19}{}%
 \contentsline {chapter}{\numberline {3}Climate Risk}{21}{}%
+\contentsline {section}{\numberline {3.1}Expected Returns}{21}{}%
