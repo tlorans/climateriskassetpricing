@@ -50,7 +50,36 @@ where $\sigma_{\tilde{\epsilon}_1, \tilde{C}_1} = \text{Cov}(\tilde{\epsilon}_1,
 
 \subsection{Optimal Portfolio}
 
-\section{Expected Returns}
+Again, the investor $i$ seeks to maximize its expected utility,
+by choosing the optimal portfolio weights $X_i$ at time 0.
+We need to find the first order conditions for the optimization problem.
+
+We are going to follow the same steps as in the previous chapter. 
+
+
+\begin{enumerate}
+    \item We combine the exponential terms:
+    \begin{equation}
+        \begin{aligned}
+        E_0(V(\tilde{W}_1, X_i, \tilde{C}_1)) = -\exp(-a_i(1 + r_f) -a_i X_i^T(\mu + \frac{b_i}{a_i}) + \\
+        \frac{1}{2}a_i^2 X_i^T \Sigma X_i + a_i c_i X_i^T \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} + \frac{1}{2}c_i^2 \sigma^2_{\tilde{C}_1})
+        \end{aligned}
+    \end{equation}
+    and let $f(X_i)$ denotes the exponent: 
+    \begin{equation}
+        E_0(V(\tilde{W}_1, X_i, \tilde{C}_1)) = -\exp(f(X_i))
+    \end{equation}
+    \item To differentiate $f(X_i)$ with respect to $X_i$, 
+    we use the chain rule $\frac{\partial h}{\partial X_i} = \frac{\partial h}{\partial f} \frac{\partial f}{\partial X_i}$.
+    If $h = - \exp(f)$, then $\frac{\partial h}{\partial f} = -\exp(f)$. Thus: 
+    \begin{equation}
+        \frac{\partial h}{\partial X_i} = -\exp(f) \frac{\partial f}{\partial X_i}
+    \end{equation}
+
+\end{enumerate}
+
+
+\section{Heterogeneous Climate Risk Expectations and Expected Returns}
 
 \begin{equation}
     \mu = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi 
@@ -60,3 +89,4 @@ Expected returns depend on climate betas, $\psi$, which represent
 firms' exposures to non-market climate risk. A firm's climate 
 beta is its loading on $\tilde{C}_1$ after controlling for the market return. 
 
+\section{Climate Risk Hedging Portfolio}

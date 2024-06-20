@@ -24,4 +24,5 @@
 \contentsline {section}{\numberline {2.1}Expected Utility and Optimal Portfolio}{19}{}%
 \contentsline {subsection}{\numberline {2.1.1}Investor's Expected Utility}{19}{}%
 \contentsline {subsection}{\numberline {2.1.2}Optimal Portfolio}{20}{}%
-\contentsline {section}{\numberline {2.2}Expected Returns}{20}{}%
+\contentsline {section}{\numberline {2.2}Heterogeneous Climate Risk Expectations and Expected Returns}{21}{}%
+\contentsline {section}{\numberline {2.3}Climate Risk Hedging Portfolio}{21}{}%
