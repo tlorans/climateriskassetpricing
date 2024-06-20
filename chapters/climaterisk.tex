@@ -259,6 +259,26 @@ We know that $\beta_m = (\frac{1}{\sigma^2_m}\sigma_{\tilde{\epsilon}_1, m})$:
     \end{aligned}
 \end{equation}
 
+In the multivariate regression of $\tilde{\epsilon}_1$ on 
+$\tilde{\epsilon}_m$ and $\tilde{C}_1$, 
+the slope coefficients are given by:
+
+\begin{equation}
+    \begin{aligned}
+    \begin{bmatrix} \sigma_{\tilde{\epsilon}_1, m} & \sigma_{\tilde{\epsilon}_1, C} \end{bmatrix} 
+    \begin{bmatrix} \sigma^2_{m} & \sigma_{m, C} \\ \sigma_{m, C} & \sigma^2_{C} \end{bmatrix}^{-1} \\
+        = \frac{1}{\sigma^2_m \sigma^2_C - \sigma^2_{mC}} \begin{bmatrix} \sigma_C^2 \sigma_{\tilde{\epsilon}_1, m} - \sigma_{mC} \sigma_{\tilde{\epsilon}_1, C} & \sigma_m^2 \sigma_{\tilde{\epsilon}_1, C} - \sigma_{mC} \sigma_{\tilde{\epsilon}_1, m} \end{bmatrix}
+\end{aligned}
+\end{equation}
+
+So the second column (the coefficient of $\tilde{C}_1$) is:
+
+\begin{equation}
+    \psi = \frac{1}{\sigma^2_m \sigma^2_C - \sigma^2_{mC}} (\sigma_m^2 \sigma_{\tilde{\epsilon}_1, C} - \sigma_{mC} \sigma_{\tilde{\epsilon}_1, m})
+\end{equation}
+
+
+
 
 \begin{equation}
     \mu = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi 

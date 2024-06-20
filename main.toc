@@ -28,5 +28,5 @@
 \contentsline {subsection}{\numberline {2.2.1}Heterogeneous Climate Risk Expectations and Market Portfolio}{21}{}%
 \contentsline {subsection}{\numberline {2.2.2}Market Portfolio Expected Returns}{23}{}%
 \contentsline {subsection}{\numberline {2.2.3}Expected Returns with Climate Risk}{23}{}%
-\contentsline {section}{\numberline {2.3}Utility in Equilibrium with Heterogenous Climate Risk Expectations}{24}{}%
-\contentsline {section}{\numberline {2.4}Climate Risk Hedging Portfolio}{24}{}%
+\contentsline {section}{\numberline {2.3}Utility in Equilibrium with Heterogenous Climate Risk Expectations}{25}{}%
+\contentsline {section}{\numberline {2.4}Climate Risk Hedging Portfolio}{25}{}%
