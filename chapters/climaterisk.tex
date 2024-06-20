@@ -277,12 +277,17 @@ So the second column (the coefficient of $\tilde{C}_1$) is:
     \psi = \frac{1}{\sigma^2_m \sigma^2_C - \sigma^2_{mC}} (\sigma_m^2 \sigma_{\tilde{\epsilon}_1, C} - \sigma_{mC} \sigma_{\tilde{\epsilon}_1, m})
 \end{equation}
 
-
-
+We can use $\psi$ to rewrite the expected returns:
 
 \begin{equation}
-    \mu = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi 
+    \begin{aligned}
+    \mu = \mu_m \beta_m - \frac{g}{a} \bar{d} + \bar{c}(\sigma_{mC} -  \frac{1}{\sigma^2_m}\sigma_{\tilde{\epsilon}_1, m} \sigma_{m, C}) \\
+    = \mu_m \beta_m - \frac{g}{a} \bar{d} + \bar{c}\frac{\sigma^2_m \sigma^2_C - \sigma^2_{mC}}{\sigma^2_m} \psi \\
+    = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi 
+    \end{aligned}
 \end{equation}
+
+recalling that $\sigma_C = 1$.
 
 Expected returns depend on climate betas, $\psi$, which represent 
 firms' exposures to non-market climate risk. A firm's climate 
