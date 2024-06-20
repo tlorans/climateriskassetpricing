@@ -1,0 +1,56 @@
+\chapter{Climate Risk}
+
+
+\section{Expected Utility and Optimal Portfolio}
+
+As with ESG preferences only, 
+we start by setting up the utility function of an investor
+who cares about climate risk, and then derive the optimal portfolio
+
+\subsection{Investor's Expected Utility}
+
+Let $\tilde{C}_1$ denote climate at time 1, which is unknown at
+time 0. The investor utility function is now:
+
+\begin{equation}
+    V(\tilde{W}_{1,i}, X_i, \tilde{C}_1) = -\exp{(-A_i \tilde{W}_{1,i} - b_i^T X_i - c_i \tilde{C}_1)}
+\end{equation}
+
+where $c_i$ is the investor's climate risk sensitivity.
+
+Taking the expectation of the utility function from period 0,
+we get: 
+
+\begin{equation}
+    E_0(V(\tilde{W}_{1,i}, X_i, \tilde{C}_1)) = E_0(-\exp{(-A_i W_{0,i} - b_i^T X_i - c_i \tilde{C}_1)})
+\end{equation}
+
+Again, we can replace $\tilde{W}_{1,i}$
+with the relation $\tilde{W}_{1,i} = W_{0,i}(1 + r_f + X_i^T \tilde{r}_1)$
+and define $a_i := A_i W_{0,i}$. 
+We still want to make out from the expectation the 
+terms that we know about in period 0, and 
+reexpress the terms with the expectation as a function 
+of the portfolio weights $X_i$. 
+
+\begin{equation}
+    \begin{aligned}
+        E_0(V(\tilde{W}_{1,i}, X_i, \tilde{C}_1)) = E_0(-\exp{(-A_i W_{0,i} - b_i^T X_i - c_i \tilde{C}_1)}) \\
+       = E_0(-\exp{(-a_i(1 + r_f + X_i^T \tilde{r}_1) - b_i^T X_i - c_i \tilde{C}_1)}) \\
+       = -\exp{(-a_i(1 + r_f))} E_0(-\exp{(-a_i X_i^T \tilde{r}_1 - b_i^T X_i - c_i \tilde{C}_1)}) \\
+       = -\exp{(-a_i(1 + r_f))} E_0(-\exp{(-a_i X_i^T(\tilde{r}_1 + \frac{b_i}{a_i}) - c_i \tilde{C}_1)}) \\
+    \end{aligned}
+\end{equation}
+
+\subsection{Optimal Portfolio}
+
+\section{Expected Returns}
+
+\begin{equation}
+    \mu = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi 
+\end{equation}
+
+Expected returns depend on climate betas, $\psi$, which represent 
+firms' exposures to non-market climate risk. A firm's climate 
+beta is its loading on $\tilde{C}_1$ after controlling for the market return. 
+
