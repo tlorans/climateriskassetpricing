@@ -343,4 +343,66 @@ and stocks with negative $\psi_n$ have negative alphas.}
 
 \subsection{Hedging Portfolio Tilt}
 
+We now want to reexpress the investor's optimal 
+portfolio weights $X_i$ in terms of 
+the ESG characteristics and climate betas.
 
+We can plug excess returns $\mu = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi$
+into the portfolio weight:
+
+\begin{equation}
+    \begin{aligned}
+        X_i = \frac{1}{a}\Sigma^{-1} ( \mu + \frac{b_i}{a} - c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}) \\
+        = \frac{1}{a} \Sigma^{-1}( \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(\sigma_{mC} -  \frac{1}{\sigma^2_m}\sigma_{\tilde{\epsilon}_1, m} \sigma_{m, C}) \psi + \frac{b_i}{a} - c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}) \\
+        = \frac{\mu_m}{a} \Sigma^{-1} \beta_m - \frac{\bar{d}}{a^2} \Sigma^{-1} g + \frac{\bar{c}}{a} \Sigma^{-1} (\sigma_{mC} -  \frac{1}{\sigma^2_m}\sigma_{\tilde{\epsilon}_1, m} \sigma_{m, C}) \psi + \frac{d_i}{a^2}g\Sigma^{-1} - \frac{c_i}{a} \Sigma^{-1} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        = \frac{\mu_m}{a} \Sigma^{-1} \beta_m - \frac{1}{a} \Sigma^{-1} \bar{c} \frac{\sigma_{mC}}{\sigma_m^2} \sigma_{\tilde{\epsilon}_1 m} + \frac{1}{a} \Sigma^{-1} (\frac{d_i}{a}g - \frac{\bar{d}}{a}g) - \frac{1}{a} \Sigma^{-1} (c_i - \bar{c})\sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        = \frac{\mu_m}{a} \Sigma^{-1} \beta_m - \frac{1}{a} \Sigma^{-1} \bar{c} \frac{\sigma_{mC}}{\sigma_m^2} \sigma_{\tilde{\epsilon}_1 m} + \frac{1}{a} \Sigma^{-1} \frac{\delta_i}{a}g - \frac{c_i - \bar{c}}{a} \Sigma^{-1} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        = \frac{\mu_m}{a} \Sigma^{-1} \beta_m - \frac{1}{a} \Sigma^{-1} \bar{c} \frac{\sigma_{mC}}{\sigma_m^2} \sigma_{\tilde{\epsilon}_1 m} + \frac{1}{a} \Sigma^{-1} \frac{\delta_i}{a}g - \frac{\gamma_i}{a} \Sigma^{-1} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+    \end{aligned}
+\end{equation}
+
+with $\gamma_i = c_i - \bar{c}$ and $\delta_i = d_i - \bar{d}$.
+
+From the market expected return $\mu_m = a \sigma^2_m + \bar{c} \sigma_{mC}$,
+we note that $\bar{c} \sigma_{mC} = \mu_m - a \sigma^2_m$.
+We also note that $\beta_m = \frac{1}{\sigma^2_m} \sigma_{\tilde{\epsilon}_1, m} = \frac{1}{\sigma^2_m} \Sigma w_m$.
+We can rewrite the portfolio weight as:
+
+\begin{equation}
+    \begin{aligned}
+        X_i = \frac{\mu_m}{a} \Sigma^{-1} \beta_m - \frac{1}{a} \Sigma^{-1} (\mu_m - a \sigma^2_m)\beta_m + \frac{\delta_i}{a^2}\Sigma^{-1}g - \frac{\gamma_i}{a}\Sigma^{-1}\sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        = \sigma^{2}_m \Sigma_{-1} \beta_m + \frac{\delta_i}{a^2}\Sigma^{-1}g - \frac{\gamma_i}{a}\Sigma^{-1}\sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        = w_m + \frac{\delta_i}{a^2}\Sigma^{-1}g - \frac{\gamma_i}{a}\Sigma^{-1}\sigma_{\tilde{\epsilon}_1, \tilde{C}_1}
+    \end{aligned}
+\end{equation}
+
+which leads to our next proposition:
+
+\paragraph{Proposition X.}
+\textit{Investor $i$'s equilibrium portfolio weights 
+on the $N$ stocks are given by:}
+
+\begin{equation}
+    X_i = w_m + \frac{\delta_i}{a^2}\Sigma^{-1}g - \frac{\gamma_i}{a}\Sigma^{-1}\sigma_{\tilde{\epsilon}_1, \tilde{C}_1}
+\end{equation}
+
+where $\sigma_{\tilde{\epsilon}_1, \tilde{C}_1}$ is the vector of
+covariances between unexpected returns and climate risk.
+
+The fourth fund is now a climate risk hedging portfolio,
+whose weights are proportional to $\Sigma^{-1}\sigma_{\tilde{\epsilon}_1, \tilde{C}_1}$.
+Investors with $\delta_i > 0$, whose climate risk expectation 
+is higher than the market average, 
+will short the hedging portfolio, whereas investors with
+$\delta_i < 0$ will go long on the hedging portfolio.
+
+The climate hedging portfolio, $\Sigma^{-1}\sigma_{\tilde{\epsilon}_1, \tilde{C}_1}$,
+is a natural mimicking portfolio for $\tilde{C}_1$.
+Indeed, note that the $N$ elements of $\Sigma^{-1}\sigma_{\tilde{\epsilon}_1, \tilde{C}_1}$
+are the slopes of the multivariate regression of $\tilde{C}_1$ on $\tilde{\epsilon}_1$.
+Therefore, the return on the hedging portfolio 
+has the highest correlation with $\tilde{C}_1$,
+among all portfolios of the $N$ stocks. 
+Investors in this model hold this maximum-correlation 
+portfolio, to various degree, determined by their 
+$\gamma_i$, to hedge climate risk. 

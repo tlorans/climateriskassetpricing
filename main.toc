@@ -33,3 +33,4 @@
 \contentsline {paragraph}{Corrolary X.}{25}{}%
 \contentsline {section}{\numberline {2.3}Climate Risk Hedging Portfolio}{26}{}%
 \contentsline {subsection}{\numberline {2.3.1}Hedging Portfolio Tilt}{26}{}%
+\contentsline {paragraph}{Proposition X.}{27}{}%
