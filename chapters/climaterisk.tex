@@ -75,7 +75,34 @@ We are going to follow the same steps as in the previous chapter.
     \begin{equation}
         \frac{\partial h}{\partial X_i} = -\exp(f) \frac{\partial f}{\partial X_i}
     \end{equation}
-
+    \item We can again use the rules that $\frac{\partial x^T b}{\partial x} = b$ and 
+    $\frac{\partial x^T A x}{\partial x} = 2Ax$:
+    \begin{equation}
+        \begin{aligned}
+            \frac{\partial f}{\partial X_i} = -a_i(\mu + \frac{b_i}{a_i}) + a_i^2 \Sigma X_i + a_i c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        \end{aligned}
+    \end{equation}
+    Combining:
+    \begin{equation}
+        \frac{\partial h}{\partial X_i} = -\exp(f) (-a_i(\mu + \frac{b_i}{a_i}) + a_i^2 \Sigma X_i + a_i c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1})
+    \end{equation}
+    \item We set the derivative to zero:
+    \begin{equation}
+        \begin{aligned}
+            -\exp(f)(-a_i(\mu + \frac{b_i}{a_i}) + a_i^2 \Sigma X_i + a_i c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}) = 0 \\
+            -a_i(\mu + \frac{b_i}{a_i}) + a_i^2 \Sigma X_i + a_i c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} = 0 \\
+        \end{aligned}
+    \end{equation}
+    because the exponential term is always positive.
+    \item We solve for $X_i$:
+    \begin{equation}
+        \begin{aligned}
+            a_i^2 \Sigma X_i = a_i(\mu + \frac{b_i}{a_i} - c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}) \\
+            a_i \Sigma X_i = \mu + \frac{b_i}{a_i} - c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+            \Sigma X_i = \frac{1}{a_i}( \mu + \frac{b_i}{a_i} - c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}) \\
+            X_i = \frac{1}{a_i}\Sigma^{-1} ( \mu + \frac{b_i}{a_i} - c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1})
+        \end{aligned}
+    \end{equation}
 \end{enumerate}
 
 
