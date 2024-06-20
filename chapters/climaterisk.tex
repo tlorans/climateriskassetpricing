@@ -218,7 +218,26 @@ $w_m^T \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} = \text{Cov}(\tilde{\epsilon}_1,
 
 \subsection{Expected Returns with Climate Risk}
 
-Starting 
+
+We use the last equation in the previous section 
+to solve for $a$:
+
+\begin{equation}
+    \begin{aligned}
+        \mu_m = a \sigma^2_m + \bar{c} \sigma_{mC} \\
+        a = \frac{\mu_m - \bar{c} \sigma_{mC}}{\sigma^2_m}
+    \end{aligned}
+\end{equation}
+
+Then, the expected excess returns can be reexpressed as:
+
+\begin{equation}
+    \begin{aligned}
+        \mu = a\Sigma w_m - \frac{g}{a} \bar{d} + \bar{c} \Sigma \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        = \frac{\mu_m - \bar{c} \sigma_{mC}}{\sigma^2_m} \Sigma w_m - \frac{g}{\frac{\mu_m - \bar{c} \sigma_{mC}}{\sigma^2_m}} \bar{d} + \bar{c} \Sigma \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+    \end{aligned}
+\end{equation}
+
 
 \begin{equation}
     \mu = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi 
