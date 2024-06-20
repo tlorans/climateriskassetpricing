@@ -106,10 +106,18 @@ We are going to follow the same steps as in the previous chapter.
 \end{enumerate}
 
 
-\section{Heterogeneous Climate Risk Expectations and Expected Returns}
+Again, we will assume that $a_i = a$ for all investors:
+
+\begin{equation}
+    X_i = \frac{1}{a}\Sigma^{-1} ( \mu + \frac{b_i}{a} - c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1})
+\end{equation}
+
+\section{Heterogeneous Climate Risk Expectations, Market 
+Portfolio and Expected Returns}
 
 
-\subsection{Heterogeneous Climate Risk Expectations}
+\subsection{Heterogeneous Climate Risk Expectations
+and Market Portfolio}
 
 We follow the same process than in the previous 
 chapter, now including differences in expectations
@@ -136,7 +144,45 @@ The $n$th element of the market portfolio weight vector $w_m$ is:
     w_{m,n} = \frac{W_{0,m,n}}{W_{0,m}}
 \end{equation}
 
+We reexpress $W_{0,n}$ in terms of individual investors' wealth 
+by using the definition of $W_{0,n}$:
 
+\begin{equation}
+    w_{m,n} = \frac{1}{W_0} \int_i W_{0,i,n}di 
+\end{equation}
+
+with $W_{0,i,n} = W_{0,i}X_{i,n}$, we can rewrite 
+the equation: 
+
+\begin{equation}
+    \begin{aligned}
+    w_{m,n} = \frac{1}{W_0} \int_i W_{0,i}X_{i,n}di \\
+    = \int_i \frac{W_{0,i}}{W_0}X_{i,n}di \\
+    = \int_i \omega_i X_{i,n}di \\
+    \end{aligned}
+\end{equation}
+
+We now plug the optimal portfolio weights $X_i$ we have found 
+in the previous section into the equation above
+to obtain the market weights $w_m$:
+
+\begin{equation}
+    \begin{aligned}
+        w_{m,n} = \int_i \omega_i \frac{1}{a} \Sigma^{-1} ( \mu + \frac{b_i}{a} - c_i \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}) di \\
+        = \frac{1}{a} \Sigma^{-1} \mu (\int_i \omega_i di) + \frac{1}{a^2} \Sigma^{-1}g (\int_i \omega_i d_i di) - \frac{1}{a} \Sigma^{-1} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} (\int_i \omega_i c_i di) \\
+    \end{aligned}
+\end{equation}
+
+We have $\int_i \omega_i di = 1$ and $\int_i \omega_i c_i di := \bar{c} \geq 0$,
+the wealth-weighted average expectation about climate risk 
+across investors. The market portfolio weights are:
+
+\begin{equation}
+    \begin{aligned}
+    w_m = \frac{1}{a} \Sigma^{-1} (\mu + \frac{g}{a} \bar{d} - \bar{c} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}) \\
+    = \frac{1}{a} \Sigma^{-1} \mu + \frac{g}{a^2} \Sigma^{-1} \bar{d} - \frac{1}{a} \Sigma^{-1} \bar{c} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}
+    \end{aligned}
+\end{equation}
 
 \subsection{Expected Returns with Climate Risk}
 
