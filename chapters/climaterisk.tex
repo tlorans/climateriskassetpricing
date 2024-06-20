@@ -39,8 +39,14 @@ of the portfolio weights $X_i$.
        = E_0(-\exp{(-a_i(1 + r_f + X_i^T \tilde{r}_1) - b_i^T X_i - c_i \tilde{C}_1)}) \\
        = -\exp{(-a_i(1 + r_f))} E_0(-\exp{(-a_i X_i^T \tilde{r}_1 - b_i^T X_i - c_i \tilde{C}_1)}) \\
        = -\exp{(-a_i(1 + r_f))} E_0(-\exp{(-a_i X_i^T(\tilde{r}_1 + \frac{b_i}{a_i}) - c_i \tilde{C}_1)}) \\
+       = -\exp{(-a_i(1 + r_f))} -\exp(a_i X_i^T(E_0(\tilde{r}_1)+\frac{b_i}{a_i}) +\\
+       \frac{1}{2}a^2_i X_i^T \text{Var}(\tilde{\epsilon}_1)X_i + a_i c_i X_i^T \text{Cov}(\tilde{\epsilon}_1, \tilde{C}_1) + \frac{1}{2}c_i^2 \text{Var}(\tilde{C}_1)) \\
+       = -\exp(-a_i(1 + r_f)) - \exp(-a_i X_i^T(\mu + \frac{b_i}{a_i}) + \\
+       \frac{1}{2}a_i^2 X_i^T \Sigma X_i + a_i c_i X_i^T \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} + \frac{1}{2}c_i^2 \sigma^2_{\tilde{C}_1})
     \end{aligned}
 \end{equation}
+
+where $\sigma_{\tilde{\epsilon}_1, \tilde{C}_1} = \text{Cov}(\tilde{\epsilon}_1, \tilde{C}_1)$.
 
 \subsection{Optimal Portfolio}
 
