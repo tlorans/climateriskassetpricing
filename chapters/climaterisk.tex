@@ -184,7 +184,41 @@ across investors. The market portfolio weights are:
     \end{aligned}
 \end{equation}
 
+\subsection{Market Portfolio Expected Returns}
+
+Starting from the vector of marekt weights $w_m$, we now 
+can solver for $\mu$ the vector of expected returns:
+
+
+\begin{equation}
+    \begin{aligned}
+        w_m = \frac{1}{a} \Sigma^{-1} \mu + \frac{g}{a^2} \Sigma^{-1} \bar{d} - \frac{1}{a} \Sigma^{-1} \bar{c} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        aw_m = \Sigma^{-1} \mu + \frac{g}{a} \Sigma^{-1} \bar{d} - \Sigma^{-1} \bar{c} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        aw_m - \frac{g}{a} \Sigma^{-1} \bar{d} + \Sigma^{-1} \bar{c} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} = \Sigma^{-1} \mu \\
+        \Sigma(aw_m - \frac{g}{a} \bar{d} + \bar{c} \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}) = \mu \\
+        \mu = a\Sigma w_m - \frac{g}{a} \Sigma \Sigma^{-1} \bar{d} + \bar{c} \Sigma \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        \mu = a\Sigma w_m - \frac{g}{a} \bar{d} + \bar{c} \Sigma \sigma_{\tilde{\epsilon}_1, \tilde{C}_1}
+    \end{aligned}
+\end{equation}
+
+Multiplying by $w_m$, we find the market equity premium ($\mu_m = w_m^T \mu$):
+
+\begin{equation}
+    \begin{aligned}
+    \mu_m = a w_m^T \Sigma w_m - \frac{g}{a} w_m^T \bar{d} + \bar{c} w_m^T \Sigma \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+    = a w_m^T \Sigma w_m + \bar{c} w_m^T \Sigma \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+    = a \sigma^2_m + \bar{c} \sigma_{mC}
+    \end{aligned}
+\end{equation}
+
+where we still maintain the assumption of an ESG-neutral market portfolio ($w_m^Tg = 0$),
+and we have the market portfolio variance 
+$\sigma^2_m = w_m^T \Sigma w_m$ and 
+$w_m^T \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} = \text{Cov}(\tilde{\epsilon}_1, \tilde{C}_1) = \sigma_{mC}$.
+
 \subsection{Expected Returns with Climate Risk}
+
+Starting 
 
 \begin{equation}
     \mu = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi 
