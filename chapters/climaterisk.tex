@@ -289,12 +289,58 @@ We can use $\psi$ to rewrite the expected returns:
 
 recalling that $\sigma_C = 1$.
 
+We have our next proposition:
+
+\paragraph{Proposition X.}
+\textit{Expected excess returns in equilibrium are given by:}
+\begin{equation}
+    \mu = \mu_m \beta_m - \frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi
+\end{equation}
+
+\textit{where $\psi$ is the $N \times 1$ vector of climate betas 
+(slope coefficients on $\tilde{C}_1$ in a multivariate 
+regressions of $\tilde{\epsilon}_1$ on $\tilde{\epsilon}_m$ and $\tilde{C}_1$),
+and $\rho_{mC}$ is the correlation between $\tilde{\epsilon}_m$ and $\tilde{C}_1$.}
+
+
 Expected returns depend on climate betas, $\psi$, which represent 
-firms' exposures to non-market climate risk. A firm's climate 
-beta is its loading on $\tilde{C}_1$ after controlling for the market return. 
+firms' exposures to non-market climate risk. 
+Recall $\tilde{\epsilon}_1$ is the vector of unexpected 
+returns, and $\tilde{\epsilon}_m$ is the 
+market unexpected return.
+A firm climate beta $\psi_n$ therefore measures 
+its loading on $\tilde{C}_1$, 
+after controlling for the market return. 
 
 
-\section{Utility in Equilibrium with Heterogenous 
-Climate Risk Expectations}
+
+\paragraph{Corrolary X.}
+\textit{Stock $n$'s climate beta $\psi_n$
+enter expected returns positively. Thus,
+a stock with a negative $\psi_n$ that 
+provides investors with a climate-risk hedge,
+has a lower expected return than it would in 
+the absence of climate risk. Vice versa,
+a stock with a positive $\psi_n$, 
+which performs particularly poorly 
+when the climate worsens unexpectedly, 
+has a higher expected return.}
+
+
+\paragraph{Corrolary X.}
+\textit{Because the vector of stocks' CAPM alphas is 
+defined as $\alpha := \mu - \mu_m \beta_m$, we have:}
+
+\begin{equation}
+    \alpha_n = -\frac{\bar{d}}{a}g + \bar{c}(1 - \rho^2_{mC}) \psi
+\end{equation}
+
+\textit{With the assumption that $\bar{c} > 0$, 
+stocks with positive $\psi_n$ have positive alphas,
+and stocks with negative $\psi_n$ have negative alphas.}
 
 \section{Climate Risk Hedging Portfolio}
+
+\subsection{Hedging Portfolio Tilt}
+
+
