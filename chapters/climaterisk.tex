@@ -233,8 +233,29 @@ Then, the expected excess returns can be reexpressed as:
 
 \begin{equation}
     \begin{aligned}
-        \mu = a\Sigma w_m - \frac{g}{a} \bar{d} + \bar{c} \Sigma \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
-        = \frac{\mu_m - \bar{c} \sigma_{mC}}{\sigma^2_m} \Sigma w_m - \frac{g}{\frac{\mu_m - \bar{c} \sigma_{mC}}{\sigma^2_m}} \bar{d} + \bar{c} \Sigma \sigma_{\tilde{\epsilon}_1, \tilde{C}_1} \\
+        \mu = a\Sigma w_m - \frac{g}{a} \bar{d} + \bar{c} \sigma_{mC} \\
+        = \frac{\mu_m - \bar{c} \sigma_{mC}}{\sigma^2_m} \Sigma w_m - \frac{g}{a} \bar{d} + \bar{c} \sigma_{mC} \\
+    \end{aligned}
+\end{equation}
+
+We know that $\frac{1}{\sigma^2_m}\Sigma w_m = \beta_m$, 
+the market beta:
+
+\begin{equation}
+    \begin{aligned}
+        \mu =  \frac{\mu_m - \bar{c} \sigma_{mC}}{\sigma^2_m} \Sigma w_m - \frac{g}{a} \bar{d} + \bar{c} \sigma_{mC} \\
+        = (\mu_m - \bar{c} \sigma_{mC})\beta_m - \frac{g}{a} \bar{d} + \bar{c} \sigma_{mC}\\
+        = \mu_m \beta_m - \bar{c} \sigma_{mC} \beta_m - \frac{g}{a} \bar{d} + \bar{c} \sigma_{mC} \\
+        = \mu_m \beta_m - \frac{g}{a} \bar{d} + \bar{c}(\sigma_{mC} - \beta_m \sigma_{mC})
+    \end{aligned}
+\end{equation}
+
+We know that $\beta_m = (\frac{1}{\sigma^2_m}\sigma_{\tilde{\epsilon}_1, m})$:
+
+\begin{equation}
+    \begin{aligned}
+        \mu = \mu_m \beta_m - \frac{g}{a} \bar{d} + \bar{c}(\sigma_{mC} - \beta_m \sigma_{mC}) \\
+        = \mu_m \beta_m - \frac{g}{a} \bar{d} + \bar{c}(\sigma_{mC} -  \frac{1}{\sigma^2_m}\sigma_{\tilde{\epsilon}_1, m} \sigma_{m, C}) \\
     \end{aligned}
 \end{equation}
 
