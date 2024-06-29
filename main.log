@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.17)  20 JUN 2024 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.17)  29 JUN 2024 06:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -554,7 +554,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@cntb=\count332
 \multirow@dima=\skip123
 \bigstrutjot=\dimen278
-)) (./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/climaterisk.aux))
+)) (./main.aux (./chapters/intro.aux) (./chapters/modeluncertainty.aux) (./chapters/climaterisk.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -645,96 +645,28 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 
 
 ]
-\openout2 = `chapters/chapter01.aux'.
+\openout2 = `chapters/modeluncertainty.aux'.
 
- (./chapters/chapter01.tex
+ (./chapters/modeluncertainty.tex
 Chapter 1.
+<images/../images/population/history_population.png, id=30, 701.7417pt x 377.9721pt>
+File: images/../images/population/history_population.png Graphic file (type png)
+<use images/../images/population/history_population.png>
+Package pdftex.def Info: images/../images/population/history_population.png  used on input line 9.
+(pdftex.def)             Requested size: 390.0pt x 210.06537pt.
 
 
 [1
 
 
-]
-
-[2]
-<images/../images/chapter01/portfolio_weights_vs_esg.png, id=44, 716.4366pt x 477.9456pt>
-File: images/../images/chapter01/portfolio_weights_vs_esg.png Graphic file (type png)
-<use images/../images/chapter01/portfolio_weights_vs_esg.png>
-Package pdftex.def Info: images/../images/chapter01/portfolio_weights_vs_esg.png  used on input line 140.
-(pdftex.def)             Requested size: 390.0pt x 260.17982pt.
+])
 
 
-[3]
-
-[4 <./images/../images/chapter01/portfolio_weights_vs_esg.png>]
-Overfull \hbox (12.87798pt too wide) in paragraph at lines 150--150
-[]\T1/cmr/bx/n/14.4 (-20) Heterogeneous Mar-ket and Mar-ket Port-fo-lio Weights 
+Overfull \hbox (140.56084pt too wide) has occurred while \output is active
+\T1/cmr/m/n/12 2 \T1/cmr/m/sl/12 CHAPTER 1.  FROM CLIMATE CHANGE UNCERTAINTY TO CLIMATE CHANGE AMBIGUITY
  []
 
-
-
-[5]
-<images/../images/chapter01/market_greenness_vs_average_esg_taste.png, id=60, 824.1189pt x 478.1865pt>
-File: images/../images/chapter01/market_greenness_vs_average_esg_taste.png Graphic file (type png)
-<use images/../images/chapter01/market_greenness_vs_average_esg_taste.png>
-Package pdftex.def Info: images/../images/chapter01/market_greenness_vs_average_esg_taste.png  used on input line 219.
-(pdftex.def)             Requested size: 390.0pt x 226.29454pt.
-
-
-[6 <./images/../images/chapter01/market_greenness_vs_average_esg_taste.png>]
-<images/../images/chapter01/market_equity_premium_vs_greenness.png, id=65, 830.6232pt x 481.3182pt>
-File: images/../images/chapter01/market_equity_premium_vs_greenness.png Graphic file (type png)
-<use images/../images/chapter01/market_equity_premium_vs_greenness.png>
-Package pdftex.def Info: images/../images/chapter01/market_equity_premium_vs_greenness.png  used on input line 257.
-(pdftex.def)             Requested size: 390.0pt x 225.99925pt.
-
-
-[7]
-
-[8 <./images/../images/chapter01/market_equity_premium_vs_greenness.png>]
-<images/../images/chapter01/alphas_vs_esg_characteristics.png, id=75, 829.6596pt x 479.1501pt>
-File: images/../images/chapter01/alphas_vs_esg_characteristics.png Graphic file (type png)
-<use images/../images/chapter01/alphas_vs_esg_characteristics.png>
-Package pdftex.def Info: images/../images/chapter01/alphas_vs_esg_characteristics.png  used on input line 336.
-(pdftex.def)             Requested size: 390.0pt x 225.22981pt.
-
-
-[9 <./images/../images/chapter01/alphas_vs_esg_characteristics.png>]
-
-[10]
-
-[11]
-
-[12]
-Overfull \hbox (18.5707pt too wide) detected at line 536
-[][][]
- []
-
-
-
-[13]
-
-[14]
-
-[15]
-<images/../images/chapter01/allocation_fractions_vs_delta_i.png, id=100, 820.7463pt x 480.1137pt>
-File: images/../images/chapter01/allocation_fractions_vs_delta_i.png Graphic file (type png)
-<use images/../images/chapter01/allocation_fractions_vs_delta_i.png>
-Package pdftex.def Info: images/../images/chapter01/allocation_fractions_vs_delta_i.png  used on input line 674.
-(pdftex.def)             Requested size: 390.0pt x 228.14429pt.
-
-
-[16 <./images/../images/chapter01/allocation_fractions_vs_delta_i.png>]
-<images/../images/chapter01/allocation_fractions_vs_delta_i_short.png, id=107, 820.7463pt x 480.1137pt>
-File: images/../images/chapter01/allocation_fractions_vs_delta_i_short.png Graphic file (type png)
-<use images/../images/chapter01/allocation_fractions_vs_delta_i_short.png>
-Package pdftex.def Info: images/../images/chapter01/allocation_fractions_vs_delta_i_short.png  used on input line 742.
-(pdftex.def)             Requested size: 390.0pt x 228.14429pt.
-)
-
-[17]
-
-[18 <./images/../images/chapter01/allocation_fractions_vs_delta_i_short.png>]
+[2 <./images/../images/population/history_population.png>]
 \openout2 = `chapters/climaterisk.aux'.
 
  (./chapters/climaterisk.tex
@@ -744,74 +676,74 @@ Underfull \vbox (badness 1331) has occurred while \output is active []
 
 
 
-[19
+[3
 
 
 
 
 ]
 
-[20]
+[4]
 
 
-Overfull \hbox (233.72404pt too wide) has occurred while \output is active
-\T1/cmr/m/sl/12 2.2.  HETEROGENEOUS CLIMATE RISK EXPECTATIONS, MARKET PORTFOLIO AND EXPECTED RETURNS \T1/cmr/m/n/12 21
+Overfull \hbox (227.85048pt too wide) has occurred while \output is active
+\T1/cmr/m/sl/12 2.2.  HETEROGENEOUS CLIMATE RISK EXPECTATIONS, MARKET PORTFOLIO AND EXPECTED RETURNS \T1/cmr/m/n/12 5
  []
 
-[21]
+[5]
 
-[22]
+[6]
 
 
-Overfull \hbox (233.72404pt too wide) has occurred while \output is active
-\T1/cmr/m/sl/12 2.2.  HETEROGENEOUS CLIMATE RISK EXPECTATIONS, MARKET PORTFOLIO AND EXPECTED RETURNS \T1/cmr/m/n/12 23
+Overfull \hbox (227.85048pt too wide) has occurred while \output is active
+\T1/cmr/m/sl/12 2.2.  HETEROGENEOUS CLIMATE RISK EXPECTATIONS, MARKET PORTFOLIO AND EXPECTED RETURNS \T1/cmr/m/n/12 7
  []
 
-[23]
+[7]
 
-[24]
+[8]
 
 
-Overfull \hbox (233.72404pt too wide) has occurred while \output is active
-\T1/cmr/m/sl/12 2.2.  HETEROGENEOUS CLIMATE RISK EXPECTATIONS, MARKET PORTFOLIO AND EXPECTED RETURNS \T1/cmr/m/n/12 25
+Overfull \hbox (227.85048pt too wide) has occurred while \output is active
+\T1/cmr/m/sl/12 2.2.  HETEROGENEOUS CLIMATE RISK EXPECTATIONS, MARKET PORTFOLIO AND EXPECTED RETURNS \T1/cmr/m/n/12 9
  []
 
-[25]
+[9]
 Overfull \hbox (16.29614pt too wide) detected at line 362
 [][][]
  []
 
 
 
-[26])
+[10])
 
-[27]
+[11]
 
-[28
+[12
 
 
 
 ]
 No file main.bbl.
-(./main.aux (./chapters/intro.aux) (./chapters/chapter01.aux) (./chapters/climaterisk.aux))
+(./main.aux (./chapters/intro.aux) (./chapters/modeluncertainty.aux) (./chapters/climaterisk.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 28589 strings out of 473599
- 703858 string characters out of 5732716
+ 28449 strings out of 473599
+ 699851 string characters out of 5732716
  1946908 words of memory out of 5000000
- 50768 multiletter control sequences out of 15000+600000
- 580727 words of font info for 172 fonts, out of 8000000 for 9000
+ 50711 multiletter control sequences out of 15000+600000
+ 577070 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,107p,1036b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (34 pages, 1142380 bytes).
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (18 pages, 301090 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 159 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 45099 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 38930 words of extra memory for PDF output out of 42996 (max. 10000000)
 
